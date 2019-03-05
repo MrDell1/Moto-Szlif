@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LDautomotive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="new1.css" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+</head>
+<body>
+<ul id="nav">
+        <li id="logo"><img class="logo img-responsive" src="https://ldautomotive.pl/img/ldautomotive-logo-1447251540.jpg"></li>
+        <li id="serch">
+            <input type="text" placeholder="Szukaj..."> 
+            <button><img id="lupa" src="lupa.png"></button>
+        </li>
+        <li id="login">
+            <a class="sign" href="">Zarejestruj się</a> 
+            <a class="login" href="">Zaloguj się</a> 
+        </li>
+        <li id="menu">
+            <span> <i class="fas fa-bars"></i> </span>
+            <div class="menu-content ">
+                <a href="">Kategorie</a>
+                <a href="">Informacje</a>
+                <a href="">Producenci</a>
+                <a href="">Promocje</a>
+                <a href="">Kontakt</a>
+            </div>
+        </li>
+</ul>
+
+<div id="myslider">
+        <img  src="http://placekitten.com/g/612/612"/>
+        <img src="https://unsplash.it/612/612"/>
+        <img src="https://unsplash.it/612/612?random=1"/>
+        <img src="https://unsplash.it/612/612?random=2"/>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js"></script>
+<script>
+  var imgSlider = simpleslider.getSlider({
+    container: document.getElementById('myslider'),
+    prop: 'left',
+    init: 100,
+    show: 0,
+    end: 0,
+    unit: 'vw',
+    delay: 2,
+    duration: 1
+  });
+</script>
+</html>

@@ -1,0 +1,180 @@
+#myslider { 
+    width:100vw; 
+    height: 40vh; 
+    position: absolute; 
+    left: 0; }
+ 
+#myslider img{
+    width:100vw;  
+    top: 50%; 
+    transform: translate(0, -50%)
+}
+
+body{
+    background-color: #464646;
+    margin: 0;
+}
+
+#nav{
+    width: 100vw;
+    height: 65px;
+    background-color: #3b3b3b;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+ 
+}
+ 
+#nav::after{
+    clear: both;
+    content: "";
+    display: table;
+ 
+}
+#nav li{
+    float: left;
+    list-style-type:none;
+}
+ 
+#logo{
+    width: 307px;
+    height: 100%;
+    background-color: aquamarine;
+    margin: 0;
+}
+ 
+#serch{
+    margin-left: 15%;
+    width: 32vw;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+ 
+input{
+    height: 40px;  
+    position: relative;
+    clear: both;
+    width: 20vw;
+    margin: 0;
+    border: #4b4b4b 2px groove;
+    border-right:0;
+    padding: 0;
+    
+}
+ 
+button{
+    
+    height: 44px;
+    position: relative;
+    width: 5vw;
+    border: #4b4b4b 2px groove;
+    border-left: 0;
+    background-color: #464646;
+    color:white;
+    padding: 0;
+    left: 0;
+    
+}
+ 
+button:hover{
+    background-color: #3b3b3b;
+    color: #b13d3d
+}
+
+#lupa{
+    height: 25px;
+}
+
+#login{
+    margin-top: 23.5px;
+    color: #ffffff;
+    font-size: 100%;
+    padding-left: 10vw;
+}
+
+.login{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 20px; 
+}
+
+.sign{
+    
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.sign:hover{
+    color: #c70f0f;
+    text-decoration: none;
+}
+
+.login:hover{
+    color: #c70f0f;
+    text-decoration: none;
+}
+
+#menu{
+    padding-left: 80px; 
+    padding-right: 5px;
+    font-size: 45px;
+    margin-top: 10px;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-top: 6.5px
+}
+
+
+.menu-content{
+    display: none;
+    position: fixed;
+    background-color: #3b3b3b;
+    right: 0;
+    min-width: 160px;
+    box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    font-size: 50%;     
+}
+
+.menu-content a{
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+#menu:hover{
+    color: #c70f0f;
+}
+
+#menu:hover .menu-content {
+    display: block;
+                
+}
+
+.menu-content a:hover{
+    background-color: #464646;
+    color: #c70f0f;
+}
+
+#myslider { 
+     width:100vw;
+     height: 40vh; 
+    position: static; 
+     top:65px;
+     left: 0; 
+     z-index: 0;
+}
+ 
+#myslider img{
+    width:100vw;  
+    top: 50%; 
+    transform: translate(0, -50%)
+}
