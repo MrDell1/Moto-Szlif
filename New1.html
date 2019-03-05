@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>LDautomotive</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="src/api/git.d.ts">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="new1.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
@@ -31,21 +32,65 @@
             </div>
         </li>
 </ul>
+<div id="container">
+    <div id="myslider">
+           <img src="http://placekitten.com/g/612/612"/>
+           <img src="https://unsplash.it/612/612"/>
+           <img src="https://unsplash.it/612/612?random=1"/>
+           <img src="https://unsplash.it/612/612?random=2"/>
+    </div>
 
-<div id="myslider">
-        <img src="http://placekitten.com/g/612/612"/>
-        <img src="https://unsplash.it/612/612"/>
-        <img src="https://unsplash.it/612/612?random=1"/>
-        <img src="https://unsplash.it/612/612?random=2"/>
-</div><br>
-<div id="border"></div>
+    <div id="border"></div>
+   
+ <ul id="photo-container">
+    <li id="new"> 
+        <img class="new" src="New.png" >
+        <div id="centered" class="text"><a href="">Nowości</a></div>        
+   </li>
+    <li id="famous">
+        <img  class="famous" src="http://ldautomotive.pl/img/cms/CAMS%20GT%20LOGO-2.jpg" >
+        <div id="centered" class="text"><a href="">Popularne</a></div>
+    </li>
+    <li id="sale">
+        <img  class="sale" src="https://ldautomotive.pl/modules/themeconfigurator/img/f6e6f8c4427ff3f2bca87d3265eb2c7a95d06e48_slider-reklamowy-rabat-dla-firm-b.jpg">
+        <div id="centered" class="text"><a href="">Promocje</a></div>
+    </li>
+ </ul>
+ <div id="mission">
+     <div class="mission"><br><br>
+    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </div>
+ </div>
+<div id="footer">
+    <div id="links">
+        <h>Lorem ipsum</h>
+        <hr>
+        <br><br>
+        <a href="">Kategorie</a><br><br>
+        <a href="">Informacje</a><br><br>
+        <a href="">Producenci</a><br><br>
+        <a href="">Promocje</a><br><br>
+        <a href="">Kontakt</a><br><br>
+    </div>
+    <div id="newsletter">
+        <h>Newsletter</h>
+        <hr>
+        <br><br>
+        <ul class="newsletter">
+            <p1>Imię</p1><br>
+            <li id="name"><input type="text" placeholder="Imię"></li><br><br>
+            <p2>E-mail</p2><br>
+            <li id="email"><input type="email" placeholder="E-mail"></li>
+        </ul>
+    </div>
+</div>
 
 
 
-
+</div>
 </body>
-<script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js"></script>
-<script>
+<script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js">
+
   var imgSlider = simpleslider.getSlider({
     container: document.getElementById('myslider'),
     prop: 'left',
