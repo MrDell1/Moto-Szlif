@@ -13,6 +13,9 @@
 body{
     background-color: #464646;
     margin: 0;
+    height: 100%!important;
+    width: 100%!important;
+    max-width: 100%!important;
 }
 
 #nav{
@@ -165,16 +168,31 @@ button:hover{
 }
 
 #myslider { 
-     width:100vw;
-     height: 40vh; 
-    position: static; 
-     top:65px;
-     left: 0; 
-     z-index: 0;
+    width:100vw;
+    height: 40vh; 
+    position: absolute; 
+    top:65px;
+    left: 0; 
+    z-index: -1;
+    clear: both;
 }
  
 #myslider img{
     width:100vw;  
     top: 50%; 
-    transform: translate(0, -50%)
+    transform: translate(0, -50%);
+    
+}
+
+#mySlider::after{
+    clear: both;
+    content: "";
+    display: table;
+ 
+}
+#border{
+    position: absolute;
+    
+    width: 100vw;
+    border-bottom: 10px solid #c70f0f;
 }
