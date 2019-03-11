@@ -210,13 +210,13 @@ button:hover{
 }
 
 #new{
-    width: 33.29%;
+    width: 33.2%;
     position: relative;
     border-bottom: #3b3b3b outset 5px;
 }
 
 #famous{
-    width: 33.29%;
+    width: 33.2%;
     position: relative;
     margin-left: 1px;
     margin-right: 1px;
@@ -224,7 +224,7 @@ button:hover{
 }
 
 #sale{
-    width: 33.29%;
+    width: 33.2%;
     position: relative;
     border-bottom: #3b3b3b outset 5px;
 }
