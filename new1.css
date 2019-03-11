@@ -34,7 +34,12 @@ body{
     background-color: aquamarine;
     margin: 0;
 }
- 
+
+.logo{
+    width: 307px;
+    height: 100%;
+}
+
 #serch{
     margin-left: 15%;
     width: 32vw;
