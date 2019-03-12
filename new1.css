@@ -4,6 +4,7 @@ body{
     height: 100%!important;
     width: 100%!important;
     max-width: 100%!important;
+    overflow-x: hidden!important;
 }
 
 #nav{
@@ -214,7 +215,7 @@ button:hover{
 }
 
 #famous{
-    width: 33.29%;
+    width: 33.2%;
     position: relative;
     margin-left: 1px;
     margin-right: 1px;
@@ -222,7 +223,7 @@ button:hover{
 }
 
 #sale{
-    width: 33.29%;
+    width: 33.2%;
     position: relative;
     border-bottom: #3b3b3b outset 5px;
 }
@@ -313,6 +314,80 @@ button:hover{
     text-shadow: 0 0 1px black;
     margin: 0;
     
+}
+
+.mission p{
+    margin-top:0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#footer{
+    width: 100vw;
+    height: 600px;
+    background-color: #3b3b3b;
+    
+}
+
+#links{
+    position: absolute;
+    width: 25vw;
+    height: 450px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family: 'Exo 2', sans-serif;
+    color: #c70f0f;
+    text-align: left;
+    text-shadow: 0 0 1px black;
+    float: left;
+}
+
+#links h{
+    font-size: 2.5vw;
+}
+
+#links hr{
+    border-color: #c70f0f;
+    background-color: #c70f0f ;/*Opera i Firefox*/
+    color:#c70f0f; /*IE*/
+}
+
+#links a{
+    font-size: 2vw;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    color: #c70f0f;
+    text-shadow: 0 0 1px black;
+}
+
+#newsletter{
+    float: right;
+    width: 25vw;
+    height: 450px;
+    padding: 10px;
+    margin-right: 10%;
+    margin-top: 5%;
+    font-family: 'Exo 2', sans-serif;
+    color: #c70f0f;
+    text-align: left;
+    text-shadow: 0 0 1px black;
+    
+}
+
+#newsletter h{
+    font-size: 2.5vw;
+}
+
+#newsletter hr{
+    border-color: #c70f0f;
+    background-color: #c70f0f ;/*Opera i Firefox*/
+    color:#c70f0f; /*IE*/
+}
+
+.newsletter{
+    list-style-type:none;
+    padding: 0;
 }
 
 .mission p{
