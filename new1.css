@@ -13,6 +13,7 @@ body{
     margin: 0;
     padding: 0;
     position: fixed;
+    z-index: 6345;
  
 }
  
@@ -32,6 +33,11 @@ body{
     height: 100%;
     background-color: aquamarine;
     margin: 0;
+}
+
+.logo{
+    width: 307px;
+    height: 100%;
 }
  
 #serch{
@@ -83,13 +89,13 @@ button:hover{
     margin-top: 23.5px;
     color: #ffffff;
     font-size: 100%;
-    padding-left: 10vw;
+    padding-left: 15vw;
 }
 
 .login{
     color: #ffffff;
     text-decoration: none;
-    padding-left: 20px; 
+    padding-left: 50px; 
 }
 
 .sign{
@@ -109,10 +115,10 @@ button:hover{
 }
 
 #menu{
-    padding-left: 80px; 
-    padding-right: 5px;
+    padding-left: 150px; 
+    padding-right: 0px;
     font-size: 45px;
-    margin-top: 10px;
+    
     color: #ffffff;
     position: relative;
     display: inline-block;
@@ -155,11 +161,17 @@ button:hover{
     color: #c70f0f;
 }
 
+#container{
+    position: relative;
+    top: 65px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
 #myslider { 
     width:100vw;
-    height: 40vh; 
-    position: absolute; 
-    top:65px;
+    height: 40vh;
     left: 0; 
     z-index: -1;
     clear: both;
@@ -169,18 +181,211 @@ button:hover{
     width:100vw;  
     top: 50%; 
     transform: translate(0, -50%);
-    
 }
 
 #mySlider::after{
     clear: both;
     content: "";
-    display: table;
+  
  
 }
 #border{
-    position: absolute;
-    
+    position: relative;
     width: 100vw;
     border-bottom: 10px solid #c70f0f;
+}
+
+#photo-container li{
+    float: left;
+    list-style-type:none;
+}
+
+#photo-container{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+   
+}
+
+#new{
+    width: 33.29%;
+    position: relative;
+    border-bottom: #3b3b3b outset 5px;
+}
+
+#famous{
+    width: 33.29%;
+    position: relative;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-bottom: #3b3b3b outset 5px;
+}
+
+#sale{
+    width: 33.29%;
+    position: relative;
+    border-bottom: #3b3b3b outset 5px;
+}
+
+#photo-container img{
+    width: 100%;
+    
+}
+
+#centered{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-size: 3vw;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    font-family: 'Exo 2', sans-serif;
+    opacity: 0;
+}
+
+.text a{
+    text-decoration: none;
+    color: #c70f0f;
+    
+}
+
+#new:hover  {
+    border-bottom: #dd2828 outset 5px;
+}
+
+#new:hover img{
+    opacity: 0.2;
+}
+
+#new:hover #centered{
+    opacity: 1;
+}
+
+#famous:hover  {
+    border-bottom: #dd2828 outset 5px;
+}
+
+#famous:hover img{
+    opacity: 0.2;
+}
+
+#famous:hover #centered{
+    opacity: 1;
+}
+
+#sale:hover  {
+    border-bottom: #dd2828 outset 5px;
+}
+
+#sale:hover img{
+    opacity: 0.2;
+}
+
+#sale:hover #centered{
+    opacity: 1;
+}
+
+#photo-container::after{
+    clear: both;
+    content: "";
+    display: table;
+ 
+}
+
+#mission{
+    position: relative;
+    margin: 0;
+    width: 100vw;
+    height: 500px;
+    background-image: url(mission.png) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.mission{
+    width: 100vw;
+    font-size: 2vw;
+    font-family: 'Exo 2', sans-serif;
+    color: #c70f0f;
+    text-align: center;
+    text-shadow: 0 0 1px black;
+    margin: 0;
+    
+}
+
+.mission p{
+    margin-top:0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#footer{
+    width: 100vw;
+    height: 600px;
+    background-color: #3b3b3b;
+    
+}
+
+#links{
+    position: absolute;
+    width: 25vw;
+    height: 450px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family: 'Exo 2', sans-serif;
+    color: #c70f0f;
+    text-align: left;
+    text-shadow: 0 0 1px black;
+    float: left;
+}
+
+#links h{
+    font-size: 2.5vw;
+}
+
+#links hr{
+    border-color: #c70f0f;
+    background-color: #c70f0f ;/*Opera i Firefox*/
+    color:#c70f0f; /*IE*/
+}
+
+#links a{
+    font-size: 2vw;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    color: #c70f0f;
+    text-shadow: 0 0 1px black;
+}
+
+#newsletter{
+    float: right;
+    width: 25vw;
+    height: 450px;
+    padding: 10px;
+    margin-right: 10%;
+    margin-top: 5%;
+    font-family: 'Exo 2', sans-serif;
+    color: #c70f0f;
+    text-align: left;
+    text-shadow: 0 0 1px black;
+    
+}
+
+#newsletter h{
+    font-size: 2.5vw;
+}
+
+#newsletter hr{
+    border-color: #c70f0f;
+    background-color: #c70f0f ;/*Opera i Firefox*/
+    color:#c70f0f; /*IE*/
+}
+
+.newsletter{
+    list-style-type:none;
+    padding: 0;
 }
