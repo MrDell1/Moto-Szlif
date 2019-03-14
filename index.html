@@ -6,6 +6,7 @@
     <title>MOTO-SZLIF</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="src/api/git.d.ts">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="new1.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
@@ -16,15 +17,16 @@
             <!--<img class="logo" src="https://images.pexels.com/photos/1337384/pexels-photo-1337384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">--></li>
          <li id="serch">
              <ul>
-                <li><a href="">O firmie</a></li>
-                <li><a href="">Oferta</a></li>
-                <li><a href="">Usługi</a></li>
-                <li><a href="">Galeria</a></li>
+                <li><a class="nav-content" href="">O firmie</a></li>
+                <li><a class="nav-content" href="">Oferta</a></li>
+                <li><a class="nav-content" href="">Usługi</a></li>
+                <li><a class="nav-content" href="">Galeria</a></li>
             </ul>
         </li>
         <li id="menu">
-            <span> <i class="fas fa-bars"></i> </span>
-            <div class="menu-content ">
+            <span id="open" onclick="otwieracz()"> <i  class="fas fa-bars"></i></span>
+            <span id="close" onclick="zamykacz()"> <i  class="fas fa-close"></i></span>
+            <div id="menu-content">
                 <a href="">Kategorie</a>
                 <a href="">Informacje</a>
                 <a href="">Producenci</a>
@@ -200,5 +202,20 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function otwieracz(){
+document.getElementById("open").style.visibility = 'hidden';
+document.getElementById("close").style.visibility = 'visible';
+document.getElementById("menu-content").style.visibility = 'visible';
+}
+
+function zamykacz(){
+document.getElementById("open").style.visibility = 'visible';
+document.getElementById("close").style.visibility = 'hidden';
+document.getElementById("menu-content").style.visibility = 'hidden';
+}
+
 </script>
 </html>

@@ -64,7 +64,8 @@ sup{
     
     height: 100%;
     width: 60vw;
-    float: left;
+    float: right;
+    margin-right: 15%;
 }
 
 #serch ul{
@@ -90,12 +91,14 @@ sup{
 
 #serch a{
     text-decoration: none;
-    color: #c70f0f;
-    
     width: 100%;
     position: relative;
     align-items: center;
     justify-content: center;
+}
+
+.nav-content{
+    color: #c70f0f;
 }
 
 #serch a::before{
@@ -115,10 +118,6 @@ sup{
     color: #3801ff;
 }
 
-#serch a:hover{
-    
-}
-
 #menu{
     display: none;
     padding-left: 10%; 
@@ -131,39 +130,39 @@ sup{
     margin-top: 6.5px
 }
 
+#close{
+    visibility: hidden;
+}
 
-.menu-content{
-    display: none;
+#menu-content{
+    visibility: hidden;
     position: fixed;
-    background-color: #3b3b3b;
-    right: 0;
-    min-width: 160px;
+    background-color: #3801ff;
+    right: 0;;
+    width: 100%;
     box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
-    font-size: 50%;     
+    font-size: 42px;     
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0 0 1px black;
+    animation-delay: 0.5s;
 }
 
-.menu-content a{
-    color: #ffffff;
-    padding: 12px 16px;
+#menu-content a{
+    color: #c70f0f;
+    padding: 20px 16px;
     text-decoration: none;
     display: block;
-    
+    width: 100%;    
+
 }
 
-#menu:hover{
-    color: #c70f0f;
-}
-
-#menu:hover .menu-content {
-    display: block;
-                
-}
-
-.menu-content a:hover{
-    background-color: #464646;
-    color: #c70f0f;
+#menu-content a:hover{
+    background-color: #c70f0f;
+    color: #3801ff;
+    transition: 0.5s;
 }
 
 #container{
@@ -374,12 +373,13 @@ sup{
 }
 
 #newsletter{
+    position: relative;
     float: right;
     width: 25vw;
-    height: 450px;
+    height: 100%;
     padding: 0;
     margin-right: 10%;
-    margin-top: 5%;
+    margin-top: 2%;
     font-family: 'Exo 2', sans-serif;
     color: #c70f0f;
     text-align: left;
@@ -427,6 +427,7 @@ sup{
     width: 24%;
     max-width: 1200px;
     padding-left: 2%;
+
   }
 
 #modal-content img{
@@ -532,11 +533,15 @@ img.hover-shadow {
   }
 
 
-@media only screen 
-and (min-device-width : 1000px) 
-and (max-device-width : 1227px) 
+@media only screen  
+and (max-device-width : 1270px) 
+and (orientation : landscape)
  {
-    
+    #logo{
+        left: 36%;
+        position: absolute;
+    }
+
     #serch{
         display: none;
     }
