@@ -54,7 +54,7 @@
         <div id="centered" class="text"><a href="">Usługi</a></div>
     </li>
     <li id="sale">
-        <img  class="sale" src="https://images.pexels.com/photos/191738/pexels-photo-191738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" height="100%">
+        <img  class="sale" src="https://images.pexels.com/photos/191738/pexels-photo-191738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
         <div id="centered" class="text"><a href="">Galeria</a></div>
     </li>
  </ul>
@@ -75,16 +75,73 @@
         <a href="">Kontakt</a><br><br>
     </div>
     <div id="newsletter">
-        <h>Newsletter</h>
-        <hr>
-        <br><br>
-        <ul class="newsletter">
-            <p1>Imię</p1><br>
-            <li id="name"><input type="text" placeholder="Imię"></li><br><br>
-            <p2>E-mail</p2><br>
-            <li id="email"><input type="email" placeholder="E-mail"></li>
+        <ul>
+            <li><img src="http://www.moto-szlif.pl/images/marwojlodz.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></li>
+            <li><img src="http://www.moto-szlif.pl/images/przedfairplay.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></li>
+            <li><img src="http://www.moto-szlif.pl/images/CP.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></li>
+            <li><img src="http://www.moto-szlif.pl/images/KIG.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></li>
+            <li><img src="http://www.moto-szlif.pl/images/dyplom.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></li>
+            <li><img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></li>
         </ul>
     </div>
+    <div id="Modal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div id="modal-content">
+            <div class="Slide">
+                <div class="numbertext">1 / 6</div>
+                <img src="http://www.moto-szlif.pl/images/marwojlodz.png" >
+            </div>
+            <div class="Slide">
+                <div class="numbertext">2 / 6</div>
+                <img src="http://www.moto-szlif.pl/images/przedfairplay.png" >
+            </div>
+            <div class="Slide">
+                <div class="numbertext">3 / 6</div>
+                <img src="http://www.moto-szlif.pl/images/CP.jpg" >
+            </div>
+            <div class="Slide">
+                <div class="numbertext">4 / 6</div>
+                <img src="http://www.moto-szlif.pl/images/KIG.jpg" >
+            </div>
+            <div class="Slide">
+                <div class="numbertext">5 / 6</div>
+                <img src="http://www.moto-szlif.pl/images/dyplom.jpg" >
+            </div>
+            <div class="Slide">
+                <div class="numbertext">6 / 6</div>
+                <img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" >
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+        <div>
+            <div class="column">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/marwojlodz.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/CP.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/przedfairplay.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/KIG.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/dyplom.jpg" style="width:100%" onclick="currentSlide(5)" alt="Northern Lights">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/SIA-2004.jpg" style="width:100%" onclick="currentSlide(6)" alt="Northern Lights">
+              </div>
+        </div>
+        
+        </div>
+    </div>
+
 </div>
 
 
@@ -104,5 +161,44 @@
     delay: 2,
     duration: 1
   });
+
+</script>
+<script>
+  function openModal() {
+  document.getElementById('Modal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('Modal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("Slide");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 </script>
 </html>
