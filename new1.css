@@ -26,6 +26,7 @@ body{
 }
 #nav li{
     list-style-type:none;
+    height: 65px;
 }
  
 #logo{
@@ -60,29 +61,62 @@ sup{
 }
  
 #serch{
-    margin-left: 15%;
+    
     height: 100%;
     width: 60vw;
     float: left;
 }
 
+#serch ul{
+    list-style-type:none;
+    display:flex;
+    justify-content: center;
+    padding: 0;
+    height: 100%;
+}
+
 #serch li{
     position: relative;
     float: left;
-    margin-top: 1.5%;
     font-size: 30px;
     margin-right: 10%;
     font-family: 'Exo 2', sans-serif;
     text-shadow: 0 0 1px black;
+    text-align: center;
+    display: list-item;
+    padding: 10px 10px 0 10px;
+    height: 55px;
 }
 
 #serch a{
     text-decoration: none;
     color: #c70f0f;
+    
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#serch a::before{
+    content: "";
+    display: table;
+ 
+}
+
+#serch a::after{
+    content: "";
+    display: table;
+ 
+}
+
+#serch li:hover, li:hover>a{
+    background-color: #c70f0f;
+    color: #3801ff;
 }
 
 #serch a:hover{
-    color: #a30d0d
+    
 }
 
 #menu{
@@ -500,30 +534,20 @@ img.hover-shadow {
 
 @media only screen 
 and (min-device-width : 1000px) 
-and (max-device-width : 1185px) 
+and (max-device-width : 1227px) 
  {
-
-    #nav{
-        height: 100px;
-    }
-
+    
     #serch{
-        height: 100px;
-        margin-left: 10%;
-    }
-
-    #login{
-        margin-top: 41px;
+        display: none;
     }
 
     #menu{
         padding-left:5%; 
-        margin-top:27.5px;
+       
+        display: block;
     }
 
-    #container{
-        top: 100px;
-    }
+
 
     .mission p{
         padding-top: 130px;
@@ -532,4 +556,10 @@ and (max-device-width : 1185px)
     #footer{
         height: 400px;
     }
+
+ 
+    
+
+
+
  }    
