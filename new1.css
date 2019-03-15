@@ -8,9 +8,11 @@ body{
 }
 
 #nav{
+    border-bottom: #3801ff outset 5px ;
+    border-top: #3801ff outset 3px;
     width: 100%;
     height: 65px;
-    background-color: #3801ff;
+    background-color: #cecdcd;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -82,11 +84,12 @@ sup{
     font-size: 30px;
     margin-right: 10%;
     font-family: 'Exo 2', sans-serif;
-    text-shadow: 0 0 1px black;
+    text-shadow: 0 0 1px #000000;
     text-align: center;
     display: list-item;
     padding: 10px 10px 0 10px;
     height: 55px;
+    transition: 0.1s;
 }
 
 #serch a{
@@ -95,6 +98,7 @@ sup{
     position: relative;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
 }
 
 .nav-content{
@@ -114,8 +118,10 @@ sup{
 }
 
 #serch li:hover, li:hover>a{
-    background-color: #c70f0f;
-    color: #3801ff;
+    background-color: #471ae7;
+    color: #c70f0f;
+    
+    font-size: 40px;
 }
 
 #menu{
@@ -258,38 +264,48 @@ sup{
 
 #new:hover  {
     border-bottom: #3801ff outset 5px;
+    transition: 0.3s;
 }
 
 #new:hover img{
     opacity: 0.2;
+    transition: 0.3s;
 }
 
 #new:hover #centered{
     opacity: 1;
+    transition: 0.3s;
 }
 
 #famous:hover  {
     border-bottom: #3801ff outset 5px;
+    transition: 0.3s;
 }
 
 #famous:hover img{
     opacity: 0.2;
+    transition: 0.3s;
+    
 }
 
 #famous:hover #centered{
     opacity: 1;
+    transition: 0.3s;
 }
 
 #sale:hover  {
     border-bottom: #3801ff outset 5px;
+    transition: 0.3s;
 }
 
 #sale:hover img{
     opacity: 0.2;
+    transition: 0.3s;
 }
 
 #sale:hover #centered{
     opacity: 1;
+    transition: 0.3s;
 }
 
 #photo-container::after{
@@ -331,7 +347,7 @@ sup{
 
 #footer{
     width: 100vw;
-    height: 600px;
+    height: 700px;
     background-color: #3b3b3b;
     
 }
@@ -375,11 +391,11 @@ sup{
 #newsletter{
     position: relative;
     float: right;
-    width: 25vw;
-    height: 100%;
+    width: 30vw;
+    height: 95%;
     padding: 0;
-    margin-right: 10%;
     margin-top: 2%;
+    margin-right: 10%;
     font-family: 'Exo 2', sans-serif;
     color: #c70f0f;
     text-align: left;
@@ -392,12 +408,20 @@ sup{
     position: relative;
     list-style-type:none;
     padding: 0;
+    left: 0;
+    
 }
 
 #newsletter img{
     width: 6.5vw;
     height: 10vw;
     padding: 5px;
+}
+
+#newsletter img:hover {
+    width: 8vw;
+    height: 11.5vw;
+    margin: 2%;
 }
 
 #newsletter::after{
