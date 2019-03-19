@@ -17,6 +17,7 @@ body{
     padding: 0;
     position: fixed;
     z-index: 6345;
+    display: none;
  
 }
  
@@ -98,7 +99,7 @@ sup{
     position: relative;
     align-items: center;
     justify-content: center;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 .nav-content{
@@ -120,7 +121,6 @@ sup{
 #serch li:hover, li:hover>a{
     background-color: #471ae7;
     color: #c70f0f;
-    
     font-size: 40px;
 }
 
@@ -173,7 +173,6 @@ sup{
 
 #container{
     position: absolute;
-    top: 65px;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -181,16 +180,19 @@ sup{
 
 #myslider { 
     width:100vw;
-    height: 40vh;
+    height: 30vh;
     left: 0; 
     z-index: -1;
     position: relative;
-}
- 
-#myslider img{
-    width:100vw;
-    height: 40vh;  
+    overflow: hidden;
     
+}
+
+#myslider img{
+    max-width: 100%;
+    height: auto;
+    top: -50%;
+    object-fit: contain;
 }
 
 #mySlider::after{
@@ -419,9 +421,7 @@ sup{
 }
 
 #newsletter img:hover {
-    width: 8vw;
-    height: 11.5vw;
-    margin: 2%;
+    opacity: 0.5;
 }
 
 #newsletter::after{

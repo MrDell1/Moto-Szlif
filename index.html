@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="new1.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 </head>
-<body>
+<body onload="Slider();">
 <ul id="nav">
         <li id="logo"><h1>MOTO-SZLIF <sup>&reg</sup> </h1>
             <!--<img class="logo" src="https://images.pexels.com/photos/1337384/pexels-photo-1337384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">--></li>
@@ -38,10 +38,6 @@
 </ul>
 <div id="container">
     <div id="myslider">
-           <img src="https://images.pexels.com/photos/38920/pexels-photo-38920.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
-           <img src="https://images.pexels.com/photos/190539/pexels-photo-190539.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"/>
-           <img src="https://unsplash.it/612/612?random=1"/>
-           <img src="https://unsplash.it/612/612?random=2"/>
     </div>
 
     <div id="border"></div>
@@ -150,7 +146,7 @@
 
 </div>
 </body>
-<script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js">
+<!--<script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js">
 </script>
 <script>
   var imgSlider = simpleslider.getSlider({
@@ -164,7 +160,7 @@
     duration: 1
   });
 
-</script>
+</script>-->
 <script>
   function openModal() {
   document.getElementById('Modal').style.display = "block";
@@ -218,4 +214,18 @@ document.getElementById("menu-content").style.visibility = 'hidden';
 }
 
 </script>
+<script>
+  var numer = Math.floor(Math.random()*4)+1;
+
+  function Slider(){
+    numer ++; if(numer>4) numer=1;
+    
+    var plik = "<img src=\"photo" + numer + ".jpeg\"/>";
+
+    document.getElementById("myslider").innerHTML = plik
+    setTimeout("Slider()",5000)
+  }
+
+</script>
+
 </html>
