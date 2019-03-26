@@ -823,6 +823,14 @@ and (max-device-width : 1480px) {
 }
 
 @media screen  
+and (max-device-width : 1290px) {
+    #zdanie{
+        font-size: 30px;
+    }
+}
+
+
+@media screen  
 and (max-device-width : 1270px) 
 
  {
