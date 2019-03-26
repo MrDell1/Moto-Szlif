@@ -12,12 +12,12 @@ body{
     border-top: #3801ff outset 3px;
     width: 100%;
     height: 65px;
-    background-color: #cecdcd;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     position: fixed;
     z-index: 6345;
-    display: none;
+    
  
 }
  
@@ -179,20 +179,46 @@ sup{
 }
 
 #myslider { 
-    width:100vw;
-    height: 30vh;
+    position: relative;
+    width:100%;
+    height: 40vh;
     left: 0; 
     z-index: -1;
-    position: relative;
+    top: 20px;
     overflow: hidden;
-    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+       
 }
 
 #myslider img{
-    max-width: 100%;
-    height: auto;
-    top: -50%;
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+}
+
+#dots{
+    position: relative;
+    width: 90px;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #3801ff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #c70f0f;
 }
 
 #mySlider::after{
@@ -202,7 +228,7 @@ sup{
  
 }
 #border{
-    position: relative;
+   
     width: 100vw;
     border-bottom: 10px solid #3801ff;
 }
@@ -218,7 +244,7 @@ sup{
     margin: 0;
     padding: 0;
     width: 100vw;
-   
+   z-index: 5;
 }
 
 #photo-container img{
@@ -322,10 +348,11 @@ sup{
     margin: 0;
     width: 100vw;
     height: 500px;
-    background-image: url(mission.png) ;
+    background-color: #a8a8a8;
+    /*background-image: url(mission.png) ;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     
 }
 
@@ -366,10 +393,12 @@ sup{
     text-align: left;
     text-shadow: 0 0 1px black;
     float: left;
+    
 }
 
 #links h{
     font-size: 2.5vw;
+    
 }
 
 #links hr{
@@ -384,6 +413,7 @@ sup{
     font-family: 'Exo 2', sans-serif;
     color: #c70f0f;
     text-shadow: 0 0 1px black;
+    transition: 0.3s;
 }
 #links a:hover{
     color: #3801ff
@@ -438,6 +468,7 @@ sup{
     left: 0;
     top: 0;
     width: 100%;
+    max-height: 100%;
     height: 100%;
     overflow: auto;
     background-color: #464646;
@@ -455,7 +486,7 @@ sup{
   }
 
 #modal-content img{
-      width: 100%;
+      max-width: 100%;
       
   }
 

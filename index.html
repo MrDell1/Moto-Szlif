@@ -37,14 +37,18 @@
 
 </ul>
 <div id="container">
-    <div id="myslider">
-    </div>
-
+    <div id="myslider"></div>
+    <div id="dots">
+        <span onclick="slide(1)" class="dot"></span>
+        <span onclick="slide(2)" class="dot"></span>
+        <span onclick="slide(3)" class="dot"></span>
+        <span onclick="slide(4)" class="dot"></span>
+     </div>
     <div id="border"></div>
    
  <ul id="photo-container">
     <li id="new"> 
-        <img class="new" src="https://images.pexels.com/photos/1166648/pexels-photo-1166648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" >
+        <img class="new" src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" >
         <div id="centered" class="text"><a href="">Oferta</a></div>        
    </li>
     <li id="famous">
@@ -56,6 +60,7 @@
         <div id="centered" class="text"><a href="">Galeria</a></div>
     </li>
  </ul>
+ <div style="clear:both"></div>
  <div id="mission">
      <div class="mission"><br><br>
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
@@ -216,14 +221,38 @@ document.getElementById("menu-content").style.visibility = 'hidden';
 </script>
 <script>
   var numer = Math.floor(Math.random()*4)+1;
+  var timer1 = 0;
+  var timer2 = 0;
+
+  function slide(nrslajdu)
+  {
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+    numer = nrslajdu - 1;
+    schowaj();
+
+    setTimeout("Slider()", 500);
+  }
+
+  function schowaj()
+  {
+    $("#myslider").fadeOut(500);
+  }
+
 
   function Slider(){
-    numer ++; if(numer>4) numer=1;
+    numer ++; 
+
+    if(numer>4)
+     numer=1;
     
     var plik = "<img src=\"photo" + numer + ".jpeg\"/>";
 
-    document.getElementById("myslider").innerHTML = plik
-    setTimeout("Slider()",5000)
+    document.getElementById("myslider").innerHTML = plik;
+    $("#myslider").fadeIn(500);
+
+    timer1=setTimeout("Slider()",5000);
+    timer2=setTimeout("schowaj()",4500);
   }
 
 </script>
