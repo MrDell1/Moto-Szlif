@@ -829,7 +829,6 @@ and (max-device-width : 1290px) {
     }
 }
 
-
 @media screen  
 and (max-device-width : 1270px) 
 
@@ -859,9 +858,11 @@ and (max-device-width : 1270px)
         height: 500px;
     }
 
+ }  
  
-    
-
-
-
- }    
+ @media screen  
+and (max-device-width : 1110px) {
+    #zdanie{
+        font-size: 25px;
+    }
+}
