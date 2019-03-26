@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="new1.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 </head>
 <body onload="Slider();">
 <ul id="nav">
@@ -17,7 +18,7 @@
             <!--<img class="logo" src="https://images.pexels.com/photos/1337384/pexels-photo-1337384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">--></li>
          <li id="serch">
              <ul>
-                <li><a class="nav-content" href="">O firmie</a></li>
+                <li><a class="nav-content" href="ofirmie.html">O firmie</a></li>
                 <li><a class="nav-content" href="">Oferta</a></li>
                 <li><a class="nav-content" href="">Usługi</a></li>
                 <li><a class="nav-content" href="">Galeria</a></li>
@@ -68,16 +69,18 @@
  </div>
 <div id="footer">
     <div id="links">
-        <h>Lorem ipsum</h>
+        <h>Przydatne linki</h>
         <hr>
         <br><br>
-        <a href="">Kategorie</a><br><br>
-        <a href="">Informacje</a><br><br>
-        <a href="">Producenci</a><br><br>
-        <a href="">Promocje</a><br><br>
+        <a href="">O firmie</a><br><br>
+        <a href="">Oferta</a><br><br>
+        <a href="">Usługi</a><br><br>
+        <a href="">Galeria</a><br><br>
         <a href="">Kontakt</a><br><br>
     </div>
     <div id="newsletter">
+      <h>Nasze osiągnięcia</h>
+      <hr>
         <ul>
             <li><img src="http://www.moto-szlif.pl/images/marwojlodz.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></li>
             <li><img src="http://www.moto-szlif.pl/images/przedfairplay.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></li>
@@ -223,6 +226,15 @@ document.getElementById("menu-content").style.visibility = 'hidden';
   var numer = Math.floor(Math.random()*4)+1;
   var timer1 = 0;
   var timer2 = 0;
+  var zdania = new Array(4)
+  var x = 0;
+  var zd = 0;
+  {
+    zdania[1]="<div id=\"zdanie\" class=\"zdanie\">DLACZEGO MOTO-SZLIF?</div>";
+    zdania[2]="<div id=\"zdanie\" class=\"zdanie\">WIELOLETNIA TRADYCJA...</div>";
+    zdania[3]="<div id=\"zdanie\" class=\"zdanie\">PASJA I MIŁOŚĆ DO MOTORYZACJI...</div>";
+    zdania[4]="<div id=\"zdanie\" class=\"zdanie\">NOWECZESNE TECHNOLOGIE...</div>";
+  }
 
   function slide(nrslajdu)
   {
@@ -242,13 +254,16 @@ document.getElementById("menu-content").style.visibility = 'hidden';
 
   function Slider(){
     numer ++; 
+   
 
-    if(numer>4)
+    if(numer>4){
      numer=1;
-    
+    }
+    x = numer;
+    zdania[x];
     var plik = "<img src=\"photo" + numer + ".jpeg\"/>";
 
-    document.getElementById("myslider").innerHTML = plik;
+    document.getElementById("myslider").innerHTML = plik + zdania[x];    
     $("#myslider").fadeIn(500);
 
     timer1=setTimeout("Slider()",5000);

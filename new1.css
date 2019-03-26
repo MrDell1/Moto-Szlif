@@ -12,7 +12,7 @@ body{
     border-top: #3801ff outset 3px;
     width: 100%;
     height: 65px;
-    background-color: #ffffff;
+    background-color: #e7e7e7;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -41,16 +41,17 @@ body{
 }
 
 h1{
-    padding-top: 7px;
     width: 307px;
     margin: 0;
     color: #c70f0f;
-    font-size: 44px;
+    font-family: 'PT Serif', serif;
+    font-weight: BOLD;
+    font-size: 46px;
     text-shadow:
-    -1px -1px 0 #ffffff,  
-     1px -1px 0 #ffffff,
-     -1px 1px 0 #ffffff,
-      1px 1px 0 #ffffff;
+    -1px -1px 0 #e7e7e7,  
+     1px -1px 0 #e7e7e7,
+     -1px 1px 0 #e7e7e7,
+      1px 1px 0 #e7e7e7;
 }
 
 sup{
@@ -172,7 +173,7 @@ sup{
 }
 
 #container{
-    position: absolute;
+    
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -201,7 +202,7 @@ sup{
     position: relative;
     width: 90px;
     top: 18%;
-    left: 50%;
+    left: 49%;
     transform: translate(-50%, -50%);
     
 }
@@ -221,11 +222,24 @@ sup{
     background-color: #c70f0f;
 }
 
+#zdanie{
+    position: absolute;
+    z-index: 31;
+    top: 40%;
+    font-family: 'PT Serif', serif;
+    font-weight: 200;
+    text-shadow: 0 0 1px #000000;
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+    width: auto;
+    padding:0% 34%;
+}
+
 #mySlider::after{
     clear: both;
     content: "";
-  
- 
 }
 #border{
    
@@ -348,7 +362,7 @@ sup{
     margin: 0;
     width: 100vw;
     height: 500px;
-    background-color: #a8a8a8;
+    background-color: #e7e7e7;
     /*background-image: url(mission.png) ;
     background-position: center;
     background-repeat: no-repeat;
@@ -359,7 +373,7 @@ sup{
 .mission{
     width: 100vw;
     font-size: 2vw;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'PT Serif', serif;
     color: #c70f0f;
     text-align: center;
     text-shadow: 0 0 1px black;
@@ -421,18 +435,29 @@ sup{
 }
 
 #newsletter{
+    padding: 10px;
     position: relative;
     float: right;
     width: 30vw;
-    height: 95%;
-    padding: 0;
-    margin-top: 2%;
+    height: 75%;
+    margin-top: 5%;
     margin-right: 10%;
     font-family: 'Exo 2', sans-serif;
     color: #c70f0f;
     text-align: left;
     text-shadow: 0 0 1px black;
     
+    
+}
+#newsletter h{
+    font-size: 2.5vw;
+    
+}
+
+#newsletter hr{
+    border-color: #c70f0f;
+    background-color: #c70f0f ;/*Opera i Firefox*/
+    color:#c70f0f; /*IE*/
 }
 
 #newsletter li{
@@ -587,7 +612,203 @@ img.hover-shadow {
       width: 16%;
   }
 
+/*//////////////////////////////////////////////////////*/
+/*  OFIRMIE     */
 
+#boss{
+    position: absolute;
+    top: 73px;
+    list-style-type:none;
+    display: flex;
+    
+}
+
+#boss li{
+    float: left;
+    height: 25vw;
+}
+
+.first{    
+    float: left;
+    width: 25vw;
+    height: 25vw;
+    padding:3%;
+    
+}
+.first img{
+    max-width: 100%;
+    height: 25vw;    
+    border: #c70f0f solid 2px;
+}
+
+.text{
+    margin-top:10%;
+    float: left;
+    height: 25vw;
+    width: auto;
+    padding: 1%;
+    color: #e7e7e7;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0 0 1px #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+#szef{
+    position: absolute;
+    top: calc(73px + 30vw);
+    list-style-type:none;
+    display: flex;
+}
+
+#szef li{
+    float: left;
+    height: 25vw;
+}
+
+.sec{    
+    float: right;
+    width: 25vw;
+    height: 25vw;
+    padding:3%;
+    
+}
+.sec img{
+    max-width: 100%;
+    height: 25vw;    
+    border: #c70f0f solid 2px;
+}
+
+.dwa{
+    margin-top:10%;
+    float: right;
+    height: 25vw;
+    width: auto;
+    padding: 1%;
+    color: #e7e7e7;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0 0 1px #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+#kierownik{
+    position: absolute;
+    top: calc(73px + 60vw);
+    list-style-type:none;
+    display: flex;
+    
+}
+
+#kierownik li{
+    float: left;
+    height: 25vw;
+}
+
+.third{    
+    float: left;
+    width: 25vw;
+    height: 25vw;
+    padding:3%;
+    
+}
+.third img{
+    max-width: 100%;
+    height: 25vw;    
+    border: #c70f0f solid 2px;
+}
+
+.trzy{
+    margin-top:10%;
+    float: left;
+    height: 25vw;
+    width: auto;
+    padding: 1%;
+    color: #e7e7e7;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0 0 1px #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+#zastepca{
+    position: absolute;
+    top: calc(73px + 90vw);;
+    list-style-type:none;
+    display: flex;
+    
+}
+
+#zastepca li{
+    float: left;
+    height: 25vw;
+}
+.four{    
+    float: right;
+    width: 25vw;
+    height: 25vw;
+    padding:3%;
+    
+}
+.four img{
+    max-width: 100%;
+    height: 25vw;    
+    border: #c70f0f solid 2px;
+}
+
+.cztery{
+    margin-top:10%;
+    float: right;
+    height: 25vw;
+    width: auto;
+    padding: 1%;
+    color: #e7e7e7;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0 0 1px #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+#dzieciak{
+    position: absolute;
+    top: calc(73px + 120vw);
+    list-style-type:none;
+    display: flex;
+    
+}
+
+#dzieciak li{
+    float: left;
+    height: 25vw;
+}
+
+.fith{    
+    float: left;
+    width: 25vw;
+    height: 25vw;
+    padding:3%;
+    
+}
+.fith img{
+    max-width: 100%;
+    height: 25vw;    
+    border: #c70f0f solid 2px;
+}
+
+.piec{
+    margin-top:10%;
+    float: left;
+    height: 25vw;
+    width: auto;
+    padding: 1%;
+    color: #e7e7e7;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0 0 1px #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+  
 @media only screen  
 and (max-device-width : 1270px) 
 and (orientation : landscape)
