@@ -125,6 +125,8 @@ sup{
     font-size: 40px;
 }
 
+
+
 #menu{
     display: none;
     padding-left: 10%; 
@@ -258,7 +260,7 @@ sup{
     margin: 0;
     padding: 0;
     width: 100vw;
-   z-index: 5;
+    z-index: 5;
 }
 
 #photo-container img{
@@ -834,8 +836,14 @@ and (max-device-width : 1270px)
 
  {
     #logo{
-        left: 36%;
+        width: 100vw;
         position: absolute;
+       
+    }
+
+    h1{
+        width: 100%;
+        text-align: center;
     }
 
     #serch{
@@ -843,12 +851,9 @@ and (max-device-width : 1270px)
     }
 
     #menu{
-        padding-left:5%; 
-       
+        padding-left:5%;        
         display: block;
     }
-
-
 
     .mission p{
         padding-top: 130px;
@@ -864,5 +869,122 @@ and (max-device-width : 1270px)
 and (max-device-width : 1110px) {
     #zdanie{
         font-size: 25px;
+    }
+}
+
+@media screen  
+and (max-device-width : 925px) {
+    #zdanie{
+        font-size: 23px;
+    }
+}
+
+@media screen  
+and (max-device-width : 850px) {
+    #zdanie{
+        font-size: 20px;
+    }
+}
+
+@media screen  
+and (max-device-width : 737px) {
+    #zdanie{
+        font-size: 20px;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    .menu-respon{
+        top: 73px;
+        visibility: visible;
+        background-color: #3801ff;
+        right: 0;;
+        width: 100%;
+        padding: 12px 0px 12px 16px;
+        z-index: 1;
+        font-size: 30px;     
+        text-align: center;
+        font-family: 'Exo 2', sans-serif;
+        text-shadow: 0 0 1px black;
+        animation-delay: 0.5s;
+        float: right;
+        color: #ffffff;
+        position: relative;
+        margin-bottom: -20px;
+    }
+    
+    .menu-respon a{
+        color: #c70f0f;
+        padding: 20px 0px 20px 16px;
+        text-decoration: none;
+        display: block;
+        width: auto;    
+    
+    }
+    
+    .menu-respon a:hover{
+        background-color: #c70f0f;
+        color: #3801ff;
+        transition: 0.5s;
+    }
+
+    #mission p{
+        font-size: 25px;
+        padding-top: 30px;
+    }
+
+
+
+
+}
+
+@media screen  
+and (max-device-width : 500px){
+    #myslider img{
+        height: 100%;
+    }
+    #photo-container{
+        height: 60vw;
+    }
+
+    #photo-container img{
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #new{
+        width: 100%;
+       
+    }
+
+    #famous{
+        width: 100%;
+        
+    }
+
+    #sale{
+        width: 100%;
+       
+    }
+
+    #centered{
+        left: calc(50% - 22.03px);
+        top: 0;
+        margin-top: 8%;
+    }
+   
+    #mission p{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+}
+
+@media screen  
+and (max-device-width : 350px){
+    #mission p{
+        font-size: 18px;
+        padding-top: 20px;
     }
 }
