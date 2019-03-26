@@ -808,10 +808,23 @@ img.hover-shadow {
     font-size: 30px;
 }
 
-  
-@media only screen  
+@media screen  
+and (max-device-width : 1840px) {
+    #zdanie{
+        font-size: 40px;
+    }
+}
+
+@media screen  
+and (max-device-width : 1480px) {
+    #zdanie{
+        font-size: 35px;
+    }
+}
+
+@media screen  
 and (max-device-width : 1270px) 
-and (orientation : landscape)
+
  {
     #logo{
         left: 36%;
@@ -835,7 +848,7 @@ and (orientation : landscape)
     }
 
     #footer{
-        height: 400px;
+        height: 500px;
     }
 
  
