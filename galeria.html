@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="oferta.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 </head>
 <body>
@@ -39,62 +40,31 @@
 </ul>
 
 <div id="container">
-    <ul id="boss">
-        <li>
-            <div class="first">
-                <img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-            </div>
-        </li>
-        <li>
-            <div class="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
-        </li>
-    </ul>
-<div style="clear:both"></div>
-    <ul id="szef">
-        <li>
-            <div class="dwa"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
-        </li>        
-        <li>
-            <div class="sec">
-                <img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-            </div>
-        </li>
-
-    </ul>
-<div style="clear:both"></div>
-    <ul id="kierownik">
-            <li>
-            <div class="third">
-                <img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-            </div>
-        </li>
-        <li>
-            <div class="trzy">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
-        </li>
-    </ul> 
-<div style="clear:both"></div>    
-    <ul id="zastepca">
-            <li>
-                    <div class="cztery">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
-            </li>
-            <li>
-            <div class="four">
-                <img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-            </div>
-        </li>
-    </ul>
-<div style="clear:both"></div>       
-    <ul id="dzieciak">
-            <li>
-            <div class="fith">
-                <img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-            </div>
-        </li>
-        <li>
-            <div class="piec">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
-        </li>
-    </ul>            
+    <div id="custom-events">
+        <ul>
+         <li>
+            <a href="photo1.jpeg">
+              <img src="photo1.jpeg" />
+          </a>
+         </li>
+         <li>
+           <a href="photo2.jpeg">
+               <img src="photo2.jpeg" />
+            </a>
+         </li>
+        </ul>
+    </div> 
+              
 </div>
 
 </body>
+<script>
+var $customEvents = $('#custom-events');
+$customEvents.lightGallery();
+ 
+var colours = ['#21171A', '#81575E', '#9C5043', '#8F655D'];
+$customEvents.on('onBeforeSlide.lg', function(event, prevIndex, index){
+    $('.lg-outer').css('background-color', colours[index])
+});
+</script>
 </html>
