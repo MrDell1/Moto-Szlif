@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="new1.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body onload="Slider();">
 <div id="main">
@@ -31,7 +32,8 @@
     </div>
   </div>
 <div id="nav">
-  <ul id="tab">
+  <div id="tab">
+  <ul >
          <li id="serch">
              <ul>
                 <li><a class="nav-content" href="ofirmie.html">O firmie</a></li>
@@ -53,6 +55,7 @@
         </li>
 
 </ul>
+</div>
 </div>
 </div>
 <div id="container">
@@ -132,16 +135,20 @@
     </div>
   </div>
 
-
+</div>
+<div id="teraz">
+    <div id="dzwon">
+      <div id="zamow"><span>NIE CZEKAJ, TWÓJ SILNIK SAM SIĘ NIE NAPRAWI, ZADZWOŃ I UMÓW SIĘ JUŻ DZIŚ!<br><p>123456789</p></span></div>
+    </div>
 </div>
 
 
 
 <div id="footer">
+  <div id="stopka">
     <div id="links">
         <h>Przydatne linki</h>
         <hr>
-        <br><br>
         <a href="ofirmie.html">O firmie</a><br><br>
         <a href="oferta.html">Oferta</a><br><br>
         <a href="uslugi.html">Usługi</a><br><br>
@@ -151,6 +158,7 @@
     <div id="newsletter">
       <h>Nasze osiągnięcia</h>
       <hr>
+      <div id="osi">
         <ul>
             <li><img src="http://www.moto-szlif.pl/images/marwojlodz.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></li>
             <li><img src="http://www.moto-szlif.pl/images/przedfairplay.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></li>
@@ -159,31 +167,33 @@
             <li><img src="http://www.moto-szlif.pl/images/dyplom.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></li>
             <li><img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></li>
         </ul>
+      </div>
     </div>
+  </div>
     <div id="Modal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div id="modal-content">
-            <div class="Slide">
+            <div class="slide">
                 <div class="numbertext">1 / 6</div>
                 <img src="http://www.moto-szlif.pl/images/marwojlodz.png" >
             </div>
-            <div class="Slide">
+            <div class="slide">
                 <div class="numbertext">2 / 6</div>
                 <img src="http://www.moto-szlif.pl/images/przedfairplay.png" >
             </div>
-            <div class="Slide">
+            <div class="slide">
                 <div class="numbertext">3 / 6</div>
                 <img src="http://www.moto-szlif.pl/images/CP.jpg" >
             </div>
-            <div class="Slide">
+            <div class="slide">
                 <div class="numbertext">4 / 6</div>
                 <img src="http://www.moto-szlif.pl/images/KIG.jpg" >
             </div>
-            <div class="Slide">
+            <div class="slide">
                 <div class="numbertext">5 / 6</div>
                 <img src="http://www.moto-szlif.pl/images/dyplom.jpg" >
             </div>
-            <div class="Slide">
+            <div class="slide">
                 <div class="numbertext">6 / 6</div>
                 <img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" >
             </div>
@@ -217,10 +227,8 @@
         
         </div>
     </div>
-
+  
 </div>
-
-
 
 </div>
 </body>
@@ -246,7 +254,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("Slide");
+  var slides = document.getElementsByClassName("slide");
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}

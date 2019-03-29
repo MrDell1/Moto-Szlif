@@ -15,8 +15,9 @@ body{
 }
 
 #header{
-    position: relative;
-    width: 100%;
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;
     height: 91px;
 }
 
@@ -24,7 +25,6 @@ body{
     position: relative;
     width: 307px;
     margin-top:15px;
-    margin-left: 110px;
     float: left;
     text-align: center;
 }
@@ -99,14 +99,23 @@ h1{
     height: 62px;
     background-color: #c70f0f;
     margin: 0 auto;
-    padding: 0 50px;
     position: relative;
     z-index: 6345;
     float: left;
 }
 
 #tab{
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 62px;  
+   
+}
+
+#tab ul{
     margin: 0;
+    padding: 0;
+    height: 62px;
 }
 
 #nav::after{
@@ -133,8 +142,8 @@ sup{
 #serch{
     height: 100%;
     width: 60vw;
-    float: right;
-    margin-right: 10%;
+    float: left;
+    margin-left: -13px;
 }
 
 #serch ul{
@@ -154,6 +163,7 @@ sup{
     text-align: center;
     display: list-item;
     transition: 0.2s;
+    height: 62px;;
 }
 
 #serch a{
@@ -164,6 +174,7 @@ sup{
     display: block;
     transition: 0.4s;
     padding: 13px 13px 13px 13px;
+    
 }
 
 .nav-content{
@@ -256,7 +267,7 @@ sup{
     position: absolute;
     z-index: 31;
     top: 40%;
-    font-family: 'PT Serif', serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     text-shadow: 0 0 1px #000000;
     color: #ffffff;
@@ -278,15 +289,15 @@ sup{
 }
 
 #mission{
-    position: relative;
-    margin: 0;
-    width: 100vw;
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;
     height: 550px;
 }
 
 .mission{
     position: relative;
-    margin: 5% 0 0 110px;
+    margin: 5% 0 0 0;
     width: 100%;
     height: 80%;
     float: left;
@@ -304,7 +315,7 @@ sup{
     border-left: #c70f0f 2px solid;
     text-align: left;
     font-size: 50px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-shadow: 0 0 1px black;
 }
 
@@ -315,7 +326,7 @@ sup{
 #cuz{
     text-align: left;
     font-size: 30px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-shadow: 0 0 1px black;
     padding-left: 23px;
 }
@@ -323,10 +334,10 @@ sup{
 #thatswhyus{
     position: relative;
     float: left;    
-    width: 40%;
+    width: 50%;
     height: 80%;
     margin-left: 30px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-shadow: 0 0 1px black;
     color: #000000
 }
@@ -342,7 +353,7 @@ sup{
     height: 100%;
     margin: 10px;
     border: #c70f0f 1px solid;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 #icon{
@@ -374,20 +385,22 @@ sup{
 }
 
 #comozesz{
-    height: 1400px;
-    margin: 5% 100px 0 100px;
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2{
-    font-family: 'Exo 2', sans-serif;
-    text-shadow: 0 0 1px black;
     font-size: 50px;
     border-bottom: #c70f0f 2px solid;
 }
 
 #mozesz{
     position: relative;
+    display: block;
     margin: 0 auto;
+    max-width: 1500px;
 }
 
 .srow{
@@ -395,6 +408,7 @@ h2{
     width: 100%;
     height: 350px;
     margin-top:40px;
+    padding-left: 89px;
 }
 
 .bloczek{
@@ -405,7 +419,7 @@ h2{
     margin: 0 30px 0 30px;
     border: #c70f0f 2px solid;
     background: #c70f0f;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .zdj{
@@ -425,7 +439,6 @@ h2{
     width: 100%;
     height: 20%;    
     color: #e7e7e7;
-    font-family: 'Exo 2', sans-serif;
     text-shadow: 0 0 1px black;
     text-align: center;
     font-size: 23px;
@@ -436,20 +449,55 @@ h2{
     border: #3801ff 2px solid;
 }
 
+#teraz{
+    margin:50px 0;
+    background-color: #c70f0f;
+    height: 200px;
+}
+
+#dzwon{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 1500px;
+    top: 50px;
+    height: 100px;
+    border: #e7e7e7 1px solid;
+    color: #e7e7e7;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0 0 1px black;
+    text-align: center;
+    font-size: 30px;
+}
+
+#zamow{
+    margin: 10px;
+}
+
+#zamow p{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
 #footer{
     width: 100vw;
-    height: 700px;
     background-color: #3b3b3b;
     
 }
 
+#stopka{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 1500px;
+    height: 500px;
+    padding-top:60px;
+}
+
 #links{
-   position: relative;
-    width: 25vw;
-    height: 75%;
-    padding: 10px;
-    margin-left: 10%;
-    margin-top: 5%;
+    position: relative;
+    width: 500px;
     font-family: 'Exo 2', sans-serif;
     color: #c70f0f;
     text-align: left;
@@ -467,6 +515,7 @@ h2{
     border-color: #c70f0f;
     background-color: #c70f0f ;/*Opera i Firefox*/
     color:#c70f0f; /*IE*/
+    margin-bottom: 20px;
 }
 
 #links a{
@@ -478,18 +527,14 @@ h2{
     transition: 0.3s;
 }
 #links a:hover{
-    color: #3801ff
+    color: #e7e7e7
 
 }
 
 #newsletter{
-    padding: 10px;
     position: relative;
     float: right;
-    width: 30vw;
-    height: 75%;
-    margin-top: 5%;
-    margin-right: 10%;
+    width: 500px;
     font-family: 'Exo 2', sans-serif;
     color: #c70f0f;
     text-align: left;
@@ -506,6 +551,20 @@ h2{
     border-color: #c70f0f;
     background-color: #c70f0f ;/*Opera i Firefox*/
     color:#c70f0f; /*IE*/
+    margin-bottom: 20px;
+}
+
+#osi{
+    width: 400px;
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#osi ul{
+    padding: 0;
+    margin: 0;
 }
 
 #newsletter li{
@@ -513,14 +572,14 @@ h2{
     position: relative;
     list-style-type:none;
     padding: 0;
+    margin: 0;
     left: 0;
-    
 }
 
 #newsletter img{
-    width: 6.5vw;
-    height: 10vw;
-    padding: 5px;
+    width: 120px;
+    height: 170px;
+    margin: 5px;
 }
 
 #newsletter img:hover {
@@ -579,7 +638,7 @@ h2{
     cursor: pointer;
   }
 
-.Slide{
+.slide{
     display: none;
 }
 
@@ -664,198 +723,211 @@ img.hover-shadow {
 /*  OFIRMIE     */
 
 #pudeleczko{
-    padding-top:5%;
-    height: 30vw;
-    margin-left: 20px;
-    margin-right: 30px;
+    position: relative;
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 454px;
 }
 
-#boss{
+.left{
     position: relative;
     list-style-type:none;
     display: flex;
-    
+    margin: 30px 0 0 0 ;
+    padding: 0;
+    float: left;
 }
 
-#boss li{
+.portretl{    
     float: left;
-    height: 25vw;
-}
-
-.first{    
-    float: left;
-    width: 25vw;
-    height: 25vw;
-    padding:3%;
+    width: 280px; 
+    height: 420px;
+    border: #c70f0f solid 2px;  
     
 }
-.first img{
+.portretl img{
     max-width: 100%;
-    height: 25vw;    
-    border: #c70f0f solid 2px;
-}
-
-.text{
-    margin-top:10%;
     float: left;
-    height: 25vw;
     width: auto;
-    padding: 1%;
-    color: #e7e7e7;
-    font-family: 'Exo 2', sans-serif;
-    text-shadow: 0 0 1px #000000;
-    text-align: center;
-    font-size: 30px;
+    height: 100%;
 }
 
-#szef{
+.right{
     position: relative;
     list-style-type:none;
     display: flex;
-}
-
-#szef li{
-    float: left;
-    height: 25vw;
-}
-
-.sec{    
     float: right;
-    width: 25vw;
-    height: 25vw;
-    padding:3%;
-    
-}
-.sec img{
-    max-width: 100%;
-    height: 25vw;    
-    border: #c70f0f solid 2px;
+    margin: 30px 0 0 0 ;
+    padding: 0;
 }
 
-.dwa{
-    margin-top:10%;
+.portretr{    
     float: right;
-    height: 25vw;
-    width: auto;
-    padding: 1%;
-    color: #e7e7e7;
-    font-family: 'Exo 2', sans-serif;
-    text-shadow: 0 0 1px #000000;
-    text-align: center;
-    font-size: 30px;
-}
-
-#kierownik{
-    position: relative;
-    list-style-type:none;
-    display: flex;
-    
-}
-
-#kierownik li{
-    float: left;
-    height: 25vw;
-}
-
-.third{    
-    float: left;
-    width: 25vw;
-    height: 25vw;
-    padding:3%;
-    
-}
-.third img{
-    max-width: 100%;
-    height: 25vw;    
+    width: 280px;   
+    height: 420px;
     border: #c70f0f solid 2px;
 }
 
-.trzy{
-    margin-top:10%;
-    float: left;
-    height: 25vw;
-    width: auto;
-    padding: 1%;
-    color: #e7e7e7;
-    font-family: 'Exo 2', sans-serif;
-    text-shadow: 0 0 1px #000000;
-    text-align: center;
-    font-size: 30px;
-}
-
-#zastepca{
-    position: relative;
-    list-style-type:none;
-    display: flex;
-    
-}
-
-#zastepca li{
-    float: left;
-    height: 25vw;
-}
-.four{    
+.portretr img{
+    max-width: 100%;    
     float: right;
-    width: 25vw;
-    height: 25vw;
-    padding:3%;
-    
-}
-.four img{
-    max-width: 100%;
-    height: 25vw;    
-    border: #c70f0f solid 2px;
+    width: auto;
+    height: 100%;
 }
 
-.cztery{
-    margin-top:10%;
+.textl{
+    margin: 20px;
+    float: left;
+    width: auto;
+    padding: 1%;
+    color: #000000;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0 0 1px #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.textr{
+    margin: 20px;
     float: right;
-    height: 25vw;
     width: auto;
     padding: 1%;
-    color: #e7e7e7;
+    color: #000000;
     font-family: 'Exo 2', sans-serif;
     text-shadow: 0 0 1px #000000;
     text-align: center;
     font-size: 30px;
 }
 
-#dzieciak{
+/*GALERIA/////////////////////////////////////////////////////////////*/
+
+#pojemnik-resp{
     position: relative;
-    list-style-type:none;
-    display: flex;
-    
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 50px;
 }
 
-#dzieciak li{
-    float: left;
-    height: 25vw;
+.grow{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin-top:40px;
+    padding-left: 89px;
 }
-
-.fith{    
-    float: left;
-    width: 25vw;
-    height: 25vw;
-    padding:3%;
-    
-}
-.fith img{
-    max-width: 100%;
-    height: 25vw;    
-    border: #c70f0f solid 2px;
-}
-
-.piec{
-    margin-top:10%;
-    float: left;
-    height: 25vw;
+#custom-events{
+    position: relative;
     width: auto;
-    padding: 1%;
-    color: #e7e7e7;
-    font-family: 'Exo 2', sans-serif;
-    text-shadow: 0 0 1px #000000;
+}
+#custom-events ul{
+    list-style-type: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+#custom-events li{
+    float: left;
+    margin: 0 20px;
+    width: 400px;
+    object-fit: cover;
+    position: relative;
+}
+
+#custom-events  li img{
+    width: 100%;
+    transition: 0.5s;
+    border: #c70f0f 2px solid;
+}
+
+.zdj{
+    z-index: 0;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a.zdj{
+    background-color: transparent !important;
+}
+
+.lg-outer{
+    transition: background-color 600ms ease 0s;
+}
+
+.nazwa{
+    width: 404px;
+    height: 60px;
     text-align: center;
-    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    background: #c70f0f;
+    color: #e7e7e7;
+    transition: 0.5s
+}
+
+#custom-events img:hover + .nazwa{
+
+    background: #3801ff;
+}
+
+#custom-events img:hover{
+    opacity: 0.9;
+    border: #3801ff 2px solid;
+}
+
+/*POKAZ ZDJ//////////////////////////////////////////////////*/
+#box{
+    position: relative;
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-top: 30px
+}
+
+#powrot{
+    position: relative;
+    float: right;
+    
+}
+#powrot a{
+    text-decoration: none;
+    font-size: 60px;
+    color:#e7e7e7;
+    transition: 0.4s;
+}
+
+#powrot a:hover{
+    color: #c70f0f;
+}
+
+#pokaz{
+    margin: 0;
+    width: 100%;
+    height: 900px;
+}
+
+.carousel{
+    position: relative;
+    width: 500px;
+    height: 700px;
+}
+
+.carousel-indicators{
+    width: 100px!important;
+    padding-left: 200px!important;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.Slide{
+    display: inline;
 }
 
 @media screen  
