@@ -204,28 +204,28 @@ sup{
 }
 
 #close{
-    visibility: hidden;
+    display: none;
 }
 
 #menu-content{
-    visibility: hidden;
-    position: fixed;
-    background-color: #3801ff;
-    right: 0;;
-    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: #c70f0f;
+    right: 0;
     box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    padding: 12px 16px ;
     z-index: 1;
     font-size: 42px;     
-    text-align: center;
+    text-align: left;
     font-family: 'Exo 2', sans-serif;
     text-shadow: 0 0 1px black;
     animation-delay: 0.5s;
+    text-align: center;
 }
 
 #menu-content a{
-    color: #c70f0f;
-    padding: 20px 16px;
+    color: #e7e7e7;
+    padding: 20px 0;
     text-decoration: none;
     display: block;
     width: 100%;    
@@ -233,8 +233,7 @@ sup{
 }
 
 #menu-content a:hover{
-    background-color: #c70f0f;
-    color: #3801ff;
+    background-color: #3801ff;
     transition: 0.5s;
 }
 
@@ -354,6 +353,7 @@ sup{
     margin: 10px;
     border: #c70f0f 1px solid;
     transition: 0.5s;
+    padding: 5px;
 }
 
 #icon{
@@ -384,11 +384,19 @@ sup{
     color: transparent;
 }
 
-#comozesz{
+.comozesz{
     display: block;
     max-width: 1500px;
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
+}
+
+.resp{
+    display:none;
+}
+
+.respon{
+    display: none;
 }
 
 h2{
@@ -405,7 +413,6 @@ h2{
 
 .srow{
     position: relative;
-    width: 100%;
     height: 350px;
     margin-top:40px;
     padding-left: 89px;
@@ -503,11 +510,11 @@ h2{
     text-align: left;
     text-shadow: 0 0 1px black;
     float: left;
-    
+    padding-left: 30px
 }
 
 #links h{
-    font-size: 2.5vw;
+    font-size: 40px;
     
 }
 
@@ -519,7 +526,7 @@ h2{
 }
 
 #links a{
-    font-size: 2vw;
+    font-size: 30px;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
     color: #c70f0f;
@@ -543,7 +550,7 @@ h2{
     
 }
 #newsletter h{
-    font-size: 2.5vw;
+    font-size: 40px;
     
 }
 
@@ -945,44 +952,73 @@ and (max-device-width : 1480px) {
 }
 
 @media screen  
-and (max-device-width : 1290px) {
-    #zdanie{
-        font-size: 30px;
-    }
-}
-
-@media screen  
-and (max-device-width : 1270px) 
-
- {
-    #logo{
-        width: 100vw;
-        position: absolute;
-       
-    }
-
-    h1{
-        width: 100%;
-        text-align: center;
-    }
+and (max-device-width : 1280px) {
 
     #serch{
         display: none;
     }
 
+    #nav li{
+         float: right;
+    }
+
     #menu{
-        padding-left:5%;        
         display: block;
+        float: right;
     }
 
-    .mission p{
-        padding-top: 130px;
+    #mission{
+        height: 700px;
     }
 
-    #footer{
-        height: 500px;
+    #whyus{
+        width: 100%;
+        height: 50%;
     }
 
+    #thatswhyus{
+        width: 100%;
+        height: 50%;
+    }
+
+    .blok span{
+        top: 0;
+    }
+
+    .comozesz{
+        display: none;
+    }
+
+    
+    .resp{
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .srow-resp{
+        position: relative;
+        height: 350px;
+        margin-top:40px;
+        max-width: 610px;
+        margin: 0 auto;
+    }
+
+    .bloczek-resp{
+        width: 45%;
+        margin: 0 10px
+    }   
+
+    #teraz{
+        height: 250px;
+    }
+
+    #dzwon{
+        height: 150px;
+    }
+
+    #zamow{
+        margin: 2%;
+    }
  }  
  
  @media screen  
@@ -996,6 +1032,43 @@ and (max-device-width : 1110px) {
 and (max-device-width : 925px) {
     #zdanie{
         font-size: 23px;
+    }
+
+    #header{
+        height: 182px;
+    }
+
+    #logo{
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    h1{
+        width: 100%;
+    }
+
+    #inf{
+        float: none;
+        width: auto;
+        position: relative;
+        object-position: center;
+        display: block;
+        max-width: 511px;
+        margin: 0 auto;
+        height: 50px;
+        padding-top: 30px
+    }
+
+    #prac{
+        float: left;
+        border-right: #c70f0f 1px solid;
+        width: 220px;
+    }
+
+    #tel{
+        float: left;
+        border-right: 0;
     }
 }
 
@@ -1012,56 +1085,86 @@ and (max-device-width : 737px) {
         font-size: 20px;
     }
 
-    #menu{
-        display: none;
-    }
-
-    .menu-respon{
-        top: 73px;
-        display: block;
-        background-color: #3801ff;
-        right: 0;;
-        width: 100%;
-        padding: 12px 0px 12px 16px;
-        z-index: 1;
-        font-size: 30px;     
-        text-align: center;
-        font-family: 'Exo 2', sans-serif;
-        text-shadow: 0 0 1px black;
-        animation-delay: 0.5s;
-        float: right;
-        color: #ffffff;
-        position: relative;
-        margin-bottom: -20px;
-    }
-    
-    .menu-respon a{
-        color: #c70f0f;
-        padding: 20px 0px 20px 16px;
-        text-decoration: none;
-        display: block;
-        width: auto;    
-    
-    }
-    
-    .menu-respon a:hover{
-        background-color: #c70f0f;
-        color: #3801ff;
-        transition: 0.5s;
-    }
-
     #mission p{
         font-size: 25px;
         padding-top: 30px;
     }
 
+    #mission{
+        height:800px;
+    }
 
+    .mission{
+        height: auto;
+    }
 
+    #whyus{
+        height: 20%;
+        margin-bottom: 30px;
+    }
 
+    #thatswhyus{
+        margin: 0 10px;
+    }
+ 
+    .row{
+        height: auto;
+    }
+
+    .blok{
+        width: 95%;
+        height: auto;
+    }
+
+    .resp{
+        display: none;
+    }
+
+    .respon{
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .srow-respon{
+        position: relative;
+        height: 350px;
+        margin-top:40px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .bloczek-respon{
+        width: 95%;
+        margin: 0 10px
+    }   
 }
 
 @media screen  
-and (max-device-width : 500px){
+and (max-device-width : 512px){
+
+    #prac{
+        width: auto;
+        border: 0;
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    #tel{
+
+        width: auto;
+        float: none;
+
+    }
+
+    #inf{
+        height: auto;
+        max-width: 255px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+    }
+
     #myslider img{
         height: 100%;
     }
