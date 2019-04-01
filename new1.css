@@ -9,9 +9,9 @@ body{
 
 #main{
     position: relative;
-    height: 153px;
     left: 0;
     top: 0;
+    margin-top:15px;
 }
 
 #header{
@@ -24,7 +24,7 @@ body{
 #logo{
     position: relative;
     width: 307px;
-    margin-top:15px;
+
     float: left;
     text-align: center;
 }
@@ -44,7 +44,7 @@ h1{
 }
 
 #inf{
-    margin-top: 15px;
+
     float: right ;
     width: auto;  
 }
@@ -101,7 +101,7 @@ h1{
     margin: 0 auto;
     position: relative;
     z-index: 6345;
-    float: left;
+
 }
 
 #tab{
@@ -118,12 +118,6 @@ h1{
     height: 62px;
 }
 
-#nav::after{
-    clear: both;
-    content: "";
-    display: table;
- 
-}
 #nav li{
     list-style-type:none;
     float: left;
@@ -728,6 +722,9 @@ img.hover-shadow {
 
 /*//////////////////////////////////////////////////////*/
 /*  OFIRMIE     */
+.pudeleczko-resp{
+    display: none;
+}
 
 #pudeleczko{
     position: relative;
@@ -809,6 +806,10 @@ img.hover-shadow {
 
 /*GALERIA/////////////////////////////////////////////////////////////*/
 
+.pojemnik-resp{
+    display: none;
+}
+
 #pojemnik-resp{
     position: relative;
     display: block;
@@ -819,10 +820,9 @@ img.hover-shadow {
 
 .grow{
     position: relative;
-    width: 100%;
     height: 350px;
-    margin-top:40px;
-    padding-left: 89px;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 #custom-events{
     position: relative;
@@ -949,6 +949,24 @@ and (max-device-width : 1480px) {
     #zdanie{
         font-size: 35px;
     }
+
+    #dzwon{
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .grow{
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+
+    #custom-events li{
+        width: 300px;
+    }
+
+    .nazwa{
+        width:304px
+    }
 }
 
 @media screen  
@@ -979,6 +997,7 @@ and (max-device-width : 1280px) {
     #thatswhyus{
         width: 100%;
         height: 50%;
+        margin: 0;
     }
 
     .blok span{
@@ -1026,6 +1045,75 @@ and (max-device-width : 1110px) {
     #zdanie{
         font-size: 25px;
     }
+
+    #stopka{
+        height: 944px;
+    }
+
+    #links{
+        width: 100%;
+       text-align: center;
+       margin-bottom: 10px;
+       padding: 0;
+    }
+
+    #newsletter{
+        width: 100%;
+        text-align: center;
+        object-position: center;
+    }
+
+    #osi{
+        width: auto;
+        max-width: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #pudeleczko{
+        margin-top: 20px;
+    }
+
+    .left li{
+        display: flex;
+    }
+
+    .right li{
+        display: flex;
+        height: 430px;
+    }
+
+    .textl{
+        font-size: 25px;
+        margin: auto;
+    }
+
+    .textr{
+        font-size: 25px;
+        margin: auto;
+    }
+
+    .grow{
+        max-width: 720px;
+        margin: 0 auto;
+        height: 210px;
+    }
+
+    #custom-events li{
+        width: 200px;
+    }
+
+    .nazwa{
+        width:204px;
+        font-size: 30px;
+        height: auto;
+    }
+    
+    #pojemnik-resp{
+        padding: 0;
+    }
+
+
 }
 
 @media screen  
@@ -1070,6 +1158,9 @@ and (max-device-width : 925px) {
         float: left;
         border-right: 0;
     }
+
+
+
 }
 
 @media screen  
@@ -1102,10 +1193,6 @@ and (max-device-width : 737px) {
         height: 20%;
         margin-bottom: 30px;
     }
-
-    #thatswhyus{
-        margin: 0 10px;
-    }
  
     .row{
         height: auto;
@@ -1137,6 +1224,60 @@ and (max-device-width : 737px) {
         width: 95%;
         margin: 0 10px
     }   
+
+    #teraz{
+        height: 300px;
+    }
+
+    #dzwon{
+        height: 200px;
+        display: flex;
+        font-size: 25px;
+    }
+
+    #zamow{
+        margin: auto;
+    }
+
+    #pudeleczko{
+        display: none;
+    }
+
+    .pudeleczko-resp{
+        display: block;
+        margin-top: 30px;
+    }
+
+    .opis-resp{
+        margin: 0;
+        float: none;
+        display: block;
+    }
+
+    .opis-resp li{
+        width: 100%;
+
+    }
+
+    .portret{
+        display: block;
+        position: relative;
+        max-width: 284px;
+        margin: 0 auto;
+    }
+
+    #pojemnik-resp{
+        display: none;
+    }
+
+    .pojemnik-resp{
+        display: block;
+    }
+
+    .pojemnik-resp .grow{
+        max-width: 480px;
+    }
+
 }
 
 @media screen  
@@ -1201,6 +1342,37 @@ and (max-device-width : 512px){
     #mission p{
         font-size: 20px;
         padding-top: 10px;
+    }
+
+    #newsletter img{
+        width: 90px;
+        height: 140px;
+    }
+
+    #osi{
+        max-width: 200px;
+    }
+
+    .blok{
+        margin-left: 0;
+    }
+
+    #custom-events li{
+        width: 150px;
+        margin: 0 10px;
+    }
+
+    .nazwa{
+        width: 154px;
+        font-size: 20px
+    }
+
+    .grow{
+        height: 160px;
+    }
+
+    .pojemnik-resp .grow{
+        max-width: 340px;
     }
 }
 

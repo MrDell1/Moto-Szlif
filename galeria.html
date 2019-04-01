@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="new1.css" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
@@ -143,12 +142,70 @@
         </div>
     </div>
      </div>  
-     <div id="teraz">
-        <div id="dzwon">
-          <div id="zamow"><span>NIE CZEKAJ, TWÓJ SILNIK SAM SIĘ NIE NAPRAWI, ZADZWOŃ I UMÓW SIĘ JUŻ DZIŚ!<br><p>123456789</p></span></div>
+
+    <div class="pojemnik-resp">
+        <div id="custom-events" style="padding-top:20px;">
+          <div class="grow">
+            <ul>
+             <li class="zdj">
+                <a class="zdj" href="pokaz.html">
+                  <img src="photo1.jpeg" />     
+                  <div class="nazwa">FRANKFURT</div>         
+              </a>
+              
+             </li>
+             <li class="zdj">
+                <a class="zdj" href="pokaz.html">
+                    <img src="photo3.jpeg" />
+                   <div class="nazwa">FRANKFURT</div>  
+                </a>
+             </li>
+            </ul>
+          </div>
+         </div> 
+         <div id="custom-events">
+            <div class="grow">
+            <ul>
+             <li class="zdj">
+                <a class="zdj" href="pokaz.html">
+                    <img src="photo1.jpeg"/>
+                  <div class="nazwa">FRANKFURT</div>  
+              </a>
+             </li>
+             <li class="zdj">
+                <a class="zdj" href="pokaz.html">
+                    <img src="photo3.jpeg" />
+                   <div class="nazwa">FRANKFURT</div>  
+                </a>
+             </li>
+             </ul>
+            </div>
+         </div>
+         <div id="custom-events">
+            <div class="grow">
+            <ul>
+             <li class="zdj">
+                <a class="zdj" href="pokaz.html">
+                    <img src="photo1.jpeg" />
+                  <div class="nazwa">FRANKFURT</div>  
+              </a>
+             </li>
+             <li class="zdj">
+                <a class="zdj" href="pokaz.html">
+                    <img src="photo3.jpeg" />
+                   <div class="nazwa">FRANKFURT</div>  
+                </a>
+             </li>             
+            </ul>
+            </div>
         </div>
-    </div>
-      
+         </div>  
+         <div id="teraz">
+            <div id="dzwon">
+              <div id="zamow"><span>NIE CZEKAJ, TWÓJ SILNIK SAM SIĘ NIE NAPRAWI, ZADZWOŃ I UMÓW SIĘ JUŻ DZIŚ!<br><p>123456789</p></span></div>
+            </div>
+        </div>
+    
 
 <div id="footer">
     <div id="stopka">
@@ -239,64 +296,20 @@
 </div>
 
 </body>
+
+
+
 <script>
-    function openModal() {
-    document.getElementById('Modal').style.display = "block";
-  }
-  
-  function closeModal() {
-    document.getElementById('Modal').style.display = "none";
-  }
-  
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("Slide");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-  }
-  </script>
-<script>
-var $customEvents = $('#custom-events');
-$customEvents.lightGallery();
- 
-var colours = ['#21171A', '#81575E', '#9C5043', '#8F655D'];
-$customEvents.on('onBeforeSlide.lg', function(event, prevIndex, index){
-    $('.lg-outer').css('background-color', colours[index])
-});
-</script>
-<script>
-        function otwieracz(){
-        document.getElementById("open").style.visibility = 'hidden';
-        document.getElementById("close").style.visibility = 'visible';
-        document.getElementById("menu-content").style.visibility = 'visible';
-        }
-        
-        function zamykacz(){
-        document.getElementById("open").style.visibility = 'visible';
-        document.getElementById("close").style.visibility = 'hidden';
-        document.getElementById("menu-content").style.visibility = 'hidden';
-        }
+function otwieracz(){
+document.getElementById("open").style.display = 'none';
+document.getElementById("close").style.display = 'block';
+document.getElementById("menu-content").style.display = 'block';
+}
+
+function zamykacz(){
+document.getElementById("open").style.display = 'block';
+document.getElementById("close").style.display = 'none';
+document.getElementById("menu-content").style.display = 'none';
+}
 </script>        
 </html>
