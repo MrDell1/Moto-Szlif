@@ -307,12 +307,23 @@ function otwieracz(){
 document.getElementById("open").style.display = 'none';
 document.getElementById("close").style.display = 'block';
 document.getElementById("menu-content").style.display = 'block';
+document.getElementById("menu-content").style.visibility = 'visible';
+document.getElementById("menu-content").style.opacity = '21';
+document.getElementById("menu-content").style.animation = 'fade 1s';
+
+
+
 }
 
 function zamykacz(){
 document.getElementById("open").style.display = 'block';
 document.getElementById("close").style.display = 'none';
 document.getElementById("menu-content").style.display = 'none';
+document.getElementById("menu-content").style.visibility = 'hidden';
+document.getElementById("menu-content").style.opacity = '0';
+document.getElementById("menu-content").style.animation = 'fade 1s';
+
+
 }
 
 </script>
