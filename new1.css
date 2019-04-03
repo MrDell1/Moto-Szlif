@@ -213,7 +213,7 @@ sup{
     text-shadow: 0 0 1px black;
     text-align: center;
     transition: opacity 600ms, visibility 600ms;
-    visibility: hidden;
+    display: none;
 }
 
 @keyframes fade {
@@ -222,16 +222,16 @@ sup{
     }
 
     100% {
-        opacity: 1;
+        opacity: 21;
     }
 }
 
-@keyframes fadeout {
-    0% {
+@keyframes fadeout{
+    100%{
         opacity: 1;
     }
 
-    100% {
+    0%{
         opacity: 0;
     }
 }
@@ -267,7 +267,7 @@ sup{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-       
+    display: flex;
 }
 
 #myslider img{
@@ -276,18 +276,16 @@ sup{
 }
 
 #zdanie{
-    position: absolute;
+    position: relative;
     z-index: 31;
-    top: 40%;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 200;
-    text-shadow: 0 0 1px #000000;
+    text-shadow: 0 0 1px #c70f0f;
     color: #ffffff;
     font-size: 50px;
     text-align: center;
     margin: auto;
-    width: auto;
-    padding:0% 34%;
+    float: left;
+
 }
 
 #myslider::after{
@@ -313,7 +311,7 @@ sup{
     width: 100%;
     height: 80%;
     float: left;
-    
+    margin-bottom: 30px;
 }
 
 #whyus{
@@ -328,11 +326,10 @@ sup{
     text-align: left;
     font-size: 50px;
     font-family: 'Open Sans', sans-serif;
+    padding-left:20px; 
 }
 
-#why span{
-    margin-left: 20px;
-}
+
 
 #cuz{
     text-align: left;
@@ -367,12 +364,10 @@ sup{
 }
 
 #icon{
-    margin: auto;
     float: left;
     margin-right: 5px;
     font-size: 50px;
     padding: 10px;
-    height: 100%;
 }
 
 .blok h{
@@ -381,7 +376,7 @@ sup{
 
 .blok span{
     position: relative;
-    top:10px;
+
 }
 
 .blok:hover{
@@ -408,11 +403,6 @@ sup{
 
 .respon{
     display: none;
-}
-
-h2{
-    font-size: 50px;
-    border-bottom: #c70f0f 2px solid;
 }
 
 #mozesz{
@@ -955,16 +945,9 @@ a.zdj{
 }
 
 @media screen  
-and (max-device-width : 1840px) {
-    #zdanie{
-        font-size: 40px;
-    }
-}
-
-@media screen  
 and (max-device-width : 1480px) {
     #zdanie{
-        font-size: 35px;
+        font-size: 45px;
     }
 
     #dzwon{
@@ -1037,6 +1020,7 @@ and (max-device-width : 1280px) {
         margin-top:40px;
         max-width: 610px;
         margin: 0 auto;
+        margin-top: 40px;
     }
 
     .bloczek-resp{
@@ -1060,11 +1044,15 @@ and (max-device-width : 1280px) {
  @media screen  
 and (max-device-width : 1110px) {
     #zdanie{
-        font-size: 25px;
+        font-size: 45px;
     }
 
     #stopka{
         height: 944px;
+    }
+
+    hr{
+        width: 320px;
     }
 
     #links{
@@ -1136,7 +1124,7 @@ and (max-device-width : 1110px) {
 @media screen  
 and (max-device-width : 925px) {
     #zdanie{
-        font-size: 23px;
+        font-size: 40px;
     }
 
     #header{
@@ -1183,14 +1171,14 @@ and (max-device-width : 925px) {
 @media screen  
 and (max-device-width : 850px) {
     #zdanie{
-        font-size: 20px;
+        font-size: 35px;
     }
 }
 
 @media screen  
 and (max-device-width : 737px) {
     #zdanie{
-        font-size: 20px;
+        font-size: 30px;
     }
 
     #mission p{
@@ -1232,14 +1220,14 @@ and (max-device-width : 737px) {
     .srow-respon{
         position: relative;
         height: 350px;
-        margin-top:40px;
         max-width: 300px;
         margin: 0 auto;
+        margin-top:40px;
     }
 
     .bloczek-respon{
         width: 95%;
-        margin: 0 10px
+        margin: 0 10px;
     }   
 
     #teraz{
@@ -1391,6 +1379,11 @@ and (max-device-width : 512px){
     .pojemnik-resp .grow{
         max-width: 340px;
     }
+
+    #icon{
+        margin: auto;
+    }
+
 }
 
 @media screen  

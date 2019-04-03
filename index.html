@@ -91,8 +91,9 @@
          </div>
          <span><h>Dostaniesz najlepsze części</h><br>Orginały i zamienniki dostarczane są do nas codziennie przez tą samą firme od wielu lat.</span>
         </div>
+        </a>
       </div>
-    </a>
+    
       <div class="row">
           <a href="">
           <div class="blok">
@@ -114,9 +115,10 @@
     </div>
   </div>
  </div>
-
+<div style="clear:both"></div>
 <div class="comozesz">
-  <h2>Co możemy dla ciebie zrobić?</h2>
+  <div id="why">  <span>Co możemy dla ciebie zrobić?</span>
+  </div>
   <div id="mozesz">
     <div class="srow">
         <a href=""><div class="bloczek"><div class="zdj"><img src="photo1.jpeg"></div><div class="cena">Nazwa Usługi<br>412</div></div></a> 
@@ -136,7 +138,8 @@
   </div>
 </div>
   <div class="resp">
-    <h2>Co możemy dla ciebie zrobić?</h2>
+      <div id="why">  <span>Co możemy dla ciebie zrobić?</span>
+      </div>
     <div id="mozesz">
       <div class="srow-resp">
           <a href=""><div class="bloczek bloczek-resp" ><div class="zdj"><img src="photo1.jpeg"></div><div class="cena">Nazwa Usługi<br>412</div></div></a> 
@@ -153,7 +156,8 @@
   </div>
   </div>
   <div class="respon">
-    <h2>Co możemy dla ciebie zrobić?</h2>
+      <div id="why">  <span>Co możemy dla ciebie zrobić?</span>
+      </div>
     <div id="mozesz">
       <div class="srow-respon">
           <a href=""><div class="bloczek bloczek-respon" ><div class="zdj"><img src="photo1.jpeg"></div><div class="cena">Nazwa Usługi<br>412</div></div></a> 
@@ -237,22 +241,22 @@
             </div>
         <div>
             <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/marwojlodz.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/marwojlodz.png" style="width:100%" onclick="currentSlide(1)" alt="Dyplom">
               </div>
               <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/CP.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/CP.jpg" style="width:100%" onclick="currentSlide(2)" alt="Dyplom">
               </div>
               <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/przedfairplay.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/przedfairplay.png" style="width:100%" onclick="currentSlide(3)" alt="Dyplom">
               </div>
               <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/KIG.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/KIG.jpg" style="width:100%" onclick="currentSlide(4)" alt="Dyplom">
               </div>
               <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/dyplom.jpg" style="width:100%" onclick="currentSlide(5)" alt="Northern Lights">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/dyplom.jpg" style="width:100%" onclick="currentSlide(5)" alt="Dyplom">
               </div>
               <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/SIA-2004.jpg" style="width:100%" onclick="currentSlide(6)" alt="Northern Lights">
+                <img class="demo cursor" src="http://www.moto-szlif.pl/images/SIA-2004.jpg" style="width:100%" onclick="currentSlide(6)" alt="Dyplom">
               </div>
         </div>
         
@@ -307,10 +311,9 @@ function otwieracz(){
 document.getElementById("open").style.display = 'none';
 document.getElementById("close").style.display = 'block';
 document.getElementById("menu-content").style.display = 'block';
-document.getElementById("menu-content").style.visibility = 'visible';
 document.getElementById("menu-content").style.opacity = '21';
-document.getElementById("menu-content").style.animation = 'fade 1s';
-
+document.getElementById("menu-content").style.animation = 'fade 0.5s';
+document.getElementById("close").style.animation = 'fade 0.5s';
 
 
 }
@@ -318,11 +321,11 @@ document.getElementById("menu-content").style.animation = 'fade 1s';
 function zamykacz(){
 document.getElementById("open").style.display = 'block';
 document.getElementById("close").style.display = 'none';
-document.getElementById("menu-content").style.display = 'none';
-document.getElementById("menu-content").style.visibility = 'hidden';
+document.getElementById("menu-content").style.animation.name = 'fade'
+document.getElementById("menu-content").style.animation.duration = '0.5s'
+document.getElementById("menu-content").style.animation.direction = 'reverse'
 document.getElementById("menu-content").style.opacity = '0';
-document.getElementById("menu-content").style.animation = 'fade 1s';
-
+document.getElementById("open").style.animation = 'fade 0.5s ';
 
 }
 
@@ -366,9 +369,10 @@ document.getElementById("menu-content").style.animation = 'fade 1s';
     }
     x = numer;
     zdania[x];
-    var plik = "<img src=\"photo" + numer + ".jpeg\"/>";
+    var plik = document.getElementById("myslider").style.backgroundImage = "url(\"photo" + numer + ".jpeg\")"
 
-    document.getElementById("myslider").innerHTML = plik + zdania[x];    
+
+    document.getElementById("myslider").innerHTML = zdania[x];    
     $("#myslider").fadeIn(500);
 
     timer1=setTimeout("Slider()",5000);
