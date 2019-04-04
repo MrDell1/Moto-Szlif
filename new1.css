@@ -261,31 +261,21 @@ sup{
     position: relative;
     width:100%;
     height: 40vh;
-    left: 0; 
-    z-index: -1;
-    overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
 }
 
-#myslider img{
-    object-fit: cover;
-    width: 100%;
-}
-
 #zdanie{
     position: relative;
     z-index: 31;
     font-family: 'Open Sans', sans-serif;
-    text-shadow: 0 0 1px #c70f0f;
+    text-shadow: 0 0 1px #000000;
     color: #ffffff;
     font-size: 50px;
     text-align: center;
     margin: auto;
-    float: left;
-
 }
 
 #myslider::after{
