@@ -638,14 +638,15 @@ sup{
 
 .slide{
     display: none;
+    padding: 10px;
+    margin: 5px;
 }
 
 .cursor {
     cursor: pointer;
   }
 
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -656,14 +657,19 @@ sup{
     font-weight: bold;
     font-size: 20px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    
     user-select: none;
     -webkit-user-select: none;
   }
 
-.next {
-    right: 0;
+.prev{
+    left: Calc(100% - (100% - 7px));
     border-radius: 3px 0 0 3px;
+}
+
+.next {
+     right: Calc(100% - (100% + 22px));
+     border-radius: 0 3px 3px 0;
   }
 
 .prev:hover,
@@ -881,6 +887,39 @@ a.zdj{
     border: #3801ff 2px solid;
 }
 
+/*SKLEP//////////////////////////////////////////////////*/
+
+#search{
+    height: 4vw;
+    margin: 10px;
+    text-align: center;
+    border: #3b3b3b solid 1px;
+   
+}
+
+#search form{
+    height: auto;
+    width: 50%;
+    margin:0 25% 0 25%;
+}
+
+select{
+    height: 2.1vw;
+}
+
+#text{
+   height: 2.1vw;
+   width: 14vw;
+   
+}
+
+#submite{
+    height: 2.1vw;
+    width: 3vw;
+    position: absolute;
+    font-size: 1.3em;
+}
+
 /*POKAZ ZDJ//////////////////////////////////////////////////*/
 #box{
     position: relative;
@@ -1038,7 +1077,7 @@ and (max-device-width : 1110px) {
     }
 
     #stopka{
-        height: 944px;
+        height: 960px;
     }
 
     hr{
