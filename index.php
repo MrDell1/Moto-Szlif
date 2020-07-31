@@ -14,54 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body onload="Slider();">
-<div id="main">
-  <div id="header">
-    <div id="logo">
-        <a href="index.html" style="text-decoration: none;"><h1>MOTO-SZLIF <sup>&reg</sup> </h1></a>
-    </div>
-    <div id="inf">
-        <div id="prac">
-          <div id="dryn"><span><i class="fa fa-clock-o"></i></span></div>
-          <div id="num" class="godz">Pracujemy<br><span>Pon-Pt 8.00-16.00</span></div>
-        </div>
-      <div id="tel">
-        <div id="dryn"><span> <i class="fas fa-phone"></i></span></div>
-        <div id="num" class="godz">Wszystkie inforamcje <br> <span>1234567890</span></div>        
-      </div>         
-    </div>
-  </div>
-
-<div id="nav">
-  <div id="tab">
-  <ul >
-         <li id="serch">
-             <ul>
-                <li><a class="nav-content" href="index.html">Start</a></li>
-                <li><a class="nav-content" href="ofirmie.html">O firmie</a></li>
-                <li><a class="nav-content" href="oferta.html">Oferta</a></li>
-                <li><a class="nav-content" href="uslugi.html">Usługi</a></li>
-                <li><a class="nav-content" href="galeria.html">Galeria</a></li>
-                <li><a class="nav-content" href="sklep.html">Sklep</a></li>
-            </ul>
-        </li>
-        <li id="menu">
-            <span id="open" onclick="otwieracz()"> <i  class="fas fa-bars"></i></span>
-            <span id="close" onclick="zamykacz()"> <i  class="fas fa-close"></i></span>
-            <div id="menu-content">
-              <a href="index.html">Start</a>
-              <a href="ofirmie.html">Kategorie</a>
-              <a href="oferta.html">Informacje</a>
-              <a href="uslugi.html">Producenci</a>
-              <a href="galeria.html">Promocje</a>
-              <a href="sklep.html">Sklep</a>
-              <a href="kontakt.html">Kontakt</a>              
-            </div>
-        </li>
-
-</ul>
-</div>
-</div>
-</div>
+<?php
+  include('menu.php');
+?>
 <div id="container">
       <div id="myslider">
       <div id="zdanie"></div>
@@ -178,96 +133,9 @@
 
 
 
-<div id="footer">
-  <div id="stopka">
-    <div id="links">
-        <h>Przydatne linki</h>
-        <hr>
-        <a href="index.html">Start</a><br><br>
-        <a href="ofirmie.html">O firmie</a><br><br>
-        <a href="oferta.html">Oferta</a><br><br>
-        <a href="uslugi.html">Usługi</a><br><br>
-        <a href="galeria.html">Galeria</a><br><br>
-        <a href="sklep.html">Sklep</a><br><br>
-        <a href="kontakt.html">Kontakt</a><br><br>
-    </div>
-    
-    <div id="newsletter">
-      <h>Nasze osiągnięcia</h>
-      <hr>
-      <div id="osi">
-        <ul>
-            <li><img src="http://www.moto-szlif.pl/images/marwojlodz.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/przedfairplay.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/CP.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/KIG.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/dyplom.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-    <div id="Modal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div id="modal-content">
-            <div class="slide">
-                <div class="numbertext">1 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/marwojlodz.png" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">2 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/przedfairplay.png" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">3 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/CP.jpg" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">4 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/KIG.jpg" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">5 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/dyplom.jpg" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">6 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" >
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
-            <div class="caption-container">
-              <p id="caption"></p>
-            </div>
-        <div>
-            <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/marwojlodz.png" style="width:100%" onclick="currentSlide(1)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/CP.jpg" style="width:100%" onclick="currentSlide(2)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/przedfairplay.png" style="width:100%" onclick="currentSlide(3)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/KIG.jpg" style="width:100%" onclick="currentSlide(4)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/dyplom.jpg" style="width:100%" onclick="currentSlide(5)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/SIA-2004.jpg" style="width:100%" onclick="currentSlide(6)" alt="Dyplom">
-              </div>
-        </div>
-        
-        </div>
-    </div>
-  
-</div>
-
-</div>
+<?php
+  include('footer.php');
+?>
 </body>
 <script>
   function openModal() {

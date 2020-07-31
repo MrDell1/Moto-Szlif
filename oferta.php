@@ -14,54 +14,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-        <div id="main">
-        <div id="header">
-          <div id="logo">
-              <a href="index.html" style="text-decoration: none;"><h1>MOTO-SZLIF <sup>&reg</sup> </h1></a>
-          </div>
-          <div id="inf">
-              <div id="prac">
-                <div id="dryn"><span><i class="fa fa-clock-o"></i></span></div>
-                <div id="num" class="godz">Pracujemy<br><span>Pon-Pt 8.00-16.00</span></div>
-              </div>
-            <div id="tel">
-              <div id="dryn"><span> <i class="fas fa-phone"></i></span></div>
-              <div id="num" class="godz">Wszystkie inforamcje <br> <span>1234567890</span></div>
-              
-            </div>         
-          </div>
-        </div>
-      <div id="nav">
-        <div id="tab">
-        <ul >
-               <li id="serch">
-                   <ul>
-                      <li><a class="nav-content"href="index.html">Start</a></li>
-                      <li><a class="nav-content" href="ofirmie.html">O firmie</a></li>
-                      <li><a class="nav-content" href="oferta.html">Oferta</a></li>
-                      <li><a class="nav-content" href="uslugi.html">Usługi</a></li>
-                      <li><a class="nav-content" href="galeria.html">Galeria</a></li>
-                      <li><a class="nav-content" href="sklep.html">Sklep</a></li>
-                  </ul>
-              </li>
-              <li id="menu">
-                  <span id="open" onclick="otwieracz()"> <i  class="fas fa-bars"></i></span>
-                  <span id="close" onclick="zamykacz()"> <i  class="fas fa-close"></i></span>
-                  <div id="menu-content">
-                    <a href="index.html">Start</a>
-                    <a href="ofirmie.html">Kategorie</a>
-                    <a href="oferta.html">Informacje</a>
-                    <a href="uslugi.html">Producenci</a>
-                    <a href="galeria.html">Promocje</a>
-                    <a href="sklep.html">Sklep</a>
-                    <a href="kontakt.html">Kontakt</a>
-                  </div>
-              </li>
-      
-      </ul>
-      </div>
-      </div>
-      </div>
+<?php
+  include('menu.php');
+?>
 
 <div id="container">
             <div id="pudeleczko">
@@ -203,34 +158,9 @@
     </div>    
 </div>
 
-  <div id="footer">
-     <div id="stopka">
-        <div id="links">
-           <h>Przydatne linki</h>
-           <hr>
-           <a href="index.html">Start</a><br><br>
-           <a href="ofirmie.html">O firmie</a><br><br>
-           <a href="oferta.html">Oferta</a><br><br>
-           <a href="uslugi.html">Usługi</a><br><br>
-           <a href="galeria.html">Galeria</a><br><br>
-           <a href="sklep.html">Sklep</a><br><br>
-           <a href="kontakt.html">Kontakt</a><br><br>
-        </div>
-        <div id="newsletter">
-          <h>Nasze osiągnięcia</h>
-          <hr>
-          <div id="osi">
-           <ul>
-            <li><img src="http://www.moto-szlif.pl/images/marwojlodz.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/przedfairplay.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/CP.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/KIG.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/dyplom.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></li>
-          </ul>
-        </div>
-    </div>
-  </div>
+<?php
+  include('footer.php');
+?>
 <div id="Modal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
     <div id="modal-content">
