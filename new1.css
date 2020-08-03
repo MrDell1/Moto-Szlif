@@ -884,6 +884,63 @@ img.hover-shadow {
     
 }
 
+.services_text{
+    height: 65px;
+}
+
+.fa-info-circle{
+    float: left;
+    cursor: pointer;
+}
+
+.fa-info-circle:hover{
+    color:#c70f0f;
+}
+
+.error{
+    max-width: 80px;
+    float: left;
+    color: #c70f0f;
+   
+}
+
+.popup{
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 400px;
+    height: 160px;
+    left: calc(50% - 200px);
+    top: calc(50% - 80px);
+    background-color: #464646;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ 
+}
+
+.popup.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
 .services_text label{
     float: left;
     margin: 20px;
@@ -917,7 +974,7 @@ input[type="submit"]:hover{
 #form {
     position: relative;
     display: block;
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;   
     text-align: center;
     height: 800px;
@@ -935,6 +992,10 @@ input[type="submit"]:hover{
 #form input:hover, select:hover{
     border-radius: 5px;
     border-color: black;
+}
+
+.label{
+    float: left;
 }
 
 

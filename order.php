@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>MOTO-SZLIF</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+    
 </head>
 <body>
 <?php
@@ -57,5 +59,14 @@ document.getElementById("menu-content").style.display = 'none';
 }
         
 </script>   
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction(x) {
+  var popup = document.getElementById(x + "_popup");
+  popup.classList.toggle("show");
+}
+
+</script>
 
 </html>

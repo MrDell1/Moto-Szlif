@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <div id="main">
   <div id="header">
     <div id="logo">
