@@ -885,7 +885,7 @@ img.hover-shadow {
 }
 
 .services_text{
-    height: 65px;
+    height: 100px;
 }
 
 .fa-info-circle{
@@ -947,7 +947,7 @@ img.hover-shadow {
     font-size: 1vw;
 }
 
-.services_text input{
+input[type = "checkbox"]{
     float: right;
     width: 5vw!important;
 }
@@ -976,7 +976,6 @@ input[type="submit"]:hover{
     display: block;
     max-width: 550px;
     margin: 0 auto;   
-    text-align: center;
     height: 800px;
     padding: 30px;
 }

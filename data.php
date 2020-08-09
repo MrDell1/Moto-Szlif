@@ -1,12 +1,11 @@
-<div class='number'><span>1</span></div>
-<h2>Krok pierwszy </h2>
+<div class='number'><span>4</span></div>
+<h2>Krok czwarty </h2>
 <span>Wypełnij formularz swoimi danymi</span>
 </div>
 <div id="form">
     <div id="data">
         <?php
 // define variables and set to empty values
-$fnameErr = $emailErr = $lnameErr = $tel_numberErr = $countryErr = $stateErr = $cityErr = $addressErr = $codeErr = "";
 
 $fname = $email = $lname = $tel_number = $country = $state = $city = $address = $code = "";
 
@@ -17,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["fname"])) {
       $_SESSION['fnameErr'] = "Imię jest wymagane";
       $GLOBALS['check'] = false;
-      header("Location:order.php");
+      header("Location:order.php?step=4");
       exit;
     } 
     else {
@@ -26,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŻŹ ]*$/u",$fname)) {
         $_SESSION['fnameErr'] = "Dozwolone są tylko litery";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;        
       }
       else{
@@ -39,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["email"])) {
         $_SESSION['emailErr']  = "Email jest wymagany";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;
     } 
     else {
@@ -48,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
           $_SESSION['emailErr'] = "Zły format adresu email";
           $GLOBALS['check'] = false;
-          header("Location:order.php");
+          header("Location:order.php?step=4");
           exit;
         }
         else{
@@ -61,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["lname"])) {
         $_SESSION['lnameErr'] = "Nazwisko jest wymagane";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;
     } 
     else {
@@ -69,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŻŹ ]*$/u",$lname)) {
           $_SESSION['lnameErr'] = "Dozwolone są tylko litery";
           $GLOBALS['check'] = false;
-          header("Location:order.php");
+          header("Location:order.php?step=4");
           exit;
         }
         else{
@@ -82,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["tel_number"])) {
         $_SESSION['tel_numberErr'] = "Numer telefonu jest wymagany";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;
     } 
     else {
@@ -90,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match("/^[0-9]*$/",$tel_number)) {
           $_SESSION['tel_numberErr'] = "Dozwolone są tylko liczby";
           $GLOBALS['check'] = false;
-          header("Location:order.php");
+          header("Location:order.php?step=4");
           exit;
         }
         else{
@@ -103,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["country"])) {
         $_SESSION['countryErr'] = "Kraj jest wymagany";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;
     }
     else{
@@ -114,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["state"])) {
         $_SESSION['stateErr'] = "Województwo jest wymagane";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;
     }
     else{
@@ -126,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["city"])) {
         $_SESSION['cityErr'] = "Miasto jest wymagane";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;
     } 
     else {
@@ -134,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŻŹ ]*$/u",$city)) {
           $_SESSION['cityErr'] = "Dozwolone są tylko litery";
           $GLOBALS['check'] = false;
-          header("Location:order.php");
+          header("Location:order.php?step=4");
           exit;
         }
         else{
@@ -147,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["address"])) {
         $_SESSION['addressErr'] = "Adres jest wymagany";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;
       }
     else {
@@ -155,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŻŹ\s0-9]*$/u",$address)) {
           $_SESSION['addressErr'] = "Dozwolone są tylko litery i liczby";
           $GLOBALS['check'] = false;
-          header("Location:order.php");
+          header("Location:order.php?step=4");
           exit;
         }
         else{
@@ -168,7 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["code"])) {
         $_SESSION['codeErr'] = "Kod pocztowy jest wymagany";
         $GLOBALS['check'] = false;
-        header("Location:order.php");
+        header("Location:order.php?step=4");
         exit;
       } 
     else {
@@ -176,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match("/^[0-9-{1}]*$/",$code)) {
           $_SESSION['codeErr'] = "Dozwolone są tylko liczby";
           $GLOBALS['check'] = false;
-          header("Location:order.php");
+          header("Location:order.php?step=4");
           exit;          
         }
         else{
@@ -198,7 +197,7 @@ function test_input($data) {
 }
 
 if($GLOBALS['check'] === 1){
-  header("Location:order.php?step=2");
+  header("Location:order.php?step=5");
 }
 
 
@@ -207,17 +206,21 @@ if($GLOBALS['check'] === 1){
 
 
 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='POST'>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?step=4" method='POST'>
             <div class='data_text'>
                 <label for="fname">Imię:</label>
-                <div class="error"><span><?php if(isset($_SESSION['fnameErr'])){echo $_SESSION['fnameErr']; }?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['fnameErr'])){echo $_SESSION['fnameErr']; }?></span>
+                </div>
                 <input type="text" <?php if(!empty($_SESSION['fname'])){echo "value='" . $_SESSION['fname'] . "'";}?>
                     name="fname" id="fname">
             </div>
             <div style="clear:both"></div>
             <div class='data_text'>
                 <label for="lname">Nazwisko:</label>
-                <div class="error"><span><?php if(isset($_SESSION['lnameErr'])){echo $_SESSION['lnameErr']; } ?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['lnameErr'])){echo $_SESSION['lnameErr']; } ?></span>
+                </div>
                 <input type="text" <?php if(!empty($_SESSION['lname'])){
                 echo "value='" . $_SESSION['lname'] . "'";}
                 ?> name="lname" id="lname">
@@ -225,7 +228,9 @@ if($GLOBALS['check'] === 1){
             <div style="clear:both"></div>
             <div class='data_text'>
                 <label for="email">E-mail:</label>
-                <div class="error"><span><?php if(isset($_SESSION['emailErr'])){echo $_SESSION['emailErr']; }?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['emailErr'])){echo $_SESSION['emailErr']; }?></span>
+                </div>
                 <input type="email" <?php if(!empty($_SESSION['email'])){
                 echo "value='" . $_SESSION['email'] . "'";}
                 ?> name="email" id="email">
@@ -233,7 +238,9 @@ if($GLOBALS['check'] === 1){
             <div style="clear:both"></div>
             <div class='data_text'>
                 <label for="tel_number">Numer telefonu:</label>
-                <div class="error"><span><?php if(isset($_SESSION['tel_numberErr'])){echo $_SESSION['tel_numberErr']; } ?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['tel_numberErr'])){echo $_SESSION['tel_numberErr']; } ?></span>
+                </div>
                 <input type="tel" <?php if(!empty($_SESSION['tel_number'])){
                 echo "value='" . $_SESSION['tel_number'] . "'";}
                 ?> name="tel_number" id="tel_number">
@@ -241,7 +248,9 @@ if($GLOBALS['check'] === 1){
             <div style="clear:both"></div>
             <div class='data_text'>
                 <label for="country">Kraj:</label>
-                <div class="error"><span><? if(isset($_SESSION['countryErr'])){echo $_SESSION['countryErr']; } ?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['countryErr'])){echo $_SESSION['countryErr']; } ?></span>
+                </div>
                 <select <?php if(!empty($_SESSION['country'])){
                 echo "value='" . $_SESSION['country'] . "'";}
                 ?> name="country" id="country">
@@ -470,7 +479,9 @@ if($GLOBALS['check'] === 1){
             <div style="clear:both"></div>
             <div class='data_text'>
                 <label for="state">Województwo:</label>
-                <div class="error"><span><? if(isset($_SESSION['stateErr'])){echo $_SESSION['stateErr']; } ?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['stateErr'])){echo $_SESSION['stateErr']; } ?></span>
+                </div>
                 <select <?php if(!empty($_SESSION['state'])){
                 echo "value='" . $_SESSION['state'] . "'";}
                 ?> name="state" id="state">
@@ -496,7 +507,9 @@ if($GLOBALS['check'] === 1){
             <div style="clear:both"></div>
             <div class='data_text'>
                 <label for="city">Miasto:</label>
-                <div class="error"><span><?php if(isset($_SESSION['cityErr'])){echo $_SESSION['cityErr']; } ?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['cityErr'])){echo $_SESSION['cityErr']; } ?></span>
+                </div>
                 <input type="text" <?php if(!empty($_SESSION['city'])){
                 echo "value='" . $_SESSION['city'] . "'";}
                 ?> name="city" id="city">
@@ -504,7 +517,9 @@ if($GLOBALS['check'] === 1){
             <div style="clear:both"></div>
             <div class='data_text'>
                 <label for="address">Adres:</label>
-                <div class="error"><span><?php if(isset($_SESSION['addressErr'])){echo $_SESSION['addressErr']; } ?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['addressErr'])){echo $_SESSION['addressErr']; } ?></span>
+                </div>
                 <input type="text" <?php if(!empty($_SESSION['address'])){
                 echo "value='" . $_SESSION['address'] . "'";}
                 ?> name="address" id="address">
@@ -512,7 +527,9 @@ if($GLOBALS['check'] === 1){
             <div style="clear:both"></div>
             <div class='data_text'>
                 <label for="code">Kod pocztowy:</label>
-                <div class="error"><span><?php if(isset($_SESSION['codeErr'])){echo $_SESSION['codeErr']; }?></span></div>
+                <div class="error">
+                    <span><?php if(isset($_SESSION['codeErr'])){echo $_SESSION['codeErr']; }?></span>
+                </div>
                 <input type="text" <?php if(!empty($_SESSION['code'])){
                 echo "value='" . $_SESSION['code'] . "'";}
                 ?> name="code" id="code">
