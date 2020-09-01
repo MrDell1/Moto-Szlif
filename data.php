@@ -1,13 +1,13 @@
 <div class='number'><span>4</span></div>
 <h2>Krok czwarty </h2>
-<span>Wypełnij formularz swoimi danymi</span>
+<span>Wypełnij formularz swoimi danymi. <br> Jeśli chcesz otrzymąć fakturę wypełnij "Dane do faktury".</span>
 </div>
-<div id="form">
+<div id="form" style="max-width:900px;">
     <div id="data">
         <?php
 // define variables and set to empty values
 
-$fname = $email = $lname = $tel_number = $country = $state = $city = $address = $code = "";
+$fname = $email = $lname = $tel_number = $country = $state = $city = $address = $code = $company = $nip = "";
 
 
 $GLOBALS['check']= 0;
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     else{
-      $_SESSION['country'] = $country;
+      $_SESSION['country'] = $_POST["country"];
       $_SESSION['countryErr'] = "";  
     } 
 
@@ -117,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     else{
-      $_SESSION['state'] = $state;
+      $_SESSION['state'] = $_POST["state"];
       $GLOBALS['check']= 1;    
       $_SESSION['stateErr'] = "";  
     } 
@@ -183,11 +183,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $GLOBALS['check']= 1;
           $_SESSION['codeErr'] = "";          
         }
-    }
+      }
+        if (empty($_POST["company"])) {
+          if(isset($_SESSION['company'])){
+            unset($_SESSION['company']);
+          }
+        }
+      else {
+          $company = test_input($_POST["company"]);
+          if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŻŹ\s0-9\S]*$/u",$company)) {
+            $_SESSION['companyErr'] = "Dozwolone są tylko liczby i litery";
+            $GLOBALS['check'] = false;
+            header("Location:order.php?step=4");
+            exit;          
+          }
+          else{
+            $_SESSION['company'] = $company;
+            $GLOBALS['check']= 1;
+            $_SESSION['companyErr'] = "";          
+          }
+        }
+
+        if (empty($_POST["nip"])) {
+          if(isset($_SESSION['nip'])){
+            unset($_SESSION['nip']);
+          }
+        }
+      else {
+          $nip = test_input($_POST["nip"]);
+          if (!preg_match("/^[[0-9-{1}]*$/u",$nip)) {
+            $_SESSION['nipErr'] = "Dozwolone są tylko liczby";
+            $GLOBALS['check'] = false;
+            header("Location:order.php?step=4");
+            exit;          
+          }
+          else{
+            $_SESSION['nip'] = $nip;
+            $GLOBALS['check']= 1;
+            $_SESSION['nipErr'] = "";          
+          }
+        }
     
-    print_r($GLOBALS['check']);
-  
-} 
+}
+    
+ 
 
 function test_input($data) {
   $data = trim($data);
@@ -195,6 +234,7 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+
 
 if($GLOBALS['check'] === 1){
   header("Location:order.php?step=5");
@@ -256,24 +296,24 @@ if($GLOBALS['check'] === 1){
                 ?> name="country" id="country">
                     <option value="">--</option>
                     <!---->
-                    <option value="AD"> Andora </option>
+                    <option value="Andora"> Andora </option>
                     <option value="AE"> Zjednoczone Emiraty Arabskie </option>
-                    <option value="AF"> Afganistan </option>
+                    <option value="Afganistan"> Afganistan </option>
                     <option value="AG"> Antigua i Barbuda </option>
-                    <option value="AI"> Anguilla </option>
-                    <option value="AL"> Albania </option>
-                    <option value="AM"> Armenia </option>
+                    <option value="Anguilla"> Anguilla </option>
+                    <option value="Albania"> Albania </option>
+                    <option value="Armenia"> Armenia </option>
                     <option value="AN"> Antyle Holenderskie </option>
-                    <option value="AO"> Angola </option>
-                    <option value="AR"> Argentyna </option>
+                    <option value="Angola"> Angola </option>
+                    <option value="Argentyna"> Argentyna </option>
                     <option value="AS"> Samoa Amerykańska </option>
-                    <option value="AT"> Austria </option>
-                    <option value="AU"> Australia </option>
-                    <option value="AW"> Aruba </option>
+                    <option value="Austria"> Austria </option>
+                    <option value="Australia"> Australia </option>
+                    <option value="Aruba"> Aruba </option>
                     <option value="AZ"> Republika Azerbejdżanu </option>
                     <option value="BA"> Bośnia i Hercegowina </option>
-                    <option value="BB"> Barbados </option>
-                    <option value="BD"> Bangladesz </option>
+                    <option value="Barbados"> Barbados </option>
+                    <option value="Bangladesz"> Bangladesz </option>
                     <option value="BE"> Belgia </option>
                     <option value="BF"> Burkina Faso </option>
                     <option value="BG"> Bułgaria </option>
@@ -414,7 +454,7 @@ if($GLOBALS['check'] === 1){
                     <option value="PG"> Papua-Nowa Gwinea </option>
                     <option value="PH"> Filipiny </option>
                     <option value="PK"> Pakistan </option>
-                    <option selected value="PL"> Polska </option>
+                    <option selected value="Polska"> Polska </option>
                     <option value="PM"> Saint-Pierre i Miquelon </option>
                     <option value="PR"> Portoryko </option>
                     <option value="PT"> Portugalia </option>
@@ -486,22 +526,22 @@ if($GLOBALS['check'] === 1){
                 echo "value='" . $_SESSION['state'] . "'";}
                 ?> name="state" id="state">
                     <option value="">--</option>
-                    <option value="PLDS">DOLNOŚLĄSKIE</option>
-                    <option value="PLKP">KUJAWSKO-POMORSKIE</option>
-                    <option value="PLLU">LUBELSKIE</option>
-                    <option value="PLLB">LUBUSKIE</option>
-                    <option value="PLMA">MAŁOPOLSKIE</option>
-                    <option value="PLMZ">MAZOWIECKIE</option>
-                    <option value="PLLD">ŁÓDZKIE</option>
-                    <option value="PLOP">OPOLSKIE</option>
-                    <option value="PLPK">PODKARPACKIE</option>
-                    <option value="PLPD">PODLASKIE</option>
-                    <option value="PLPM">POMORSKIE</option>
-                    <option value="PLSL">ŚLĄSKIE</option>
-                    <option value="PLSK">ŚWIĘTOKRZYSKIE</option>
-                    <option value="PLWN">WARMIŃSKO-MAZURSKIE</option>
-                    <option value="PLWP">WIELKOPOLSKIE</option>
-                    <option value="PLZP">ZACHODNIOPOMORSKIE</option>
+                    <option value="DOLNOŚLĄSKIE">DOLNOŚLĄSKIE</option>
+                    <option value="KUJAWSKO-POMORSKIE">KUJAWSKO-POMORSKIE</option>
+                    <option value="LUBELSKIE">LUBELSKIE</option>
+                    <option value="LUBUSKIE">LUBUSKIE</option>
+                    <option value="MAŁOPOLSKIE">MAŁOPOLSKIE</option>
+                    <option value="MAZOWIECKIE">MAZOWIECKIE</option>
+                    <option value="ŁÓDZKIE">ŁÓDZKIE</option>
+                    <option value="OPOLSKIE">OPOLSKIE</option>
+                    <option value="PODKARPACKIE">PODKARPACKIE</option>
+                    <option value="PODLASKIE">PODLASKIE</option>
+                    <option value="POMORSKIE">POMORSKIE</option>
+                    <option value="ŚLĄSKIE">ŚLĄSKIE</option>
+                    <option value="ŚWIĘTOKRZYSKIE">ŚWIĘTOKRZYSKIE</option>
+                    <option value="WARMIŃSKO-MAZURSKIE">WARMIŃSKO-MAZURSKIE</option>
+                    <option value="WIELKOPOLSKIE">WIELKOPOLSKIE</option>
+                    <option value="ZACHODNIOPOMORSKIE">ZACHODNIOPOMORSKIE</option>
                 </select>
             </div>
             <div style="clear:both"></div>
@@ -535,13 +575,41 @@ if($GLOBALS['check'] === 1){
                 ?> name="code" id="code">
             </div>
             <div style="clear:both"></div>
-            <div class='data_text'>
+            
+    </div>
+    <div style="float:left;">
+        
+            <span style="font-size:1vw; font-style:bold;">Dane do faktury: </span>
+                  <br>
+                  <br>
+        <div class='data_text'>
+            <label for="company">Firma:</label>
+            <div class="error">
+              <span><?php if(isset($_SESSION['companyErr'])){echo $_SESSION['companyErr']; }?></span>
+            </div>
+            <input type="text" <?php if(!empty($_SESSION['company'])){
+                echo "value='" . $_SESSION['company'] . "'";}
+                ?> name="company" id="company">
+        </div>
+        <div style="clear:both"></div>
+        <div class='data_text'>
+            <label for="nip">NIP:</label>
+            <div class="error">
+              <span><?php if(isset($_SESSION['nipErr'])){echo $_SESSION['nipErr']; }?></span>
+            </div>
+            <input type="text" <?php if(!empty($_SESSION['nip'])){
+                echo "value='" . $_SESSION['nip'] . "'";}
+                ?> name="nip" id="nip">
+        </div>
+        <div style="clear:both"></div>
+            <div class='data_text' style="top:430px; position:relative;">
                 <input type="submit" value="Następny krok">
             </div>
-        </form>
-
     </div>
-</div>
-<?php
 
-?>
+    </form>
+
+</div>
+</div>
+
+

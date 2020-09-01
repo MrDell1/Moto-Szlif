@@ -43,6 +43,9 @@
             else if($_GET['step'] == 5){
                 include('summary.php');
             }
+            else if($_GET['step'] == 6){
+                include('done.php');
+            }
         }
         ?>
         </div>
@@ -94,7 +97,7 @@ function Eng_change() {
     var valve_seats = document.getElementById("11");
     if(<?php echo $_SESSION['part_valve']; ?> == 1){
         valve.checked = true;
-        valve.disabled = true;
+        valve.disabled = "disabled";
     }
     else{
         valve.checked = false;

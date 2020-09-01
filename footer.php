@@ -13,7 +13,7 @@
     </div>
     
     <div id="newsletter">
-      <h>Nasze osiągnięcia</h>
+      <h>Nasze certyfikaty</h>
       <hr>
       <div id="osi">
         <ul>

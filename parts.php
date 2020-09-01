@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!empty($_POST["part_fence"])) {
-      $_SESSION['part_fence'] = 1;
+        $_SESSION['part_fence'] = 1;
     } 
     else{
         $_SESSION['part_fence'] = 0;    

@@ -873,6 +873,17 @@ img.hover-shadow {
     float: left;
 }
 
+.summary{
+    font-size: 1vw;
+    font-style: bold;
+}
+
+.data{
+    float: left;
+    margin: 10px;
+    padding: 20px;
+}
+
 .data_text label{
     float: left;
     margin: 20px;

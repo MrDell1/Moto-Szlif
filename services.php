@@ -1,4 +1,4 @@
-- <div class='number'><span>3</span></div>
+<div class='number'><span>3</span></div>
  <h2>Krok trzeci </h2>
  <span>Zaznacz z których usług chcesz skorzystać, <br>niektóre usługi wiążą się z kosztami nowych część nie wliczonych w
      cene usługi np. Wymiana zaworów. <br> Podane ceny są poglądowe i są cenami netto, pełny kosztorys zostnie przesłany po otrzymaniu przez nas głowicy</span>
@@ -13,23 +13,26 @@
                 exit();
             }
 
-            $sql = "SELECT * FROM `services` ORDER BY `services`.`Name` ASC";
+            $sql = "SELECT * FROM `services`";
 
 
             $result = $conn->query($sql);
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     
                     while($x = $result->fetch_assoc()){
+                        $id = $x['Id'];                       
+                       if(isset($_POST[$id])){
+                        if($_POST[$id] == 'on'){
 
-                        if(!empty($_POST[$x['Id']])){
-                            $_SESSION[$x['Id']] = 1;
-                        }
-                        else{
-                            $_SESSION[$x['Id']] = 0;    
-                        }
+                            $_SESSION['services_'.$id] = $x['Name'];
+                        }                  
+                                                
+                       }
+                       else{
+                        unset($_SESSION['services_'.$id]);
                     }
-
-
+                    }
+                    
                     header("Location:order.php?step=4");
                   }
             ?>
@@ -63,7 +66,11 @@
                     }
                    
                     echo "<div class='services_text'>";
-                    echo "<input type='checkbox' name=" . $x['Id'] . " id=" . $x['Id'] . ">";
+                    echo "<input type='checkbox' name=" . $x['Id'] . " id=" . $x['Id']."";
+                    if($x['Name'] == 'Czyszczenie' || $x['Name'] == 'Demontaż' || $x['Name'] == 'Montaż'){
+                        echo " checked";
+                    }; 
+                    echo">";
                     echo "<div onclick='myFunction(" . $x['Id'] . ")' class='popup' id=" . $x['Id'] . "_popup >" . $x['Description'] . "</div>";
                     echo "<i class='fa fa-info-circle' onclick='myFunction(" . $x['Id'] . ")'></i>";
                     echo "<label for=" . $x['Id'] . ">" . $x['Name'] . ": <br> Od " . $x['Price_8'] . " do " . $x['Price_16'] . " zł</label>";

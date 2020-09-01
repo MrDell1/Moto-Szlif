@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
       }
       else{
-        $_SESSION['mark'] = $mark;
+        $_SESSION['mark'] = $_POST["mark"];
         $GLOBALS['check'] = 1;
         $_SESSION['markErr'] = "";
       }
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
         }
         else{
-          $_SESSION['model'] = $model;
+          $_SESSION['model'] = $_POST["model"];
           $GLOBALS['check'] = 1;
           $_SESSION['modelErr'] = "";
         }
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
         }
         else{
-          $_SESSION['year'] = $year;
+          $_SESSION['year'] = $_POST["year"];
           $GLOBALS['check'] = 1;
           $_SESSION['yearErr'] = "";
         }
@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
       }
       else{
-        $_SESSION['capacity'] = $capacity;
+        $_SESSION['capacity'] = $_POST["capacity"];
         $GLOBALS['check'] = 1;
         $_SESSION['capacityErr'] = "";
       }
@@ -108,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
     }
     else{
-      $_SESSION['fuel'] = $fuel;
+      $_SESSION['fuel'] = $_POST["fuel"];
       $GLOBALS['check'] = 1;
       $_SESSION['fuelErr'] = "";
     } 
@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
         }
         else{
-          $_SESSION['eng_num'] = $eng_num;
+          $_SESSION['eng_num'] =$_POST["eng_num"];
           $GLOBALS['check'] = 1;
           $_SESSION['eng_numErr'] = "";         
         }
@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
         }
         else{
-          $_SESSION['valve'] = $valve;
+          $_SESSION['valve'] = $_POST["valve"];
           $GLOBALS['check'] = 1;
           $_SESSION['valveErr'] = "";
         }
@@ -157,7 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
     }
     else{
-      $_SESSION['type'] = $type;
+      $_SESSION['type'] = $_POST["type"];
       $GLOBALS['check'] = 1;
       $_SESSION['typeErr'] = "";
     } 
@@ -223,9 +223,9 @@ if($GLOBALS['check'] == 1){
                 <select type="text" <?php if(!empty($_SESSION['fuel'])){
                   echo "value='" . $_SESSION['fuel'] . "'";}?> name="fuel" id="fuel">
                     <option value="">--</option>
-                    <option value="pb">Benzyna</option>
-                    <option value="diseal">Diseal</option>
-                    <option value="gaz">LPG</option>
+                    <option value="Benzyna">Benzyna</option>
+                    <option value="Diseal">Diseal</option>
+                    <option value="Gaz">LPG</option>
                 </select>
             </div>
             <div style="clear:both"></div>
