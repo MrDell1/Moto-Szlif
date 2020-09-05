@@ -1175,6 +1175,19 @@ select{
     display: inline;
 }
 
+/*///////////////////  DONE   //////////////////////////*/
+.packing{
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+.packing img{
+    margin: 15px 5px 5px 5px;
+    padding: 5px;
+}
+
 @media screen  
 and (max-device-width : 1480px) {
     #zdanie{

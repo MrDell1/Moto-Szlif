@@ -14,6 +14,15 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177332583-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177332583-1');
+</script>
 
 
 </head>
@@ -95,7 +104,7 @@ function Eng_change() {
     var vortex = document.getElementById("13");
     var sime = document.getElementById("20");
     var valve_seats = document.getElementById("11");
-    if(<?php echo $_SESSION['part_valve']; ?> == 1){
+    if(<?php echo $_SESSION['parts_script_1']; ?> == 1){
         valve.checked = true;
         valve.disabled = "disabled";
     }
@@ -103,7 +112,7 @@ function Eng_change() {
         valve.checked = false;
         valve.disabled = false; 
     }
-    if(<?php echo $_SESSION['part_sealant']; ?> == 1){
+    if(<?php echo $_SESSION['parts_script_2']; ?> == 1){
         sealant.checked = true;
         sealant.disabled = true;
     }
@@ -111,7 +120,7 @@ function Eng_change() {
         sealant.checked = false;
         sealant.disabled = false; 
     }
-    if(<?php echo $_SESSION['part_pusher']; ?> == 1){
+    if(<?php echo $_SESSION['parts_script_3']; ?> == 1){
         pusher.checked = true;
         pusher.disabled = true;
     }
@@ -119,7 +128,7 @@ function Eng_change() {
         pusher.checked = false;
         pusher.disabled = false; 
     }
-    if(<?php echo $_SESSION['part_fence']; ?> == 1){
+    if(<?php echo $_SESSION['parts_script_4']; ?> == 1){
         fence.checked = true;
         fence.disabled = true;
     }
@@ -127,7 +136,7 @@ function Eng_change() {
         fence.checked = false;
         fence.disabled = false; 
     }
-    if(<?php echo $_SESSION['part_vortex']; ?> == 1){
+    if(<?php echo $_SESSION['parts_script_6']; ?> == 1){
         vortex.checked = true;
         vortex.disabled = true;
     }
@@ -135,7 +144,7 @@ function Eng_change() {
         vortex.checked = false;
         vortex.disabled = false; 
     }
-    if(<?php echo $_SESSION['part_sime']; ?> == 1){
+    if(<?php echo $_SESSION['parts_script_7']; ?> == 1){
         sime.checked = true;
         sime.disabled = true;
     }
@@ -143,7 +152,7 @@ function Eng_change() {
         sime.checked = false;
         sime.disabled = false; 
     }
-    if(<?php echo $_SESSION['part_valve_seats']; ?> == 1){
+    if(<?php echo $_SESSION['parts_script_5']; ?> == 1){
         valve_seats.checked = true;
         valve_seats.disabled = true;
     }

@@ -78,37 +78,37 @@
                 echo "<br>";
 
 
-                if($_SESSION['part_valve'] == 1){
+                if(isset($_SESSION['parts_1'])){
                     echo "Zawory";
                     echo "<br>";
                     $_SESSION["services_8"] = "Wymiana zaworów";
                 };                
-                if($_SESSION['part_sealant'] == 1){
+                if(isset($_SESSION['parts_2'])){
                     echo "Uszczelniacze";
                     echo "<br>";
                     $_SESSION["services_14"] = "Wymiana uszczelniaczy";
                 };                
-                if($_SESSION['part_pusher'] == 1){
+                if(isset($_SESSION['parts_3'])){
                     echo "Popychacze";
                     echo "<br>";
                     $_SESSION["services_21"] = "Wymiana popychaczy";
                 };                
-                if($_SESSION['part_fence'] == 1){
+                if(isset($_SESSION['parts_4'])){
                     echo "Prowadnice";
                     echo "<br>";
                     $_SESSION["services_9"] = "Wymiana prowadnic";
                 };
-                if($_SESSION['part_vortex'] == 1){
+                if(isset($_SESSION['parts_6'])){
                     echo "Komory wirowe";
                     echo "<br>";
                     $_SESSION["services_13"] = "Wymiana komór wirowych";
                 };
-                if($_SESSION['part_sime'] == 1){
+                if(isset($_SESSION['parts_7'])){
                     echo "Simeringi";
                     echo "<br>";
                     $_SESSION["services_20"] = "Wymiana simeringów";
                 };
-                if($_SESSION['part_valve_seats'] == 1){
+                if(isset($_SESSION['parts_5']) ){
                     echo "Gnizada zaworowe";
                     echo "<br>";
                     $_SESSION["services_11"] = "Wymiana gniazd zaworowych";
