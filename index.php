@@ -36,7 +36,7 @@
    <div class="mission">
     <div id="whyus">
       <div id="why"><span>Dlaczego my?</span></div>
-      <div id="cuz"><span>Ponieważ od kfbwqkjdhgwad kjawhbdkj ewahgfvkjwh iufwghklajgfawikl jghfliwaughf klajfgh walkfhgj wlakfjh walkfj halkf jhwalkf jhali uhalfkh wfalkfjh walkf jhwalfh</span></div>
+      <div id="cuz"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
     </div>
     <div id="thatswhyus">
       <div class="row">
@@ -45,7 +45,7 @@
            <div id="icon">
              <i class='fas fa-screwdriver'></i>
           </div>
-          <span><h>Nie podmienimy Ci części</h><br>Przywozisz i zabierasz te same tylko naprawione rzeczy.</span>
+          <span><h>Lorem ipsum dolor sit amet</h><br> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
         </div>
       </a>
       <a href="">
@@ -53,7 +53,7 @@
             <div id="icon">
               <i class='fas fa-cog'></i>
          </div>
-         <span><h>Dostaniesz najlepsze części</h><br>Orginały i zamienniki dostarczane są do nas codziennie przez tą samą firme od wielu lat.</span>
+         <span><h>Lorem ipsum dolor sit amet</h><br> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
         </div>
         </a>
       </div>
@@ -64,7 +64,7 @@
               <div id="icon">
                   <i class='fas fa-tools'></i>           
               </div>
-              <span><h>Naprawiamy, nie psujemy</h><br>Będziesz zadowolony i chętny do dalszej współpracy.</span>
+              <span><h>Lorem ipsum dolor sit amet</h><br> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
             </div>
           </a>
           <a href="">
@@ -72,7 +72,7 @@
               <div id="icon">
                   <i class='fas fa-wallet'></i>
               </div>
-              <span><h>Nie pracujemy za darmo</h><br>Nasze ceny są adekwatne do usługi, części oraz włożonej pracy.</span>
+              <span><h>Lorem ipsum dolor sit amet</h><br> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
             </div>
           </a>
       </div>

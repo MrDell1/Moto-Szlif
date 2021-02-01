@@ -6,7 +6,7 @@
  <div id="form" style="max-width: 900px!important; height: 1100px!important">
      <div id="data">
      <?php
-            $conn = mysqli_connect("localhost", 'root', '', 'm-s');
+            $conn = mysqli_connect('localhost', 'root', '', 'm-s');
             if (mysqli_connect_errno()) {
                 echo "Błąd połączenia nr: " . mysqli_connect_errno();
                 echo "Opis błędu: " . mysqli_connect_error();
@@ -40,17 +40,11 @@
 
              <?php
 
-                $conn = mysqli_connect("localhost", 'root', '', 'm-s');
-                if (mysqli_connect_errno()) {
-                    echo "Błąd połączenia nr: " . mysqli_connect_errno();
-                    echo "Opis błędu: " . mysqli_connect_error();
-                    exit();
-                }
-
                 $sql = "SELECT * FROM `services` ORDER BY `services`.`Name` ASC";
 
 
                 $result = $conn->query($sql);
+
                 $label = 0;
                 while($x = $result->fetch_assoc()){
                     $label = $label + 1;

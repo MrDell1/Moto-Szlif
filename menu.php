@@ -29,7 +29,6 @@
                 <li><a class="nav-content" href="oferta.php">Oferta</a></li>
                 <li><a class="nav-content" href="uslugi.php">Usługi</a></li>
                 <li><a class="nav-content" href="galeria.php">Galeria</a></li>
-                <li><a class="nav-content" href="sklep.php">Sklep</a></li>
             </ul>
         </li>
         <li id="menu">
@@ -37,11 +36,10 @@
             <span id="close" onclick="zamykacz()"> <i  class="fas fa-close"></i></span>
             <div id="menu-content">
               <a href="index.php">Start</a>
-              <a href="ofirmie.php">Kategorie</a>
-              <a href="oferta.php">Informacje</a>
-              <a href="uslugi.php">Producenci</a>
-              <a href="galeria.php">Promocje</a>
-              <a href="sklep.php">Sklep</a>
+              <a href="ofirmie.php">O firmie</a>
+              <a href="oferta.php">Oferta</a>
+              <a href="uslugi.php">Usługi</a>
+              <a href="galeria.php">Galeria</a>              
               <a href="kontakt.php">Kontakt</a>              
             </div>
         </li>
