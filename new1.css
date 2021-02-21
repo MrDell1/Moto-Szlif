@@ -5,6 +5,8 @@ body{
     width: 100%!important;
     max-width: 100%!important;
     overflow-x: hidden!important;
+    font-family: 'Exo 2', sans-serif!important;
+    text-shadow: 0 0 1px #000000!important;
 }
 
 #main{
@@ -400,6 +402,13 @@ sup{
     display: block;
     margin: 0 auto;
     max-width: 1500px;
+    text-align: center;
+}
+
+#mozesz span{    
+    font-size: 2.3vw;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0 0 1px #000000;
 }
 
 .srow{
@@ -524,6 +533,7 @@ sup{
     text-shadow: 0 0 1px black;
     transition: 0.3s;
 }
+
 #links a:hover{
     color: #e7e7e7
 
@@ -623,7 +633,7 @@ sup{
 .close {
     color: white;
     position: absolute;
-    top: 70px;
+    top: 0;
     right: 25px;
     font-size: 35px;
     font-weight: bold;
@@ -735,6 +745,32 @@ img.hover-shadow {
     max-width: 1500px;
     margin: 0 auto;
     height: 454px;
+    text-align: center;
+}
+
+.order{
+    position: relative;
+    list-style-type:none;
+    margin: 30px 0 0 0 ;
+    padding: 0;
+}
+
+.order button{
+    width: 7vw;
+    height: 2vw;
+    border-radius: 10px;
+    border: 1px solid #3801ff;
+    font-size: 1vw;
+    font-family: 'Exo 2', sans-serif!important;
+    text-shadow: 0 0 1px #000000!important;
+    cursor: pointer;
+    background-color: #3801ff;
+    color: #e7e7e7;
+}
+
+.order button:hover{
+    background-color: #c70f0f;
+    border-color: #c70f0f;
 }
 
 .left{
@@ -744,6 +780,15 @@ img.hover-shadow {
     margin: 30px 0 0 0 ;
     padding: 0;
     float: left;
+}
+
+#pudeleczko ul{
+    transition: 0.5s linear;
+}
+
+#pudeleczko ul:hover {
+    background-color: #464646;
+    color: #e7e7e7;
 }
 
 .portretl{    
@@ -788,7 +833,6 @@ img.hover-shadow {
     float: left;
     width: auto;
     padding: 1%;
-    color: #000000;
     font-family: 'Exo 2', sans-serif;
     text-shadow: 0 0 1px #000000;
     text-align: center;
@@ -800,12 +844,171 @@ img.hover-shadow {
     float: right;
     width: auto;
     padding: 1%;
-    color: #000000;
     font-family: 'Exo 2', sans-serif;
     text-shadow: 0 0 1px #000000;
     text-align: center;
     font-size: 30px;
 }
+
+/*ZAMOWIENIA/////////////////////////////////////////////////////////////*/
+
+#step{
+    position: relative;
+    display: block;
+    max-width: 1500px;
+    margin: 0 auto;   
+    text-align: center;
+    padding: 30px;
+}
+
+.number{
+    margin: auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    max-width: 20px;
+    border: 4px solid black;
+    border-radius: 40%;
+}
+
+#data{
+    float: left;
+}
+
+.summary{
+    font-size: 1vw;
+    font-style: bold;
+}
+
+.data{
+    float: left;
+    margin: 10px;
+    padding: 20px;
+}
+
+.data_text label{
+    float: left;
+    margin: 20px;
+    font-size: 1vw;
+}
+
+.data_text input, select{
+    float: right;
+    
+}
+
+.services_text{
+    height: 100px;
+}
+
+.fa-info-circle{
+    float: left;
+    cursor: pointer;
+}
+
+.fa-info-circle:hover{
+    color:#c70f0f;
+}
+
+.error{
+    max-width: 80px;
+    float: left;
+    color: #c70f0f;
+   
+}
+
+.popup{
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 400px;
+    height: 160px;
+    left: calc(50% - 200px);
+    top: calc(50% - 80px);
+    background-color: #464646;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ 
+}
+
+.popup.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.services_text label{
+    float: left;
+    margin: 20px;
+    font-size: 1vw;
+}
+
+input[type = "checkbox"]{
+    float: right;
+    width: 5vw!important;
+}
+
+input[type="submit"]{
+    background-color: #c70f0f;
+    color:white;
+    border:1px solid #000000;
+    font-size: 1vw;
+    font-family: 'Exo 2', sans-serif!important;
+    text-shadow: 0 0 1px #000000!important;
+    transition: 0.3s;
+    height: auto!important;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    border-radius: 5px;
+    border-color: black;
+    background-color: #3801ff;
+    
+}
+
+#form {
+    position: relative;
+    display: block;
+    max-width: 550px;
+    margin: 0 auto;   
+    height: 800px;
+    padding: 30px;
+}
+
+#form input, select{
+    height: 1.3vw;
+    width: 10vw;
+    margin: 20px;
+    padding: 5px;
+    
+}
+
+#form input:hover, select:hover{
+    border-radius: 5px;
+    border-color: black;
+}
+
+.label{
+    float: left;
+}
+
 
 /*GALERIA/////////////////////////////////////////////////////////////*/
 
@@ -907,7 +1110,7 @@ select{
     height: 2.1vw;
 }
 
-#text{
+#code{
    height: 2.1vw;
    width: 14vw;
    
@@ -971,6 +1174,19 @@ select{
 
 .Slide{
     display: inline;
+}
+
+/*///////////////////  DONE   //////////////////////////*/
+.packing{
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+.packing img{
+    margin: 15px 5px 5px 5px;
+    padding: 5px;
 }
 
 @media screen  

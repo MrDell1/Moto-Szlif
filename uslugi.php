@@ -12,57 +12,21 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177332583-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177332583-1');
+</script>
+
 </head>
 <body>
-        <div id="main">
-        <div id="header">
-          <div id="logo">
-              <a href="index.html" style="text-decoration: none;"><h1>MOTO-SZLIF <sup>&reg</sup> </h1></a>
-          </div>
-          <div id="inf">
-              <div id="prac">
-                <div id="dryn"><span><i class="fa fa-clock-o"></i></span></div>
-                <div id="num" class="godz">Pracujemy<br><span>Pon-Pt 8.00-16.00</span></div>
-              </div>
-            <div id="tel">
-              <div id="dryn"><span> <i class="fas fa-phone"></i></span></div>
-              <div id="num" class="godz">Wszystkie inforamcje <br> <span>1234567890</span></div>
-              
-            </div>         
-          </div>
-        </div>
-      <div id="nav">
-        <div id="tab">
-        <ul >
-               <li id="serch">
-                   <ul>
-                      <li><a class="nav-content" href="index.html">Start</a></li>
-                      <li><a class="nav-content" href="ofirmie.html">O firmie</a></li>
-                      <li><a class="nav-content" href="oferta.html">Oferta</a></li>
-                      <li><a class="nav-content" href="uslugi.html">Usługi</a></li>
-                      <li><a class="nav-content" href="galeria.html">Galeria</a></li>
-                      <li><a class="nav-content" href="sklep.html">Sklep</a></li>
-                  </ul>
-              </li>
-              <li id="menu">
-                  <span id="open" onclick="otwieracz()"> <i  class="fas fa-bars"></i></span>
-                  <span id="close" onclick="zamykacz()"> <i  class="fas fa-close"></i></span>
-                  <div id="menu-content">
-                    <a href="index.html">Start</a>
-                    <a href="ofirmie.html">Kategorie</a>
-                    <a href="oferta.html">Informacje</a>
-                    <a href="uslugi.html">Producenci</a>
-                    <a href="galeria.html">Promocje</a>
-                    <a href="sklep.html">Sklep</a>
-                    <a href="kontakt.html">Kontakt</a>
-                  </div>
-              </li>
-      
-      </ul>
-      </div>
-      </div>
-      </div>
-
+<?php
+  include('menu.php');
+?>
 <div id="container">
             <div id="pudeleczko">
                     <ul class="left">
@@ -73,6 +37,7 @@
                         </li>
                         <li>
                             <div class="textr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
+                            <a href="order.php"><div class="order"><button type="submite">Zamów</button></div></a>
                         </li>
                     </ul>
                 </div>
@@ -81,6 +46,8 @@
                     <ul class="right">
                         <li>
                             <div class="textl"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+                            <a href=""><div class="order"><button type="submite">Zamów</button></div></a>
+
                         </li>        
                         <li>
                             <div class="portretr">
@@ -100,6 +67,8 @@
                         </li>
                         <li>
                             <div class="textr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
+                            <a href=""><div class="order"><button type="submite">Zamów</button></div></a>
+
                         </li>
                     </ul> 
                 </div>
@@ -108,6 +77,8 @@
                     <ul class="right">
                             <li>
                                     <div class="textl">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
+                                    <a href=""><div class="order"><button type="submite">Zamów</button></div></a>
+
                             </li>
                             <li>
                             <div class="portretr">
@@ -126,6 +97,7 @@
                         </li>
                         <li>
                             <div class="textr">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
+                            <a href=""><div class="order"><button type="submite">Zamów</button></div></a>
                         </li>
                     </ul>   
                 </div> 
@@ -201,95 +173,11 @@
                           <div id="zamow"><span>NIE CZEKAJ, TWÓJ SILNIK SAM SIĘ NIE NAPRAWI, ZADZWOŃ I UMÓW SIĘ JUŻ DZIŚ!<br><p>123456789</p></span></div>
                         </div>    
                 </div>
-                <div id="footer">
-                        <div id="stopka">
-                          <div id="links">
-                              <h>Przydatne linki</h>
-                              <hr>
-                              <a href="index.html">Start</a><br><br>
-                              <a href="ofirmie.html">O firmie</a><br><br>
-                              <a href="oferta.html">Oferta</a><br><br>
-                              <a href="uslugi.html">Usługi</a><br><br>
-                              <a href="galeria.html">Galeria</a><br><br>
-                              <a href="sklep.html">Sklep</a><br><br>
-                              <a href="kontakt.html">Kontakt</a><br><br>
-                          </div>
-                          <div id="newsletter">
-                            <h>Nasze osiągnięcia</h>
-                            <hr>
-                            <div id="osi">
-                              <ul>
-                                  <li><img src="http://www.moto-szlif.pl/images/marwojlodz.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></li>
-                                  <li><img src="http://www.moto-szlif.pl/images/przedfairplay.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></li>
-                                  <li><img src="http://www.moto-szlif.pl/images/CP.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></li>
-                                  <li><img src="http://www.moto-szlif.pl/images/KIG.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></li>
-                                  <li><img src="http://www.moto-szlif.pl/images/dyplom.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></li>
-                                  <li><img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                          <div id="Modal" class="modal">
-                              <span class="close cursor" onclick="closeModal()">&times;</span>
-                              <div id="modal-content">
-                                  <div class="slide">
-                                      <div class="numbertext">1 / 6</div>
-                                      <img src="http://www.moto-szlif.pl/images/marwojlodz.png" >
-                                  </div>
-                                  <div class="slide">
-                                      <div class="numbertext">2 / 6</div>
-                                      <img src="http://www.moto-szlif.pl/images/przedfairplay.png" >
-                                  </div>
-                                  <div class="slide">
-                                      <div class="numbertext">3 / 6</div>
-                                      <img src="http://www.moto-szlif.pl/images/CP.jpg" >
-                                  </div>
-                                  <div class="slide">
-                                      <div class="numbertext">4 / 6</div>
-                                      <img src="http://www.moto-szlif.pl/images/KIG.jpg" >
-                                  </div>
-                                  <div class="slide">
-                                      <div class="numbertext">5 / 6</div>
-                                      <img src="http://www.moto-szlif.pl/images/dyplom.jpg" >
-                                  </div>
-                                  <div class="slide">
-                                      <div class="numbertext">6 / 6</div>
-                                      <img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" >
-                                  </div>
-                      
-                                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                              
-                                  <div class="caption-container">
-                                    <p id="caption"></p>
-                                  </div>
-                              <div>
-                                  <div class="column">
-                                      <img class="demo cursor" src="http://www.moto-szlif.pl/images/marwojlodz.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
-                                    </div>
-                                    <div class="column">
-                                      <img class="demo cursor" src="http://www.moto-szlif.pl/images/CP.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-                                    </div>
-                                    <div class="column">
-                                      <img class="demo cursor" src="http://www.moto-szlif.pl/images/przedfairplay.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                                    </div>
-                                    <div class="column">
-                                      <img class="demo cursor" src="http://www.moto-szlif.pl/images/KIG.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                                    </div>
-                                    <div class="column">
-                                      <img class="demo cursor" src="http://www.moto-szlif.pl/images/dyplom.jpg" style="width:100%" onclick="currentSlide(5)" alt="Northern Lights">
-                                    </div>
-                                    <div class="column">
-                                      <img class="demo cursor" src="http://www.moto-szlif.pl/images/SIA-2004.jpg" style="width:100%" onclick="currentSlide(6)" alt="Northern Lights">
-                                    </div>
-                              </div>
-                              
-                              </div>
-                          </div>
-                        
-                      </div>
+<?php
+  include('footer.php');
+?>
 </body>
-  <script>
+ <script>
 function otwieracz(){
 document.getElementById("open").style.display = 'none';
 document.getElementById("close").style.display = 'block';
