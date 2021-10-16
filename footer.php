@@ -8,7 +8,7 @@
         <a href="oferta.php">Oferta</a><br><br>
         <a href="uslugi.php">Usługi</a><br><br>
         <a href="galeria.php">Galeria</a><br><br>
-        <a href="sklep.php">Sklep</a><br><br>
+        <!-- <a href="sklep.php">Sklep</a><br><br> -->
         <a href="kontakt.php">Kontakt</a><br><br>
     </div>
     
