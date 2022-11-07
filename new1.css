@@ -46,18 +46,35 @@ h1{
 }
 
 #inf{
-
-    float: right ;
-    width: auto;  
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: flex-end;
 }
 
+#login{
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+    margin: 0;
+    font-size: 35px;
+    height: 100%;
+    cursor: pointer;
+}
+
+#login a{
+    color: #000000;
+}
+
+#login a:hover{
+    color:#c70f0f;
+}
 
 #tel{
-    float: right;
-    margin: 5px;
-    height: 100%;
-    width: 270px;
-    border-right: #d31f1f 1px solid;
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
 
 #dryn{
@@ -83,10 +100,9 @@ h1{
 
 
 #prac{
-    float: right ;
-    margin: 5px;
-    height: 100%;
-    width: 270px;
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
 
 .godz span{

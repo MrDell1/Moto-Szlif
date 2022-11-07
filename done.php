@@ -34,8 +34,8 @@
 
                 $sql_customer_checked_select = $conn->query($sql_customer_checked);
 
-
-               /* if($sql_customer_checked_select->num_rows >= 1){
+                
+                if($sql_customer_checked_select->num_rows >= 1){
                     echo "<span style=color:#c70f0f;>Możesz zrobić jedno zamówienie dziennie</span>";
                     echo "</div>";
                 }
@@ -115,8 +115,8 @@
                 $sql_orders = ("INSERT INTO `orders` (`Id_order`, `Id_Usr`, `Id_head`, `Name_parts`, `Name_services`) VALUES (NULL, '". $_SESSION['Id_Usr']."', '". $_SESSION['Id_head']."', " .$part. ", " .$name);
                 $conn->query($sql_orders);
                 echo $sql_orders;
-*/
-                
+
+              
                 echo "<span>Twoje zamówienie zostało przyjęte. Teraz tylko wyślij nam swoją głowicę lub dostarcz ją osobiście</span>";
                 echo "</div>";
                 echo "<div id='form' style='max-width:700px; height:1000px';>";
@@ -154,7 +154,7 @@
                 echo "<img src='Graphic/Packing6.svg' width='200px' height='100px'>";
                 echo "</div>";  
                  
-     //          }
+               }
                 //echo $sql_customer;
 
 
@@ -166,5 +166,5 @@
 
             
             
-        </div>
-</div>
+        <!-- </div>
+</div> -->

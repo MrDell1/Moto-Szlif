@@ -233,7 +233,7 @@ document.getElementById("open").style.animation = 'fade 0.5s ';
     }
     x = numer;
     zdania[x];
-    var plik = document.getElementById("myslider").style.backgroundImage = "url(\"photo" + numer + ".jpeg\")"
+    var plik = document.getElementById("myslider").style.backgroundImage = "url(\"graphic/photo" + numer + ".jpeg\")"
 
 
     document.getElementById("zdanie").innerHTML = zdania[x];    
