@@ -975,28 +975,13 @@ img.hover-shadow {
     font-size: 1vw;
 }
 
-input[type = "checkbox"]{
-    float: right;
-    width: 5vw!important;
-}
-
 input[type="submit"]{
     background-color: #c70f0f;
     color:white;
-    border:1px solid #000000;
-    font-size: 1vw;
-    font-family: 'Exo 2', sans-serif!important;
-    text-shadow: 0 0 1px #000000!important;
-    transition: 0.3s;
-    height: auto!important;
-    cursor: pointer;
 }
 
 input[type="submit"]:hover{
-    border-radius: 5px;
-    border-color: black;
     background-color: #3801ff;
-    
 }
 
 #form {
