@@ -1,12 +1,6 @@
 body{
-    background-color: #e7e7e7;
     margin: 0;
-    height: 100%!important;
-    width: 100%!important;
-    max-width: 100%!important;
-    overflow-x: hidden!important;
-    font-family: 'Exo 2', sans-serif!important;
-    text-shadow: 0 0 1px #000000!important;
+    font-family: 'Antonio', sans-serif!important;
 }
 
 #main{
@@ -29,20 +23,6 @@ body{
 
     float: left;
     text-align: center;
-}
-
-h1{
-    width: 307px;
-    margin: 0;
-    color: #c70f0f;
-    font-family: 'PT Serif', serif;
-    font-weight: BOLD;
-    font-size: 46px;
-    text-shadow:
-    -1px -1px 0 #e7e7e7,  
-     1px -1px 0 #e7e7e7,
-     -1px 1px 0 #e7e7e7,
-      1px 1px 0 #e7e7e7;
 }
 
 #inf{
@@ -199,40 +179,11 @@ sup{
     color: #e7e7e7;
 }
 
-.menu-respon{
-    display: none;
-}
-
-#menu{
-    display: none;
-    padding-left: 10%; 
-    padding-right: 30px;
-    font-size: 45px;
-    float: right;
-    color: #ffffff;
-    position: relative;
-    margin: 0;
-    margin-top: 6.5px
-}
 
 #close{
     display: none;
 }
 
-#menu-content{
-    position: absolute;
-    background-color: #c70f0f;
-    right: 0;
-    box-shadow: 0px 16px 8px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px ;
-    z-index: 1;
-    font-size: 42px;     
-    font-family: 'Exo 2', sans-serif;
-    text-shadow: 0 0 1px black;
-    text-align: center;
-    transition: opacity 600ms, visibility 600ms;
-    display: none;
-}
 
 @keyframes fade {
     0% {
@@ -254,19 +205,6 @@ sup{
     }
 }
 
-#menu-content a{
-    color: #e7e7e7;
-    padding: 20px 0;
-    text-decoration: none;
-    display: block;
-    width: 100%;    
-
-}
-
-#menu-content a:hover{
-    background-color: #3801ff;
-    transition: 0.5s;
-}
 
 #container{
     position: relative;
@@ -926,10 +864,7 @@ img.hover-shadow {
 }
 
 .error{
-    max-width: 80px;
-    float: left;
     color: #c70f0f;
-   
 }
 
 .popup{
@@ -993,12 +928,8 @@ input[type="submit"]:hover{
     padding: 30px;
 }
 
-#form input, select{
-    height: 1.3vw;
-    width: 10vw;
-    margin: 20px;
-    padding: 5px;
-    
+input{
+    background-color: rgb(229 231 235);    
 }
 
 #form input:hover, select:hover{
@@ -1217,19 +1148,6 @@ and (max-device-width : 1480px) {
 
 @media screen  
 and (max-device-width : 1280px) {
-
-    #serch{
-        display: none;
-    }
-
-    #nav li{
-         float: right;
-    }
-
-    #menu{
-        display: block;
-        float: right;
-    }
 
     #mission{
         height: 700px;

@@ -1,90 +1,66 @@
-<div id="footer">
-  <div id="stopka">
-    <div id="links">
-        <h>Przydatne linki</h>
-        <hr>
-        <a href="index.php">Start</a><br><br>
-        <a href="ofirmie.php">O firmie</a><br><br>
-        <a href="oferta.php">Oferta</a><br><br>
-        <a href="uslugi.php">Usługi</a><br><br>
-        <a href="galeria.php">Galeria</a><br><br>
-        <!-- <a href="sklep.php">Sklep</a><br><br> -->
-        <a href="kontakt.php">Kontakt</a><br><br>
+<div class="flex bg-gray-200 text-black flex-col items-center py-10 text-lg">
+  <div>
+    <div class="flex items-center gap-2 mb-4 justify-center lg:justify-start">
+      <h2
+        class="text-[#d01616] font-[Antonio] font-bold flex text-3xl lg:text-4xl"
+      >
+        MOTO-SZLIF
+        <p class="inline-block w-fit text-base">&#174;</p>
+      </h2>
     </div>
-    
-    <div id="newsletter">
-      <h>Nasze certyfikaty</h>
-      <hr>
-      <div id="osi">
-        <ul>
-            <li><img src="http://www.moto-szlif.pl/images/marwojlodz.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/przedfairplay.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/CP.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/KIG.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/dyplom.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></li>
-            <li><img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></li>
-        </ul>
+    <div
+      class="flex flex-wrap justify-center items-center md:items-start flex-col md:flex-row gap-16 lg:gap-28"
+    >
+      <div class="flex items-center md:items-normal flex-col gap-2">
+        <p class="font-semibold">Kontakt</p>
+        <a href="tel:+48691-675-201">+48 691 675 201</a>
+        <a href="tel:+42659-21-28">+42 659 21 28</a>
+        <a href="mailto:office@moto-szlif.pl">office@moto-szlif.pl</a>
+      </div>
+      <div class="flex items-center md:items-normal flex-col gap-2">
+        <p class="font-semibold">Usługi</p>
+        <a href="/uslugi#gniazda">Obróbka gniazd zaworowych</a>
+        <a href="/uslugi#planowanie">Planowanie</a>
+        <a href="/uslugi#spawanie">Spawanie</a>
+        <a href="/uslugi#szczelnosc"> Sprawdzanie szczelności</a>
+        <a href="/uslugi#silnik"> Regeneracja silników</a>
+        <a href="/uslugi#glowica"> Regeneracja głowic</a>
+        <a href="/uslugi#honowanie"> Honowanie</a>
+        <a href="/uslugi"> Więcej..</a>
+      </div>
+      <div class="flex items-center md:items-normal flex-col gap-2">
+        <p class="font-semibold">Oferta</p>
+        <a href="/oferta#komoryWirowe"> Komory wirowe</a>
+        <a href="https://ldautomotive.pl/15-walki-rozrzadu"> Wałki rozrządu</a>
+        <a href="https://ldautomotive.pl/19-powiazane-produkty">
+          Dźwigienki zaworów
+        </a>
+        <a href="https://ldautomotive.pl/21-popychacze"> Popychacze</a>
+        <a href="https://ldautomotive.pl/23-kola-pasowe"> Koła Pasowe</a>
+        <a href="https://ldautomotive.pl/22-glowice-cylindrow"> Głowice</a>
+      </div>
+      <div class="flex items-center md:items-normal flex-col gap-2">
+        <p class="font-semibold">Firma</p>
+        <a href="/o-nas"> O nas</a>
+        <a href="/o-nas#certyfikaty"> Certyfikaty</a>
       </div>
     </div>
-  </div>
-    <div id="Modal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div id="modal-content">
-            <div class="slide">
-                <div class="numbertext">1 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/marwojlodz.png" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">2 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/przedfairplay.png" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">3 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/CP.jpg" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">4 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/KIG.jpg" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">5 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/dyplom.jpg" >
-            </div>
-            <div class="slide">
-                <div class="numbertext">6 / 6</div>
-                <img src="http://www.moto-szlif.pl/images/SIA-2004.jpg" >
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
-            <div class="caption-container">
-              <p id="caption"></p>
-            </div>
-        <div>
-            <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/marwojlodz.png" style="width:100%" onclick="currentSlide(1)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/przedfairplay.png" style="width:100%" onclick="currentSlide(3)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/CP.jpg" style="width:100%" onclick="currentSlide(2)" alt="Dyplom">
-              </div>              
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/KIG.jpg" style="width:100%" onclick="currentSlide(4)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/dyplom.jpg" style="width:100%" onclick="currentSlide(5)" alt="Dyplom">
-              </div>
-              <div class="column">
-                <img class="demo cursor" src="http://www.moto-szlif.pl/images/SIA-2004.jpg" style="width:100%" onclick="currentSlide(6)" alt="Dyplom">
-              </div>
-        </div>
-        
-        </div>
+    <div
+      class="flex pt-16 lg:pt-0 items-center lg:items-baseline m-auto lg:m-0 flex-col gap-2 w-32"
+    >
+      <p class="font-semibold">Adres</p>
+      <a
+        target="_blank"
+        href="https://goo.gl/maps/4mkw5Nt21dWsVgYH7"
+        class="text-center lg:text-left">11 Listopada 3 Łódź 91-358 Polska</a
+      >
     </div>
-  
-</div>
-
+    <hr class="my-8 border-t-2 border-red-500" />
+    <div
+      class="text-base font-light flex-col md:flex-row gap-4 md:gap-0 justify-center md:justify-between text-black"
+    >
+      <p>© MOTO-SZLIF. Wszystkie prawa zastrzerzone</p>
+      <p>Stworzone przez Marcin Leszczyński</p>
+    </div>
+  </div>
 </div>
