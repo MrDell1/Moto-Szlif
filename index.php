@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo $_SESSION['role'];
 ?>
 <!DOCTYPE html>
 <html lang="pl">
