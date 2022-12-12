@@ -28,6 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = 1;
     } else {
         $mypassword = test_input($_POST["password"]);
+        if (strlen($mypassword) < 8) {
+            $passwordErr = "Hasło jest za krótkie";
+            $error = 1;
+        }
     }
 
     if (empty($_POST["repeatPassword"]) || $_POST["password"] != $_POST["repeatPassword"]) {

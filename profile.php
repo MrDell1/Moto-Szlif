@@ -20,22 +20,18 @@ session_start();
                 class="flex flex-col gap-6 items-center bg-gray-200 border h-full border-gray-300 px-8 py-8 rounded-xl">
                 <h1 class="text-3xl font-bold">
                     <?php
-                    echo $_SESSION['login_user']
+                    echo $_SESSION['login_user'];
                     ?>
                 </h1>
                 <div class="flex flex-col gap-3">
-                    <a  href="profile.php" class="hover:font-semibold w-40 px-2 py-2">
-                        <p>Twoje dane</p>
-                    </a>
-                    <a href="profile.php?step=2" class="hover:font-semibold w-40 px-2 py-2">
-                        <p>Dane kontaktowe</p>
-                    </a>
-                    <a href="profile.php?step=3" class="hover:font-semibold w-40 px-2 py-2">
-                        <p>Zmiana hasła</p>
-                    </a>
-                    <a href="profile.php?step=4" class="hover:font-semibold w-40 px-2 py-2">
-                        <p>Wyloguj</p>
-                    </a>
+                    <?php 
+                    if($_SESSION['role'] == 'admin'){
+                        include('admin.php');
+                    }
+                    else{
+                        include('userLinks.php');
+                    }
+                    ?>
                 </div>
             </div>
             <?php
@@ -44,11 +40,24 @@ session_start();
             } else {
                 if ($_GET['step'] == 2) {
                     include('contactData.php');
-                } else if ($_GET['step'] == 3) {
+                }else if ($_GET['step'] == 3) {
+                    include('invoiceData.php');
+                }  
+                else if ($_GET['step'] == 4) {
                     include('changePassword.php');
-                } else if ($_GET['step'] == 4) {
-                    include('logout.php');
-                }
+                } 
+                else if ($_GET['step'] == 5) {
+                    include('addServices.php');
+                } 
+                else if ($_GET['step'] == 6) {
+                    include('addParts.php');
+                } 
+                else if ($_GET['step'] == 7) {
+                    include('checkOrders.php');
+                } 
+                else if ($_GET['step'] == 8) {
+                    include('usersList.php');
+                } 
             }
             ?>
         </div>

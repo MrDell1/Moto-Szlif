@@ -1,0 +1,17 @@
+  <option value="">--</option>
+  <option value="dolnośląskie">dolnośląskie</option>
+  <option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+  <option value="lubelskie">lubelskie</option>
+  <option value="lubuskie">lubuskie</option>
+  <option value="małopolskie">małopolskie</option>
+  <option value="mazowieckie">mazowieckie</option>
+  <option value="łódzkie">łódzkie</option>
+  <option value="opolskie">opolskie</option>
+  <option value="podkarpackie">podkarpackie</option>
+  <option value="podlaskie">podlaskie</option>
+  <option value="pomorskie">pomorskie</option>
+  <option value="śląskie">śląskie</option>
+  <option value="świętokrzyskie">świętokrzyskie</option>
+  <option value="warmińsko-mazurskie">warmińsko-mazurskie</option>
+  <option value="wielkopolskie">wielkopolskie</option>
+  <option value="zachodniopomorskie">zachodniopomorskie</option>

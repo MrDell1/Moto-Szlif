@@ -22,18 +22,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $mypassword = test_input($_POST["password"]);
     }
-    $sql = "SELECT password, role FROM users WHERE username = '$myusername'";
+    $sql = "SELECT `password`, `role`, `id` FROM users WHERE username = '$myusername'";   
     $result = $conn->query($sql);
-    $password = $result->fetch_assoc()['password'];
+    $x = $result->fetch_assoc();
+    $password = $x['password'];
     $verify = password_verify($mypassword, $password);
     if ($verify) {
-        $role = $result->fetch_assoc()['role'];
+        $role = $x['role'];
         $_SESSION['role'] = $role;
         $_SESSION['login_user'] = $myusername;
+        $id = $x['id'];
+        $_SESSION['id'] = $id;
         header("location: index.php");
     } else {
         $error = "Twoja nazwa użytkownika lub hasło jest niepoprawne";
-        exit;
+        //exit;
     }
 }
 function test_input($data)
