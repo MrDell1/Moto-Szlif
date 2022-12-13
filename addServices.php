@@ -95,12 +95,13 @@ function test_input($data)
                 <span class="w-3/4">Opis</span>
             </div>
             <div class="flex flex-row items-center w-full rounded-md border border-gray-400 px-4 py-2 bg-gray-100 justify-between text-center gap-2">
-
-                <div class="flex items-center w-full pl-2 1" id="text1">
-                    <span class="w-1/4 truncate">Regulacja luzów zaworowych</span>
-                    <span class="w-1/12">50</span>
-                    <span class="w-1/12">60</span>
-                    <span class="w-3/4 truncate">Zalecane przy wymianie popychaczy, polega na dobraniu odpowiednich popychaczy do każdego zaworu według norm producenta</span>
+                <div class="flex w-full pl-2" id="text1">
+                    <div class="w-full flex gap-2 items-center">
+                        <span class="w-1/4 truncate">Regulacja luzów zaworowych</span>
+                        <span class="w-1/12">50</span>
+                        <span class="w-1/12">60</span>
+                        <span class="w-3/4 truncate">Zalecane przy wymianie popychaczy, polega na dobraniu odpowiednich popychaczy do każdego zaworu według norm producenta</span>
+                    </div>
                 </div>
                 <div class="hidden  w-full pl-2 " id="input1">
                     <form class="w-full flex gap-2 items-center" method="post" action="<?php echo htmlspecialchars("profile.php?step=5"); ?>">
