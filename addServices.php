@@ -9,9 +9,6 @@ if (mysqli_connect_errno()) {
     echo "Opis błędu: " . mysqli_connect_error();
     exit();
 }
-
-$company = $nip = "";
-$companyErr = $nipErr = "";
 $error = 0;
 
 $sql = "SELECT * FROM `services`";
@@ -20,39 +17,67 @@ $x = $result->fetch_assoc();
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $price_from = $price_to = $desc = "";
+
+
     $id = $_GET['id'];
     if (empty($_POST["name"])) {
-        if (isset($company)) {
-            unset($company);
-        }
+       
     } else {
-        $company = test_input($_POST["company"]);
-        if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŻŹ\s0-9\S]*$/u", $company)) {
-            $companyErr = "Dozwolone są tylko liczby i litery";
+        $name = test_input($_POST["name"]);
+        if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŻŹ\s0-9\S]*$/u", $name)) {
             $error = 1;
-        } else {
-            $company = $company;
-            $companyErr = "";
         }
     }
 
-    if (empty($_POST["nip"])) {
-        if (isset($nip)) {
-            unset($nip);
-        }
+    if (empty($_POST["price_from"])) {
+      
     } else {
-        $nip = test_input($_POST["nip"]);
-        if (!preg_match("/^[[0-9-{1}]*$/u", $nip)) {
-            $nipErr = "Dozwolone są tylko liczby";
+        $price_from = test_input($_POST["price_from"]);
+        if (!preg_match("/^[[0-9-{1}]*$/u", $price_from)) {
             $error = 1;
-        } else {
-            $nip = $nip;
-            $nipErr = "";
-        }
+        }       
     }
+
+    if (empty($_POST["price_to"])) {
+      
+    } else {
+        $price_to = test_input($_POST["price_to"]);
+        if (!preg_match("/^[[0-9-{1}]*$/u", $price_to)) {
+            $error = 1;
+        }       
+    }
+
+    if (empty($_POST["desc"])) {
+      
+    } else {
+        $desc = test_input($_POST["desc"]);
+        if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŻŹ\s0-9\S]*$/u", $desc)) {
+            $error = 1;
+        }       
+    }
+
     if ($error == 0) {
-        //$sql = "UPDATE `customer` SET `Company`='" . $company . "', `NIP`='" . $nip . "' WHERE Id_Usr = $_SESSION[id]";
-        // $conn->query($sql);
+         if($name != ""){
+            $sql = "UPDATE `services` SET `Name` = '".$name."' WHERE `services`.`Id` = $id";
+            $conn ->query($sql);
+
+         }
+         if($price_from != ""){
+            $sql = "UPDATE `services` SET `Price_8` = ".$price_from." WHERE `services`.`Id` = $id";
+            $conn ->query($sql);
+
+         }
+         if($price_to != ""){
+            $sql = "UPDATE `services` SET `Price_16` = ".$price_to." WHERE `services`.`Id` = $id";
+            $conn ->query($sql);
+
+         }
+         if($desc != ""){
+            $sql = "UPDATE `services` SET `Description` = '".$desc."' WHERE `services`.`Id` = $id";
+            $conn ->query($sql);
+
+         }
     }
 }
 
@@ -106,11 +131,11 @@ function test_input($data)
 
 
 <div class="flex h-full w-full ">
-    <div class="flex w-full h-full flex-col gap-10 flex flex-col gap-6 items-center bg-gray-200 border border-gray-300 px-8 py-8 rounded-xl">
+    <div class="flex w-full h-full flex-col gap-10 items-center bg-gray-200 border border-gray-300 px-8 py-8 rounded-xl">
         <h1 class="text-3xl font-bold w-full h-fit">Dodaj usługi</h1>
-        <div class="flex flex-col items-center gap-2 w-full h-full">
+        <div class="flex flex-col grow items-center gap-2 w-full">
 
-            <div class="flex flex-row items-center justify-between w-full px-4 py-2 text-center font-semibold">
+            <div class="flex flex-row items-center justify-between w-full h-10 px-4 py-2 text-center font-semibold">
                 <span class="w-1/4">Nazwa</span>
                 <span class="w-1/12">Cena od</span>
                 <span class="w-1/12">Cena do</span>
