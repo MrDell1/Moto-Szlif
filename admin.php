@@ -1,8 +1,8 @@
 <a href="profile.php?step=5" class="hover:font-semibold w-40 px-2 py-2">
-    <p>Dodaj usługi</p>
+    <p>Edytuj usługi</p>
 </a>
 <a href="profile.php?step=6" class="hover:font-semibold w-40 px-2 py-2">
-    <p>Dodaj części</p>
+    <p>Edytuj części</p>
 </a>
 <a href="profile.php?step=7" class="hover:font-semibold w-40 px-2 py-2">
     <p>Sprawdź zamówienia</p>
@@ -23,5 +23,14 @@
         document.getElementById(text).classList.toggle('hidden');
         //document.getElementById(text).classList.add('hidden');
 
+    }
+
+    function toogleDelete(input) {
+        document.getElementById(input).classList.toggle('hidden');
+        document.getElementById(input).classList.toggle('flex');
+    }
+    function toogleExpand(input) {
+        document.getElementById(input).classList.toggle('hidden');
+        document.getElementById(input).classList.toggle('flex');
     }
 </script>

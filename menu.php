@@ -1,4 +1,3 @@
-
 <div class="flex justify-between md:justify-center flex-row md:flex-col items-center">
   <div class="flex pr-4 md:pr-8 lg:pr-40 w-full gap-4 md:gap-6 flex-col md:flex-row justify-between">
     <div class="flex justify-center py-3 bg-[#00046b] rounded-br-full">
@@ -45,7 +44,14 @@
       <div class="flex-row flex items-center">
         <div class="px-2">
           <a <?php if (!empty($_SESSION['login_user'])) {
-                echo "href='profile.php'";
+
+                if ($_SESSION['role'] == 'admin') {
+                  echo "href='profile.php?step=5'";
+                } else {
+                  echo "href='profile.php'";
+                }
+
+                
               } else {
                 echo "href='login.php'";
               } ?>>
