@@ -124,7 +124,7 @@ function test_input($data)
             <div class="w-full overflow-auto">
                 <?php
                 while ($x = $result->fetch_assoc()) {
-                    tale_row($x['username'], $x['email'], $x['role'], $x['id']);
+                    tale_row($x['Username'], $x['Email'], $x['Role'], $x['Id']);
                 };
                 ?>
             </div>

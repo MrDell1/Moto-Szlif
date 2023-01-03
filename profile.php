@@ -14,7 +14,7 @@ session_start();
     <?php
     include('menu.php');
     ?>
-    <main class="flex flex-col h-[60vh] m-0">
+    <main class="flex flex-col m-0">
         <div class="flex flex-row px-8 items-center justify-start h-full py-8 gap-16 w-full">
             <div
                 class="flex flex-col gap-6 items-center bg-gray-200 border h-full border-gray-300 px-8 py-8 rounded-xl">

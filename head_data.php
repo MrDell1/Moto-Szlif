@@ -1,4 +1,4 @@
-<div class='number'><span>1</span></div>
+<div class='my-2'><span class='rounded-full border-gray-400 border-2 px-2 py-2 font-semibold'>1</span></div>
 <h2>Krok pierwszy </h2>
 <span>Wypełnij formularz danymi swojej głowicy</span>
 </div>
