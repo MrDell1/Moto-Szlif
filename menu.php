@@ -43,18 +43,11 @@
       </div>
       <div class="flex-row flex items-center">
         <div class="px-2">
-          <a <?php if (!empty($_SESSION['login_user'])) {
-
-                if ($_SESSION['role'] == 'admin') {
-                  echo "href='profile.php?step=5'";
-                } else {
-                  echo "href='profile.php'";
-                }
-
-                
-              } else {
-                echo "href='login.php'";
-              } ?>>
+          <a 
+          <?php 
+          isLogin()
+          ?>
+          >
             <span class="material-symbols-outlined text-3xl lg:text-5xl">
               person
             </span>
@@ -117,3 +110,16 @@
     display: flex;
   }
 </style>
+<?php
+function isLogin()
+{
+  if (!empty($_SESSION['login_user'])) {
+    if ($_SESSION['role'] == 'admin') {
+      return "href='profile.php?step=5'";
+    } else {
+      return "href='profile.php'";
+    }
+  } else {
+    return "href='login.php'";
+  }
+} ?>

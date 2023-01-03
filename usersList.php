@@ -22,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->query($sql);
         $sql = "SELECT * FROM `users`";
         $result = $conn->query($sql);
-        
     }
 }
 
@@ -40,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         $sql = "SELECT * FROM `users`";
         $result = $conn->query($sql);
-        
     }
 }
 
@@ -115,11 +113,12 @@ function test_input($data)
     <div class="flex w-full h-full flex-col gap-10 items-center bg-gray-200 border border-gray-300 px-8 py-8 rounded-xl">
         <h1 class="text-3xl font-bold w-full h-fit">Użytkownicy</h1>
         <div class="flex flex-col grow items-center gap-2 w-full">
-
-            <div class="flex flex-row items-center justify-between w-full h-10 px-4 py-2 text-center font-semibold">
-                <span class="w-1/3">Nazwa użytkownika</span>
-                <span class="w-1/3">Email</span>
-                <span class="w-1/3">Rola</span>
+            <div class="w-full">
+                <div class="flex flex-row items-center justify-start w-[calc(100%-72px)] h-10 px-4 py-2 text-center font-semibold">
+                    <span class="w-1/3">Nazwa użytkownika</span>
+                    <span class="w-1/3">Email</span>
+                    <span class="w-1/3">Rola</span>
+                </div>
             </div>
             <div class="w-full overflow-auto">
                 <?php

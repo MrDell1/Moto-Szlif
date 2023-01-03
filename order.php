@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -16,24 +19,24 @@
     <div id="container">
         <div id="step">
             <?php
-        if(!isset($_GET['step'])){
+        if(!isset($_SESSION['step'])){
             include('head_data.php');
         }
         else {
-            if($_GET['step'] == 2){
+            if($_SESSION['step'] == 2){
                 include('parts.php');
                 
             }
-            else if($_GET['step'] == 3){
+            else if($_SESSION['step'] == 3){
                 include('services.php');
             }
-            else if($_GET['step'] == 4){                
+            else if($_SESSION['step'] == 4){                
                 include('data.php');
             }
-            else if($_GET['step'] == 5){
+            else if($_SESSION['step'] == 5){
                 include('summary.php');
             }
-            else if($_GET['step'] == 6){
+            else if($_SESSION['step'] == 6){
                 include('done.php');
             }
         }
