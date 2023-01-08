@@ -899,11 +899,6 @@ input[type="checkbox"]:disabled {
   cursor: not-allowed;
 }
 
-input[type="checkbox"]:focus {
-  /* outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em); */
-}
-
 .services_text {
   display: flex;
   align-items: center;
