@@ -1,6 +1,7 @@
-<div class='my-2'><span class='rounded-full border-gray-400 border-2 px-2 py-2 font-semibold'>1</span></div>
-<h2>Krok pierwszy </h2>
-<span>Wypełnij formularz danymi swojej głowicy</span>
+<div class="flex flex-col align-center items-center">
+  <div class='my-2'><span class='rounded-full border-gray-400 border-2 px-2 py-2 font-semibold'>1</span></div>
+  <h2>Krok pierwszy </h2>
+  <span>Wypełnij formularz danymi swojej głowicy</span>
 </div>
 <div id="form">
   <div id="data">
@@ -12,7 +13,10 @@
     $markErr = $modelErr = $yearErr = $capacityErr = $fuelErr = $eng_numErr = $valveErr = $typeErr = "";
 
     $error = 1;
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['head_data']) && $_GET['head_data'] == 'true') {
+      if ($_POST['foo'] == 'Anuluj') {
+        header("location: index.php");
+      }
       if (empty($_POST["mark"])) {
         $markErr = "Marka jest wymagane";
         $error = 0;
@@ -23,7 +27,7 @@
           $markErr = "Dozwolone są tylko litery";
           $error = 0;
         } else {
-          $_SESSION['mark'] = $_POST["mark"];
+          $_SESSION['mark'] = $mark;
 
           $markErr = "";
         }
@@ -39,7 +43,7 @@
           $modelErr = "Dozwolone są tylko litery i cyfry";
           $error = 0;
         } else {
-          $_SESSION['model'] = $_POST["model"];
+          $_SESSION['model'] = $model;
 
           $modelErr = "";
         }
@@ -55,7 +59,7 @@
           $yearErr = "Dozwolone są tylko liczby";
           $error = 0;
         } else {
-          $_SESSION['year'] = $_POST["year"];
+          $_SESSION['year'] = $year;
 
           $yearErr = "";
         }
@@ -71,7 +75,7 @@
           $capacityErr = "Dozwolone są tylko liczby";
           $error = 0;
         } else {
-          $_SESSION['capacity'] = $_POST["capacity"];
+          $_SESSION['capacity'] = $capacity;
 
           $capacityErr = "";
         }
@@ -93,7 +97,7 @@
           $eng_numErr = "Dozwolone są tylko litery i liczby";
           $error = 0;
         } else {
-          $_SESSION['eng_num'] = $_POST["eng_num"];
+          $_SESSION['eng_num'] = $eng_num;
 
           $eng_numErr = "";
         }
@@ -108,7 +112,7 @@
           $valveErr = "Dozwolone są tylko liczby";
           $error = 0;
         } else {
-          $_SESSION['valve'] = $_POST["valve"];
+          $_SESSION['valve'] = $valve;
           $valveErr = "";
         }
       }
@@ -119,11 +123,13 @@
         $_SESSION['type'] = $_POST["type"];
         $typeErr = "";
       }
+      if ($error == 1) {
+        $_SESSION['step'] = 2;
+        header("location: order.php");
+      }
     }
-    
-    if ($error == 1) {
-      $_SESSION['step'] = 2;
-    }
+
+
 
     function test_input($data)
     {
@@ -133,7 +139,7 @@
       return $data;
     }
     ?>
-    <form class="flex flex-col gap-8" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method='POST'>
+    <form class="flex flex-col gap-8 items-center" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?head_data=true" method='POST'>
       <div class="flex flex-row gap-10">
         <div class="flex flex-col gap-4">
           <div class='data_text'>
@@ -252,8 +258,9 @@
         </div>
       </div>
 
-      <div class='data_text'>
-        <input type="submit" value="Następny krok">
+      <div class='flex flex-row gap-4 w-full'>
+        <input type="submit" class="hover:bg-[#3801ff] bg-[#c70f0f] w-full text-white rounded-md border-color-[#d1d5db] h-10 border-[1px]" value="Anuluj" name="foo" />
+        <input class="w-full rounded-md border-color-[#d1d5db] h-10 border-[1px]" type="submit" value="Następny krok" name="foo" />
       </div>
     </form>
   </div>

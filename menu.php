@@ -1,3 +1,16 @@
+<?php
+function isLogin()
+{
+  if (!empty($_SESSION['login_user'])) {
+    if ($_SESSION['role'] == 'admin') {
+      return "href='profile.php?step=5'";
+    } else {
+      return "href='profile.php'";
+    }
+  } else {
+    return "href='login.php'";
+  }
+} ?>
 <div class="flex justify-between md:justify-center flex-row md:flex-col items-center">
   <div class="flex pr-4 md:pr-8 lg:pr-40 w-full gap-4 md:gap-6 flex-col md:flex-row justify-between">
     <div class="flex justify-center py-3 bg-[#00046b] rounded-br-full">
@@ -45,7 +58,7 @@
         <div class="px-2">
           <a 
           <?php 
-          isLogin()
+          echo isLogin()
           ?>
           >
             <span class="material-symbols-outlined text-3xl lg:text-5xl">
@@ -110,16 +123,3 @@
     display: flex;
   }
 </style>
-<?php
-function isLogin()
-{
-  if (!empty($_SESSION['login_user'])) {
-    if ($_SESSION['role'] == 'admin') {
-      return "href='profile.php?step=5'";
-    } else {
-      return "href='profile.php'";
-    }
-  } else {
-    return "href='login.php'";
-  }
-} ?>
