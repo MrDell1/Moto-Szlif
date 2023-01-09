@@ -35,16 +35,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['summary']) && $_GET['su
         $company = "";
         if (isset($_SESSION['company'])) {
 
-            $company = "Company = '" . $_SESSION['company'] . "'";
+            $company = "Company = '," . $_SESSION['company'] . "'";
         }
         $nip = "";
         if (isset($_SESSION['nip'])) {
 
-            $nip = "NIP = '" . $_SESSION['nip'] . "'";
+            $nip = "NIP = '," . $_SESSION['nip'] . "'";
         }
         $sql_head = ("INSERT INTO `head_data` SET Mark = '" . $_SESSION['mark'] . "', Model = '" . $_SESSION['model'] . "', Year = '" . $_SESSION['year'] . "', Capacity = '" . $_SESSION['capacity'] . "', Fuel = '" . $_SESSION['fuel'] . "', " . $eng_num . " Valve = '" . $_SESSION['valve'] . "'");
 
-        $sql_customer = ("INSERT INTO `customer` SET Fname ='" . $_SESSION['fname'] . "', Lname = '" . $_SESSION['lname'] . "', Email = '" . $_SESSION['email'] . "', Number = '" . $_SESSION['tel_number'] . "', Country = '" . $_SESSION['country'] . "', State = '" . $_SESSION['state'] . "', City = '" . $_SESSION['city'] . "', Adress = '" . $_SESSION['address'] . "', Code = '" . $_SESSION['code'] . "', " . $company . ", " . $nip . ", Date= CURRENT_TIMESTAMP()");
+        $sql_customer = ("INSERT INTO `customer` SET Id_Usr='". $_SESSION['id'] ."' Fname ='" . $_SESSION['fname'] . "', Lname = '" . $_SESSION['lname'] . "', Email = '" . $_SESSION['email'] . "', Number = '" . $_SESSION['tel_number'] . "', Country = '" . $_SESSION['country'] . "', State = '" . $_SESSION['state'] . "', City = '" . $_SESSION['city'] . "', Adress = '" . $_SESSION['address'] . "', Code = '" . $_SESSION['code'] . " '" . $company . " " . $nip );
 
         $sql_customer_checked = ("SELECT * FROM customer WHERE Fname ='" . $_SESSION['fname'] . "'AND Lname = '" . $_SESSION['lname'] . "'AND Email = '" . $_SESSION['email'] . "'AND Number = '" . $_SESSION['tel_number'] . "'AND Country = '" . $_SESSION['country'] . "'AND State = '" . $_SESSION['state'] . "'AND City = '" . $_SESSION['city'] . "'AND Adress = '" . $_SESSION['address'] . "'AND Code = '" . $_SESSION['code'] . "'AND " . $company . " AND " . $nip . " AND Date >= NOW() - INTERVAL 1 DAY");
 
