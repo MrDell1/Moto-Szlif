@@ -72,17 +72,6 @@ session_start();
             </div>
           </div>
         </a>
-        <a href="/oferta.php">
-          <div class="flex items-center flex-col gap-4 px-4 py-4 text-center ease-linear rounded-md duration-75 hover:bg-[#00046b] hover:text-white">
-            <span class="material-symbols-outlined h-12 w-full text-5xl">
-              work_history
-            </span>
-            <div class="max-w-[14rem]">
-              <h1 class="text-2xl py-2 font-semibold">Ponad 65 lat!</h1>
-              <p class="text-lg">Jesteśmy firmą rodzinną, która istnieje od 1946 roku.</p>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
     <div class="flex flex-col gap-10 lg:gap-0 px-4 sm:px-10 lg:px-40 my-20">
