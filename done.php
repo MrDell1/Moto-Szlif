@@ -43,4 +43,5 @@ unset($_SESSION['step'])
             <img src='Graphic/Packing6.svg' width='200px' height='100px'>
         </div>
     </div>
+    <div class='flex flex-row gap-4 w-full my-2'><a class="w-full flex justify-center items-center rounded-md border-color-[#d1d5db] h-10 border-[1px] bg-[#00046b] hover:bg-blue-900 text-white" href="index.php">Zakończ</a></div>
 </div>

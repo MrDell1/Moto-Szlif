@@ -93,25 +93,25 @@ session_start();
       <div class="flex font-semibold text-xl gap-20 justify-center py-8 items-center flex-wrap">
         <div class="flex flex-col w-56 items-center gap-3 justify-center h-full" id={id}>
           <div class="overflow-hidden rounded-2xl h-[70%] transition-all duration-[0.5s] delay-[0s] hover:shadow-[11px_9px_4px_rgba(28,41,81,0.25)]">
-            <img alt="Obróbka gniazd zaworowych" class="max-h-40 h-40 w-full object-cover transition-all duration-[0.5s] delay-[0s] overflow-hidden hover:scale-150" src="Graphic/Gniazda.webp" />
+            <img alt="Obróbka gniazd zaworowych" class="max-h-40 h-40 w-full object-cover transition-all duration-[0.5s] delay-[0s] overflow-hidden hover:scale-150" src="assets/Gniazda.webp" />
           </div>
           <p class="h-14 text-center">Obróbka gniazd zaworowych</p>
         </div>
         <div class="flex flex-col w-56 items-center gap-3 justify-center h-full" id={id}>
           <div class="overflow-hidden rounded-2xl h-[70%] transition-all duration-[0.5s] delay-[0s] hover:shadow-[11px_9px_4px_rgba(28,41,81,0.25)]">
-            <img alt="planownaie głowicy lub bloku" class="max-h-40 h-40 w-full object-cover transition-all duration-[0.5s] delay-[0s] overflow-hidden hover:scale-150" src="Graphic/planowanie.webp" />
+            <img alt="planownaie głowicy lub bloku" class="max-h-40 h-40 w-full object-cover transition-all duration-[0.5s] delay-[0s] overflow-hidden hover:scale-150" src="assets/planowanie.webp" />
           </div>
           <p class="h-14 text-center">Planowanie</p>
         </div>
         <div class="flex flex-col w-56 items-center gap-3 justify-center h-full" id={id}>
           <div class="overflow-hidden rounded-2xl h-[70%] transition-all duration-[0.5s] delay-[0s] hover:shadow-[11px_9px_4px_rgba(28,41,81,0.25)]">
-            <img alt="spawanie głowicy" class="max-h-40 h-40 w-full object-cover transition-all duration-[0.5s] delay-[0s] overflow-hidden hover:scale-150" src="Graphic/Spawanie.webp" />
+            <img alt="spawanie głowicy" class="max-h-40 h-40 w-full object-cover transition-all duration-[0.5s] delay-[0s] overflow-hidden hover:scale-150" src="assets/Spawanie.webp" />
           </div>
           <p class="h-14 text-center">Spawanie</p>
         </div>
         <div class="flex flex-col w-56 items-center gap-3 justify-center h-full" id={id}>
           <div class="overflow-hidden rounded-2xl h-[70%] transition-all duration-[0.5s] delay-[0s] hover:shadow-[11px_9px_4px_rgba(28,41,81,0.25)]">
-            <img alt="sprawdzane szczelności" class="max-h-40 h-40 w-full object-cover transition-all duration-[0.5s] delay-[0s] overflow-hidden hover:scale-150" src="Graphic/Szczelnosc.webp" />
+            <img alt="sprawdzane szczelności" class="max-h-40 h-40 w-full object-cover transition-all duration-[0.5s] delay-[0s] overflow-hidden hover:scale-150" src="assets/Szczelnosc.webp" />
           </div>
           <p class="h-14 text-center">Sprawdzanie szczelności</p>
         </div>
@@ -228,7 +228,7 @@ session_start();
     }
     x = numer;
     zdania[x];
-    var plik = document.getElementById("myslider").style.backgroundImage = "url(\"graphic/photo" + numer + ".jpeg\")"
+    var plik = document.getElementById("myslider").style.backgroundImage = "url(\"assets/photo" + numer + ".jpeg\")"
 
 
     document.getElementById("zdanie").innerHTML = zdania[x];

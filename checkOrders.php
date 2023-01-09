@@ -11,19 +11,9 @@ if (mysqli_connect_errno()) {
 }
 $error = 0;
 
-$sql = "SELECT * FROM `orders`";
+$sql = "SELECT * FROM `orders` WHERE `State` != 'Zakończone' ORDER BY `Date` DESC;";
 $result = $conn->query($sql);
 
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_GET['delete'] === "true") {
-        $id = $_GET['id'];
-        $sql = "DELETE FROM `services` WHERE `services`.`Id` = $id";
-        $conn->query($sql);
-        $sql = "SELECT * FROM `services`";
-        $result = $conn->query($sql);
-    }
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $state = "";
@@ -34,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if ($error == 0) {
         if ($state != "") {
-            $sql = "UPDATE `orders` SET `state` = '" . $state . "' WHERE `orders`.`Id_order` = $id";
+            $sql = "UPDATE `orders` SET `State` = '" . $state . "' WHERE `orders`.`Id_order` = $id";
             $conn->query($sql);
         }
-        $sql = "SELECT * FROM `orders`";
+        $sql = "SELECT * FROM `orders` WHERE NOT `State` = 'Zakończone' ORDER BY `Date` DESC;";
         $result = $conn->query($sql);
         
     }
@@ -64,6 +54,7 @@ function tale_row($services, $parts, $mark, $model, $year, $capacity, $fuel, $en
                     <option value="Gotowe">Gotowe</option>
                     <option value="W trakcie">W trakcie</option>
                     <option value="Oczekujące">Oczekujące</option>
+                    <option value="Zakończone">Zakończone</option>
                 </select>
                 <button type="submit" class="bg-green-700 flex items-center h-full px-1 py-1 rounded-md hover:bg-green-800">
                 <span class="material-symbols-outlined text-white">
@@ -144,7 +135,7 @@ function test_input($data)
 <div class="flex h-full w-full ">
     <div class="flex w-full h-full flex-col gap-10 items-center bg-gray-200 border border-gray-300 px-8 py-8 rounded-xl">
         <h1 class="text-3xl font-bold w-full h-fit">Sprawdź zamówienia</h1>
-        <div class="flex flex-col items-center gap-2 w-full">
+        <div class="flex flex-col items-center gap-2 w-full max-h-96">
             <div class="w-full">
                 <div class="flex flex-row items-center justify-start gap-2 w-[calc(100%-72px)] h-10 px-4 py-2 text-center font-semibold">
                     <span class="w-1/4">Usuługi</span>

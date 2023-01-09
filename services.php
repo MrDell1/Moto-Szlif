@@ -27,7 +27,7 @@
             while ($x = $result->fetch_assoc()) {
                 $id = $x['Id'];
                 if (isset($_POST[$id])) {
-                    if ($_POST[$id] == 'on') {
+                    if ($_POST[$id] == $id) {
 
                         $_SESSION['services_' . $id] = $x['Name'];
                     }
@@ -61,10 +61,17 @@
                         echo "<i class='fa fa-info-circle' onclick='myFunction(" . $x['Id'] . ")'></i>";
 
                         echo "<label for=" . $x['Id'] . ">" . $x['Name'] . ": <br> Od " . $x['Price_8'] . " do " . $x['Price_16'] . " zł  </label>";
-                        echo "<input type='checkbox' name=" . $x['Id'] . " id=" . $x['Id'] . "";
+                        echo "<input type='checkbox' name=" . $x['Id'] . " value=" . $x['Id'] . "";
                         if ($x['Name'] == 'Czyszczenie' || $x['Name'] == 'Demontaż' || $x['Name'] == 'Montaż' || isset($_SESSION['services_' . $x['Id']])) {
                             echo " checked";
                         };
+                        foreach ($_SESSION as $key => $val) {
+                            if (strpos($key, 'parts_') !== FALSE) {
+                                if($val == $x['Parts']){
+                                    echo " checked disabled";
+                                }
+                            }
+                        }
                         echo ">";
                         echo "</div>";
                     }

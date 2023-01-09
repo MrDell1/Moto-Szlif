@@ -15,17 +15,16 @@ $sql = "SELECT * FROM `services`";
 $result = $conn->query($sql);
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_GET['delete'] === "true") {
-        $id = $_GET['id'];
-        $sql = "DELETE FROM `services` WHERE `services`.`Id` = $id";
-        $conn->query($sql);
-        $sql = "SELECT * FROM `services`";
-        $result = $conn->query($sql);
-    }
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['delete']) && $_GET['delete'] === "true") {
+
+    $id = $_GET['id'];
+    $sql = "DELETE FROM `services` WHERE `services`.`Id` = $id";
+    $conn->query($sql);
+    $sql = "SELECT * FROM `services`";
+    $result = $conn->query($sql);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['delete']) && $_GET['delete'] === "false") {
     $name = $price_from = $price_to = $desc = "";
     $id = $_GET['id'];
     if (empty($_POST["name"])) {
@@ -170,5 +169,6 @@ function test_input($data)
             </div>
 
         </div>
+        <?php include("addService.php") ?>
     </div>
 </div>

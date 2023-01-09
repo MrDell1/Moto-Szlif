@@ -15,7 +15,7 @@ $sql = "SELECT * FROM `parts`";
 $result = $conn->query($sql);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_GET['delete'] === "true") {
+    if (isset($_GET['delete']) && $_GET['delete'] === "true") {
         $id = $_GET['id'];
         $sql = "DELETE FROM `parts` WHERE `parts`.`Id_part` = $id";
         $conn->query($sql);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['delete']) && $_GET['delete'] === "false") {
     $name = $price_from = $price_to = $desc = "";
     $id = $_GET['id'];
     if (empty($_POST["name"])) {
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($error == 0) {
         if ($name != "") {
-            $sql = "UPDATE `parts` SET `Name` = '" . $name . "' WHERE `parts`.`Id_part` = $id";
+            $sql = "UPDATE `prts` SET `Name` = '" . $name . "' WHERE `parts`.`Id_part` = $id";
             $conn->query($sql);
         }
         $sql = "SELECT * FROM `parts`";
@@ -124,5 +124,6 @@ function test_input($data)
             </div>
 
         </div>
+        <?php include("addPart.php") ?>
     </div>
 </div>

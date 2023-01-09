@@ -19,18 +19,18 @@
       </div>
       <div class="flex items-center md:items-normal flex-col gap-2">
         <p class="font-semibold">Usługi</p>
-        <a href="/uslugi#gniazda">Obróbka gniazd zaworowych</a>
-        <a href="/uslugi#planowanie">Planowanie</a>
-        <a href="/uslugi#spawanie">Spawanie</a>
-        <a href="/uslugi#szczelnosc"> Sprawdzanie szczelności</a>
-        <a href="/uslugi#silnik"> Regeneracja silników</a>
-        <a href="/uslugi#glowica"> Regeneracja głowic</a>
-        <a href="/uslugi#honowanie"> Honowanie</a>
-        <a href="/uslugi"> Więcej..</a>
+        <a href="uslugi.php#gniazda">Obróbka gniazd zaworowych</a>
+        <a href="uslugi.php#planowanie">Planowanie</a>
+        <a href="uslugi.php#spawanie">Spawanie</a>
+        <a href="uslugi.php#szczelnosc"> Sprawdzanie szczelności</a>
+        <a href="uslugi.php#silnik"> Regeneracja silników</a>
+        <a href="uslugi.php#glowica"> Regeneracja głowic</a>
+        <a href="uslugi.php#honowanie"> Honowanie</a>
+        <a href="uslugi.php"> Więcej..</a>
       </div>
       <div class="flex items-center md:items-normal flex-col gap-2">
         <p class="font-semibold">Oferta</p>
-        <a href="/oferta#komoryWirowe"> Komory wirowe</a>
+        <a href="oferta.php#komoryWirowe"> Komory wirowe</a>
         <a href="https://ldautomotive.pl/15-walki-rozrzadu"> Wałki rozrządu</a>
         <a href="https://ldautomotive.pl/19-powiazane-produkty">
           Dźwigienki zaworów
@@ -41,8 +41,8 @@
       </div>
       <div class="flex items-center md:items-normal flex-col gap-2">
         <p class="font-semibold">Firma</p>
-        <a href="/o-nas"> O nas</a>
-        <a href="/o-nas#certyfikaty"> Certyfikaty</a>
+        <a href="ofirmie.php"> O nas</a>
+        <a href="ofirmie.php#certyfikaty"> Certyfikaty</a>
       </div>
     </div>
     <div

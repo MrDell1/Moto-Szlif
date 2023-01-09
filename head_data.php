@@ -209,10 +209,26 @@
             <select type="text" <?php if (!empty($_SESSION['fuel'])) {
                                   echo "value='" . $_SESSION['fuel'] . "'";
                                 } ?> name="fuel" id="fuel">
-              <option value="">--</option>
-              <option value="Benzyna">Benzyna</option>
-              <option value="Diseal">Diseal</option>
-              <option value="Gaz">LPG</option>
+              <option  <?php 
+              if(isset($_SESSION['fuel']) && $_SESSION['fuel'] == ''){
+                echo "selected";
+              }
+              ?> value="">--</option>
+              <option <?php 
+              if(isset($_SESSION['fuel']) && $_SESSION['fuel'] == 'Benzyna'){
+                echo "selected";
+              }
+              ?> value="Benzyna">Benzyna</option>
+              <option <?php 
+              if(isset($_SESSION['fuel']) && $_SESSION['fuel'] == 'Diseal'){
+                echo "selected";
+              }
+              ?> value="Diseal">Diseal</option>
+              <option <?php 
+              if(isset($_SESSION['fuel']) && $_SESSION['fuel'] == 'Gaz'){
+                echo "selected";
+              }
+              ?> value="Gaz">LPG</option>
             </select>
           </div>
 
@@ -237,16 +253,37 @@
             <select type="text" onchange="Eng_change()" <?php if (!empty($_SESSION['type'])) {
                                                           echo "value='" . $_SESSION['type'] . "'";
                                                         } ?> name="type" id="type">
-              <option value="">--</option>
-              <option value="row_eng">Silnik rzędowy</option>
-              <option value="v_eng">Silnik typu V</option>
-              <option value="w_eng">Silnik typu W</option>
-              <option value="boxer_eng">Silnik typu boxer</option>
+             
+              <option <?php 
+              if(isset($_SESSION['type']) && $_SESSION['type'] == ''){
+                echo "selected";
+              }
+              ?> value="">--</option>
+              <option <?php 
+              if(isset($_SESSION['type']) && $_SESSION['type'] == 'row_eng'){
+                echo "selected";
+              }
+              ?> value="row_eng">Silnik rzędowy</option>
+              <option <?php 
+              if(isset($_SESSION['type']) && $_SESSION['type'] == 'v_eng'){
+                echo "selected";
+              }
+              ?> value="v_eng">Silnik typu V</option>
+              <option <?php 
+              if(isset($_SESSION['type']) && $_SESSION['type'] == 'w_eng'){
+                echo "selected";
+              }
+              ?> value="w_eng">Silnik typu W</option>
+              <option <?php 
+              if(isset($_SESSION['type']) && $_SESSION['type'] == 'boxer_eng'){
+                echo "selected";
+              }
+              ?> value="boxer_eng">Silnik typu boxer</option>
             </select>
           </div>
 
-          <div class='data_text' id="quantity_id" style="display:none;">
-            <label for="quantity">Czy chcesz naprawić obie głowice?</label>
+          <div class='hidden gap-2 items-center' id="quantity_id">
+            <label for="quantity" class="font-bold">Czy chcesz naprawić obie głowice?</label>
             <div class="error"><span><?php if (isset($typeErr)) {
                                         echo $typeErr;
                                       } ?></span>

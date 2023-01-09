@@ -1,13 +1,13 @@
 <div class="swiper mySwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide h-96 bg-cover flex justify-center items-center">
-      <img class="w-full" alt="planowanie bloku" src="Graphic/planowanie.webp" />
+      <img class="w-full" alt="planowanie bloku" src="assets/planowanie.webp" />
     </div>
     <div class="swiper-slide h-96 bg-cover flex justify-center items-center">
-      <img class="w-full" alt="regeneracja głowicy" src="Graphic/glowicaZawor.webp" />
+      <img class="w-full" alt="regeneracja głowicy" src="assets/glowicaZawor.webp" />
     </div>
     <div class="swiper-slide h-96 bg-cover flex justify-center items-center">
-      <img class="w-full" alt="regeneracja silnika" src="Graphic/silnikSkladanie.webp" />
+      <img class="w-full" alt="regeneracja silnika" src="assets/silnikSkladanie.webp" />
     </div>
   </div>
   <div class="swiper-button-next"></div>

@@ -1,15 +1,41 @@
 <?php
 // define variables and set to empty values
-
-$username = $fname = $email = $lname = "";
+$conn = mysqli_connect("localhost", 'root', '', 'm-s');
+if (mysqli_connect_errno()) {
+    echo "Błąd połączenia nr: " . mysqli_connect_errno();
+    echo "Opis błędu: " . mysqli_connect_error();
+    exit();
+}
+$fname = $email = $lname = "";
 $tel_number = $country = $state = $city = $address = $code = "";
 
 $tel_numberErr = $countryErr = $stateErr = $cityErr = $addressErr = $codeErr = "";
-$usernameErr = $fnameErr = $emailErr = $lnameErr = "";
+$fnameErr = $emailErr = $lnameErr = "";
 
 $company = $nip = "";
 $companyErr = $nipErr = "";
 $error = 1;
+$sql = "SELECT  `Fname`, `Email`, `Lname` FROM `customer`  WHERE Id_Usr = $_SESSION[id]";
+$result = $conn->query($sql);
+$x = $result->fetch_assoc();
+$fname = $x['Fname'];
+$email = $x['Email'];
+$lname = $x['Lname'];
+$sql = "SELECT * FROM `customer` WHERE Id_Usr = $_SESSION[id]";
+$result = $conn->query($sql);
+$x = $result->fetch_assoc();
+$tel_number = $x['Number'];
+$country = $x['Country'];
+$state = $x['State'];
+$_SESSION['state'] = $state;
+$city = $x['City'];
+$address = $x['Adress'];
+$code = $x['Code'];
+$sql = "SELECT `company`, `nip` FROM `customer` WHERE Id_Usr = $_SESSION[id]";
+$result = $conn->query($sql);
+$x = $result->fetch_assoc();
+$company = $x['company'];
+$nip = $x['nip'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['data']) && $_GET['data'] == 'true') {
   if ($_POST['foo'] == 'Wstecz') {
@@ -139,8 +165,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['data']) && $_GET['data'
     }
   }
   if (empty($_POST["company"])) {
-    if (isset($company)) {
-      unset($company);
+    if (isset($_SESSION['company'])) {
+      unset($_SESSION['company']);
     }
   } else {
     $company = test_input($_POST["company"]);
@@ -155,8 +181,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['data']) && $_GET['data'
   }
 
   if (empty($_POST["nip"])) {
-    if (isset($nip)) {
-      unset($nip);
+    if (isset($_SESSION['nip'])) {
+      unset($_SESSION['nip']);
     }
   } else {
     $nip = test_input($_POST["nip"]);
@@ -243,15 +269,15 @@ function select_container($err, $label, $session_name, $id)
     <form class="flex flex-col gap-8 items-center" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?data=true" method='POST'>
       <div class="flex flex-row gap-10">
         <div class="flex flex-col gap-4">
-          <?php input_container($fnameErr, "Imię:", $_SESSION['fname'], "fname") ?>
-          <?php input_container($lnameErr, "Nazwisko:", $_SESSION['lname'], "lname") ?>
-          <?php input_container($emailErr, "E-mail:", $_SESSION['email'], "email") ?>
-          <?php input_container($tel_numberErr, "Numer telefonu:", $_SESSION['tel_number'], "tel_number") ?>
-          <?php input_container($cityErr, "Miasto:", $_SESSION['city'], "city") ?>
-          <?php input_container($addressErr, "Adres:", $_SESSION['address'], "address") ?>
-          <?php input_container($codeErr, "Kod pocztowy:", $_SESSION['code'], "code") ?>
-          <?php select_container($countryErr, "Kraj:", $_SESSION['country'], "country") ?>
-          <?php select_container($stateErr, "Województwo:", $_SESSION['state'], "state") ?>
+          <?php input_container($fnameErr, "Imię:", $fname, "fname") ?>
+          <?php input_container($lnameErr, "Nazwisko:", $lname, "lname") ?>
+          <?php input_container($emailErr, "E-mail:", $email, "email") ?>
+          <?php input_container($tel_numberErr, "Numer telefonu:", $tel_number, "tel_number") ?>
+          <?php input_container($cityErr, "Miasto:", $city, "city") ?>
+          <?php input_container($addressErr, "Adres:", $address, "address") ?>
+          <?php input_container($codeErr, "Kod pocztowy:", $code, "code") ?>
+          <?php select_container($countryErr, "Kraj:", $country, "country") ?>
+          <?php select_container($stateErr, "Województwo:", $state, "state") ?>
         </div>
         <div class="flex flex-col gap-4">
           <div class='services_text'>

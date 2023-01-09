@@ -88,9 +88,9 @@ session_start();
         var type = document.getElementById("type").value;
         var quantity_id = document.getElementById("quantity_id");
         if (type == "v_eng" || type == "w_eng") {
-            quantity_id.style.display = "block";
+            quantity_id.classList = "flex";
         } else {
-            quantity_id.style.display = "none";
+            quantity_id.classList = "hidden";
         }
     }
 </script>
